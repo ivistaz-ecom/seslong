@@ -66,8 +66,8 @@ export default function Banner() {
           {nextBtn}
         </div>
       </div>
-      <div className="z-40 mx-auto flex h-[20vh] items-center justify-center bg-[#F8E2CF] px-40 text-xl font-normal">
-        <p className="w-10/12">
+      <div className="z-40 mx-auto flex p-5 lg:h-[20vh] items-center justify-center bg-[#F8E2CF] lg:px-40 text-xl font-normal">
+        <p className="lg:w-10/12">
           Seslong is a global trading house with operations strategically
           located across India, Hong Kong, and China, enabling us to supply a
           diverse range of products to customers worldwide.

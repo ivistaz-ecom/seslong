@@ -98,14 +98,14 @@ export default function Contact() {
   }
 
   return (
-    <div className="mx-auto w-10/12 py-10">
+    <div className="mx-auto w-10/12 py-10 container">
       <div className="mx-auto flex w-full flex-col">
         <h2 className="py-4 text-center text-4xl font-medium">
           Connect With Us
         </h2>
         <p className="text-center text-[20px] font-normal">
           Partner with Seslong for your product needs and discover how our
-          global presence, <br /> product knowledge, and commitment to quality
+          global presence, <br className="hidden sm:block" /> product knowledge, and commitment to quality
           can help your business.
         </p>
         <h2 className="py-8 text-center text-4xl font-medium">Contact Us</h2>

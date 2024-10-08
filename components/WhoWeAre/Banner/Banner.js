@@ -64,9 +64,9 @@ export default function Banner() {
           {nextBtn}
         </div>
       </div>
-      <div className="z-40 mx-auto flex h-[40vh] flex-col items-center justify-center bg-[#F8E2CF] px-40 text-xl font-normal">
+      <div className="z-40 mx-auto flex h-[40vh] flex-col items-center justify-center bg-[#F8E2CF] lg:px-40 text-xl font-normal">
         <h2 className="text-4xl font-medium">About Seslong</h2>
-        <p className="w-10/12 py-10 text-center">
+        <p className="lg:w-10/12 w-[90%] lg:py-12 py-3 text-center">
           We are a company involved in manufacturing and global trade. With
           operations strategically located in India, Hong Kong and China, we are
           able to leverage our product knowledge and location to maximise our

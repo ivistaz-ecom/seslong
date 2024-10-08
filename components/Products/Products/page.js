@@ -45,7 +45,7 @@ export default function Products() {
       <div className="p-12">
         <h2 className="text-center text-4xl font-medium">Our Products</h2>
       </div>
-      <div className="mx-auto grid w-8/12 grid-cols-5 gap-4">
+      <div className="mx-auto lg:grid w-8/12 grid-cols-5 lg:gap-4 container">
         {Object.keys(products).map((category) => (
           <button
             key={category}
@@ -57,42 +57,42 @@ export default function Products() {
         ))}
       </div>
 
-      <div className="mx-auto mt-4 grid w-10/12 grid-cols-4 gap-4 py-10 ">
+      <div className="mx-auto mt-4 lg:grid w-10/12 grid-cols-4 gap-4 py-10 container">
         {loading
           ? Array.from({ length: 4 }).map((_, index) => (
-              <div key={index} className="border p-4">
-                <div className="h-32 w-full animate-pulse rounded bg-gray-300"></div>
-                <div className="mt-4 h-6 w-3/4 animate-pulse rounded bg-gray-300"></div>
-                <div className="mt-2 h-4 w-full animate-pulse rounded bg-gray-300"></div>
-              </div>
-            ))
+            <div key={index} className="border p-4">
+              <div className="h-32 w-full animate-pulse rounded bg-gray-300"></div>
+              <div className="mt-4 h-6 w-3/4 animate-pulse rounded bg-gray-300"></div>
+              <div className="mt-2 h-4 w-full animate-pulse rounded bg-gray-300"></div>
+            </div>
+          ))
           : products[selectedCategory]?.map((product, index) => (
-              <div key={index} className="border">
-                <Image
-                  src={product.imageSrc}
-                  width={200}
-                  height={200}
-                  className="w-auto"
-                />
-                <div className="relative top-0 flex flex-col items-center justify-center p-4 text-center">
-                  <h2 className="h-14 text-xl font-medium">{product.name}</h2>
-                  <p className="h-18 line-clamp-4 text-base">
-                    {product.description}
-                  </p>
-                  <div className="flex w-full items-center justify-center bg-white">
-                    <Modal
-                      banner={product.popImageSrc}
-                      title={product.name}
-                      description={product.description}
-                      pdfUrl=""
-                    />
-                  </div>
+            <div key={index} className="border mt-4">
+              <Image
+                src={product.imageSrc}
+                width={200}
+                height={200}
+                className="w-auto"
+              />
+              <div className="relative top-0 flex flex-col items-center justify-center p-4 text-center">
+                <h2 className="h-14 text-xl font-medium">{product.name}</h2>
+                <p className="h-18 line-clamp-4 text-base">
+                  {product.description}
+                </p>
+                <div className="flex w-full items-center justify-center bg-white">
+                  <Modal
+                    banner={product.popImageSrc}
+                    title={product.name}
+                    description={product.description}
+                    pdfUrl=""
+                  />
                 </div>
               </div>
-            ))}
+            </div>
+          ))}
       </div>
 
-      <div className="mx-auto grid w-10/12 grid-cols-4 gap-4 pb-20">
+      <div className="mx-auto lg:grid lg:w-10/12 grid-cols-4 gap-4 pb-20 lg:px-0 px-8">
         <Link
           href="/"
           className="flex items-center py-4 text-center text-xl font-medium"

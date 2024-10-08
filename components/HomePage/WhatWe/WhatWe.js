@@ -5,8 +5,8 @@ import { IoMdArrowForward } from "react-icons/io";
 
 export default function WhatWe() {
   return (
-    <div className="grid grid-cols-2">
-      <div className="flex flex-col items-center justify-center p-12 pl-40">
+    <div className="lg:grid grid-cols-2">
+      <div className="flex flex-col items-center justify-center lg:p-12 lg:py-0 py-16 p-3  lg:pl-40">
         <h2 className="text-4xl font-medium">What We Offer</h2>
         <p className="py-8 text-center text-[20px] font-normal">
           Our core activities encompass manufacturing, export, and distribution.

@@ -12,13 +12,14 @@ export default function Footer() {
   return (
     <>
       <div className="bg-[#E5E5E4] p-12">
-        <div className="mx-auto grid w-11/12 grid-cols-3 gap-4">
-          <div className="mx-auto w-11/12">
+        <div className="mx-auto lg:grid w-11/12 grid-cols-3 gap-4 container">
+          <div className="mx-auto lg:w-11/12">
             <Image
               src="/seslong-logo.svg"
               width={400}
               height={400}
               className="w-auto"
+              alt="Company Logo"
             />
             {companyInfo.map((company, index) => (
               <div className="py-4" key={index}>
@@ -27,18 +28,18 @@ export default function Footer() {
               </div>
             ))}
           </div>
-          <div className="mx-auto">
-            <h4 className="text-2xl font-medium">Quick Links</h4>
+          <div className="mx-auto ">
+            <h4 className="text-2xl font-medium lg:mt-0 mt-5">Quick Links</h4>
             <ul>
               {quickLinks.map((link, index) => (
-                <li key={index} className="py-1 text-xl font-medium">
+                <li key={index} className="py-1 text-xl font-thin">
                   <Link href={link.url}>{link.name}</Link>
                 </li>
               ))}
             </ul>
           </div>
-          <div className="mx-auto">
-            <h4 className="text-2xl font-medium">Connect</h4>
+          <div className="mx-auto ">
+            <h4 className="text-2xl font-medium lg:mt-0 mt-5">Connect</h4>
             <ul>
               {contactInfo.map((contact, index) => (
                 <li key={index} className="text-xl">
@@ -50,7 +51,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="py-4 text-center text-xl font-thin">
-        <p>{copyRight}</p>
+        <div dangerouslySetInnerHTML={{ __html: copyRight }} />
       </div>
     </>
   );

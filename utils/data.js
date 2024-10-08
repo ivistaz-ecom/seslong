@@ -5,7 +5,17 @@ export const homeSlider = [
     description: "Seslong Your Reliable Partner for Quality Products",
   },
   {
-    image: "/Home/main-slider-image-01.png",
+    image: "/Home/main-slider-image-02.png",
+    alt: "Description 2",
+    description: "Seslong Your Reliable Partner for Quality Products",
+  },
+  {
+    image: "/Home/main-slider-image-03.png",
+    alt: "Description 2",
+    description: "Seslong Your Reliable Partner for Quality Products",
+  },
+  {
+    image: "/Home/main-slider-image-04.png",
     alt: "Description 2",
     description: "Seslong Your Reliable Partner for Quality Products",
   },
@@ -77,8 +87,9 @@ export const contactInfo = [
 ];
 
 export const copyRight = [
-  "@ 2024 Seslong Global Limited. All Rights Reserved. Privacy Policy.",
+  "@ 2024 Seslong Global Limited. <br class='md:hidden block'> All Rights Reserved. Privacy Policy.",
 ];
+
 
 export const whoWeAre = [
   {

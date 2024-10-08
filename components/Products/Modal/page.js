@@ -32,6 +32,7 @@ export default function Page({ banner, title, description, pdfUrl }) {
       <Modal
         show={openModal}
         onClose={() => setOpenModal(false)}
+        dismissible={true} // Allows closing on outside clicks
         className="transition-all duration-300 ease-in-out"
       >
         <div className="relative flex items-center justify-between bg-transparent transition-all duration-300 ease-in-out">
@@ -49,9 +50,9 @@ export default function Page({ banner, title, description, pdfUrl }) {
             >
               <path
                 stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
               />
             </svg>
@@ -61,10 +62,10 @@ export default function Page({ banner, title, description, pdfUrl }) {
         <Modal.Body className="p-0">
           <div className="space-y-4">
             {loading ? (
-              <div role="status" class="animate-pulse ">
-                <div class="flex h-[350px] w-full items-center justify-center rounded bg-gray-300 transition-all duration-300 ease-in-out ">
+              <div role="status" className="animate-pulse">
+                <div className="flex h-[350px] w-full items-center justify-center rounded bg-gray-300 transition-all duration-300 ease-in-out">
                   <svg
-                    class="h-10 w-full text-gray-200 dark:text-gray-600"
+                    className="h-10 w-full text-gray-200 dark:text-gray-600"
                     aria-hidden="true"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="currentColor"

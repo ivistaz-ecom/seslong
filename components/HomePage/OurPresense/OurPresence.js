@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function OurPresence() {
   return (
-    <div className="grid grid-cols-2 bg-[#E5E5E4] py-20">
+    <div className="md:grid grid-cols-2 bg-[#E5E5E4] py-20">
       <div className="h-[50vh]">
         <Image
           src="/Home/our-presence-img.png"
@@ -12,7 +12,7 @@ export default function OurPresence() {
           className="w-full"
         />
       </div>
-      <div className="mx-auto flex h-[50vh] w-9/12 flex-col items-center justify-center p-12 pr-40">
+      <div className="mx-auto flex h-[50vh] lg:w-9/12 flex-col items-center justify-center lg:p-12 p-3 lg:pr-40 md:-mt-0 -mt-20">
         <h2 className="text-4xl font-medium">Our Presence</h2>
         <p className="py-8 text-center text-[20px] font-normal">
           Seslong supplies products to customers spread across major global

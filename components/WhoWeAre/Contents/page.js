@@ -6,25 +6,25 @@ export default function page() {
   return (
     <div className="py-12">
       <div className="flex flex-col items-center justify-center">
-        <h2 className="text-4xl font-medium">
+        <h2 className="text-4xl font-medium text-center">
           Seslong Traders Private Limited
         </h2>
-        <p className="py-4 text-center text-xl">
+        <p className="py-4 text-center text-xl p-2">
           was founded in <strong>2008</strong> and is located in{" "}
           <strong>Bangalore, India.</strong>
-          <br /> Our team in India focuses on 3 main functions:
+          <br className="hidden sm:block" /> Our team in India focuses on 3 main functions:
         </p>
       </div>
-      <div className="mx-auto grid w-8/12 grid-cols-3 gap-8">
+      <div className="mx-auto lg:grid w-8/12 grid-cols-3 gap-8 container">
         {whoWeAre.map((items) => (
-          <div className="flex flex-col items-center justify-center border border-black p-8">
+          <div className="flex flex-col items-center justify-center border border-black p-8 mt-4">
             <Image src={items.icon} width={200} height={200} className="w-24" />
             <p className="pt-6 text-center text-xl">{items.expert}</p>
           </div>
         ))}
       </div>
 
-      <div className="flex flex-col items-center justify-center py-12">
+      <div className="flex flex-col items-center justify-center py-12 p-2">
         <h2 className="text-4xl font-medium">Seslong Global Limited</h2>
         <p className="py-4 text-center text-xl">
           Established in 2016 and based in <strong>Hong Kong</strong>, servers
@@ -33,9 +33,9 @@ export default function page() {
           <strong>56 factories located in Mainland China</strong>.
         </p>
       </div>
-      <div className="mx-auto grid w-10/12 grid-cols-2 items-center justify-center">
-        <div className="mx-auto w-8/12">
-          <p className="py-4 text-center text-xl">
+      <div className="mx-auto lg:grid lg:w-10/12 grid-cols-2 items-center justify-center container">
+        <div className="mx-auto lg:w-8/12">
+          <p className="py-4 text-center text-xl -mt-10 lg:-mt-0">
             Our key markets span across{" "}
             <strong>
               North
@@ -49,7 +49,7 @@ export default function page() {
             src="/who-we-are/world-map.svg"
             width={400}
             height={400}
-            className="w-full"
+            className="w-full mt-4 lg:mt-0"
           />
         </div>
       </div>

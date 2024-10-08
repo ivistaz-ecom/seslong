@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function Header() {
   return (
     <div className="flex h-[10vh] items-center bg-[#E5E5E4]">
-      <div className="mx-auto grid w-10/12 grid-cols-2">
+      <div className="mx-auto grid w-10/12 grid-cols-2 container">
         <div className="flex items-center justify-start">
           <Link href="/">
             <Image
