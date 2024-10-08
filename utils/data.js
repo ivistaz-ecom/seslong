@@ -21,7 +21,7 @@ export const homeSlider = [
   },
 ];
 
-export const Products = [
+export const ProductsItems = [
   {
     items: "Personal Care",
     productImage: "/Home/home-product01.png",
@@ -89,7 +89,6 @@ export const contactInfo = [
 export const copyRight = [
   "@ 2024 Seslong Global Limited. <br class='md:hidden block'> All Rights Reserved. Privacy Policy.",
 ];
-
 
 export const whoWeAre = [
   {

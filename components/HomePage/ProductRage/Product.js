@@ -1,22 +1,21 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Products } from "../../../utils/data";
+import { ProductsItems } from "../../../utils/data";
 import { IoMdArrowForward } from "react-icons/io";
-
 
 export default function Product() {
   return (
     <div className=" w-full py-8">
       <h2 className="py-8 text-center text-4xl font-medium">Product Range</h2>
-      <div className="mx-auto lg:grid w-10/12 grid-cols-3 gap-6 container">
-        {Products.map((items) => (
-          <div className="group relative bg-red-400">
+      <div className="container mx-auto w-10/12 grid-cols-3 gap-6 lg:grid">
+        {ProductsItems.map((items, index) => (
+          <div className="group relative bg-red-400" key={index}>
             <Image
               src={items.productImage}
               width={300}
               height={300}
-              className="w-full lg:mb-0 mb-4"
+              className="mb-4 w-full lg:mb-0"
             />
             <div className="absolute inset-0 bottom-0 flex w-full items-end bg-[#00000069] p-4 text-2xl font-medium text-white group-hover:hidden">
               {items.items}
