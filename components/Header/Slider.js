@@ -48,7 +48,7 @@ export default function Slider() {
           type="button"
           onClick={toggleDrawer}
         >
-          Menu
+          Menu-
           <IoMdArrowForward
             className={`transition-transform duration-300 group-hover:rotate-45 `}
             size={30}
