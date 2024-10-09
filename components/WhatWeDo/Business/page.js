@@ -8,17 +8,22 @@ export default function Page() {
   return (
     <>
       {sections.map((section, index) => (
-        <div key={index} className="mx-auto grid w-9/12 lg:grid-cols-2 py-4 container" >
+        <div
+          key={index}
+          className="container mx-auto grid w-9/12 py-4 lg:grid-cols-2"
+        >
           <div
-            className={`mx-auto lg:flex flex-col items-center justify-center ${index % 2 === 0 ? "order-2" : "order-1"}`}
+            className={`mx-auto flex-col items-center justify-center lg:flex ${index % 2 === 0 ? "order-2" : "order-1"}`}
           >
-            <h2 className="text-4xl font-medium lg:pt-0 pt-5">{section.title}</h2>
-            <p className="lg:w-10/12 py-6 text-center text-xl">
+            <h2 className="pt-5 text-4xl font-medium lg:pt-0">
+              {section.title}
+            </h2>
+            <p className="py-6 text-center text-xl lg:w-10/12">
               {section.description}
             </p>
             <Link
               href="/"
-              className="flex items-center justify-center gap-2 text-2xl lg:mb-0 mb-4"
+              className="mb-4 flex items-center justify-center gap-2 border-b-2 border-white text-2xl hover:border-[#f5831fca] lg:mb-0"
             >
               Read More <IoMdArrowForward />
             </Link>

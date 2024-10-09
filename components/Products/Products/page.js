@@ -61,12 +61,12 @@ export default function Products() {
               </div>
             ))
           : products[selectedCategory]?.map((product, index) => (
-              <div key={index} className="mt-4 border">
+              <div key={index} className="group mt-4 overflow-hidden border">
                 <Image
                   src={product.imageSrc}
                   width={200}
                   height={200}
-                  className="w-auto"
+                  className="w-auto transition-all group-hover:scale-105"
                 />
                 <div className="relative top-0 flex flex-col items-center justify-center p-4 text-center">
                   <h2 className="h-14 text-xl font-medium">{product.name}</h2>
@@ -89,7 +89,7 @@ export default function Products() {
       <div className="mx-auto grid-cols-4 gap-4 px-8 pb-20 lg:grid lg:w-10/12 lg:px-0">
         <Link
           href="/"
-          className="flex items-center py-4 text-center text-xl font-medium"
+          className="flex items-center border-b-2 border-white py-4 text-center text-xl font-medium hover:border-[#f5831fca]"
         >
           Get the Brochure <IoIosArrowForward />
         </Link>

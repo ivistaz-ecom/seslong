@@ -32,7 +32,7 @@ export default function Product() {
                     pathname: "/products", // Assuming this is the product listing page
                     query: { category: items.items }, // Passing the category as query param
                   }}
-                  className="flex items-center justify-center gap-1 py-10 text-lg font-medium"
+                  className="flex items-center justify-center gap-1 py-10 text-lg font-medium "
                 >
                   Show More <IoMdArrowForward />
                 </Link>

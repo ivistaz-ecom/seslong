@@ -23,7 +23,7 @@ export default function Page({ banner, title, description, pdfUrl }) {
     <>
       <button
         onClick={() => setOpenModal(true)}
-        className="flex items-center py-4 text-center font-medium"
+        className="flex items-center border-b-2 border-white py-1 pt-4 text-center font-medium hover:border-[#f5831fca]"
       >
         More Details <IoIosArrowForward />
       </button>
