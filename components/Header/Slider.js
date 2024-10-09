@@ -92,7 +92,7 @@ export default function Slider() {
             {quickLinks.map((link, index) => (
               <li
                 key={index}
-                className={`group flex w-full border-b-4 border-gray-200 py-4 text-2xl font-medium transition-transform duration-300 ease-in-out hover:border-b-4 hover:border-[#F5841F] ${
+                className={`group flex w-full border-b-4 border-[#E5E5E4] py-4 text-2xl font-medium transition-transform duration-300 ease-in-out hover:border-b-4 hover:border-[#F5841F] ${
                   isDrawerOpen
                     ? "translate-y-0 transform opacity-100"
                     : "translate-y-20 transform opacity-0"

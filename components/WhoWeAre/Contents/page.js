@@ -19,7 +19,7 @@ export default function page() {
       <div className="container mx-auto w-8/12 grid-cols-3 gap-8 lg:grid">
         {whoWeAre.map((items, index) => (
           <div
-            className="mt-4 flex flex-col items-center justify-center border border-black p-8"
+            className="mt-4 flex flex-col items-center justify-center border border-black p-8 hover:border-[#f5831fca]"
             key={index}
           >
             <Image src={items.icon} width={200} height={200} className="w-24" />

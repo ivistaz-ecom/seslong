@@ -10,12 +10,15 @@ export default function Product() {
       <h2 className="py-8 text-center text-4xl font-medium">Product Range</h2>
       <div className="container mx-auto w-10/12 grid-cols-3 gap-6 lg:grid">
         {ProductsItems.map((items, index) => (
-          <div className="group relative bg-red-400" key={index}>
+          <div
+            className="group relative overflow-hidden bg-red-400"
+            key={index}
+          >
             <Image
               src={items.productImage}
               width={300}
               height={300}
-              className="mb-4 w-full lg:mb-0"
+              className="mb-4 w-full transition ease-out group-hover:scale-105 lg:mb-0"
             />
             <div className="absolute inset-0 bottom-0 flex w-full items-end bg-[#00000069] p-4 text-2xl font-medium text-white group-hover:hidden">
               {items.items}
