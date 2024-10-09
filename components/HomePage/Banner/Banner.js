@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { homeSlider } from "../../../utils/data"; // Ensure this imports correctly
 import { FaArrowRight } from "react-icons/fa";
 import { FaArrowLeft } from "react-icons/fa";
@@ -8,6 +8,14 @@ import { IoIosArrowRoundBack } from "react-icons/io";
 
 export default function Banner() {
   const [activeIndex, setActiveIndex] = useState(0); // Track the active slide index
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex((prevIndex) => (prevIndex + 1) % homeSlider.length);
+    }, 5000); // Change slide every 5 seconds
+
+    return () => clearInterval(interval);
+  }, []);
 
   const prevBtn = (
     <button
@@ -66,7 +74,7 @@ export default function Banner() {
           {nextBtn}
         </div>
       </div>
-      <div className="z-40 mx-auto flex p-5 lg:h-[20vh] items-center justify-center bg-[#F8E2CF] lg:px-40 text-xl font-normal">
+      <div className="z-40 mx-auto flex items-center justify-center bg-[#F8E2CF] p-5 text-xl font-normal lg:h-[20vh] lg:px-40">
         <p className="lg:w-10/12">
           Seslong is a global trading house with operations strategically
           located across India, Hong Kong, and China, enabling us to supply a

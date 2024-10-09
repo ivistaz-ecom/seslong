@@ -298,6 +298,8 @@ export const products = {
       imageSrc: "/Products/Asian-sauces-and-pastes.png",
       popImageSrc: "/Products/popup/Asian-sauces-and-pastes.png",
     },
+  ],
+  Tobacco: [
     {
       name: "Tobacco",
       description:

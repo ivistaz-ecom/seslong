@@ -35,11 +35,11 @@ export default function Products() {
   };
 
   return (
-    <>
+    <div className="z-20">
       <div className="p-12">
         <h2 className="text-center text-4xl font-medium">Our Products</h2>
       </div>
-      <div className="container mx-auto w-8/12 grid-cols-5 lg:grid lg:gap-4">
+      <div className="container mx-auto w-9/12 grid-cols-6 lg:grid lg:gap-4">
         {Object.keys(products).map((category) => (
           <button
             key={category}
@@ -94,6 +94,6 @@ export default function Products() {
           Get the Brochure <IoIosArrowForward />
         </Link>
       </div>
-    </>
+    </div>
   );
 }
