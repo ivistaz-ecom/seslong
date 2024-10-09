@@ -44,7 +44,7 @@ export default function Slider() {
     <>
       <div className={`z-20 flex text-center`}>
         <button
-          className="group flex items-center justify-center gap-1 text-2xl font-normal text-black"
+          className="group flex items-center justify-center gap-1 border-b-2 text-2xl font-normal text-black hover:border-[#f5831fca]"
           type="button"
           onClick={toggleDrawer}
         >

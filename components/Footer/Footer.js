@@ -12,7 +12,7 @@ export default function Footer() {
   return (
     <>
       <div className="bg-[#E5E5E4] p-12">
-        <div className="mx-auto lg:grid w-11/12 grid-cols-3 gap-4 container">
+        <div className="container mx-auto w-11/12 grid-cols-3 gap-4 lg:grid">
           <div className="mx-auto lg:w-11/12">
             <Image
               src="/seslong-logo.svg"
@@ -29,17 +29,20 @@ export default function Footer() {
             ))}
           </div>
           <div className="mx-auto ">
-            <h4 className="text-2xl font-medium lg:mt-0 mt-5">Quick Links</h4>
+            <h4 className="mt-5 text-2xl font-medium lg:mt-0">Quick Links</h4>
             <ul>
               {quickLinks.map((link, index) => (
-                <li key={index} className="py-1 text-xl font-thin">
+                <li
+                  key={index}
+                  className="border-b-2 py-1 text-xl font-normal hover:border-[#f5831fca]"
+                >
                   <Link href={link.url}>{link.name}</Link>
                 </li>
               ))}
             </ul>
           </div>
           <div className="mx-auto ">
-            <h4 className="text-2xl font-medium lg:mt-0 mt-5">Connect</h4>
+            <h4 className="mt-5 text-2xl font-medium lg:mt-0">Connect</h4>
             <ul>
               {contactInfo.map((contact, index) => (
                 <li key={index} className="text-xl">
