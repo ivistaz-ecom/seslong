@@ -1,16 +1,26 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { homeSlider } from "../../../utils/data"; // Ensure this imports correctly
+import { FaArrowRight } from "react-icons/fa";
+import { FaArrowLeft } from "react-icons/fa";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { IoIosArrowRoundBack } from "react-icons/io";
 
 export default function Banner() {
   const [activeIndex, setActiveIndex] = useState(0); // Track the active slide index
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex((prevIndex) => (prevIndex + 1) % homeSlider.length);
+    }, 5000); // Change slide every 5 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+
   const prevBtn = (
     <button
       type="button"
-      className="group absolute start-0 top-40 z-50 flex h-full cursor-pointer items-center justify-center px-4 focus:outline-none"
+      className="group absolute start-0 top-40 z-30 flex h-full cursor-pointer items-center justify-center px-4 focus:outline-none"
       onClick={() =>
         setActiveIndex(
           (activeIndex - 1 + homeSlider.length) % homeSlider.length,
@@ -24,7 +34,7 @@ export default function Banner() {
   const nextBtn = (
     <button
       type="button"
-      className="group absolute end-0 top-40 z-50 flex h-full cursor-pointer items-center justify-center px-4 focus:outline-none"
+      className="group absolute end-0 top-40 z-30 flex h-full cursor-pointer items-center justify-center px-4 focus:outline-none"
       onClick={() => setActiveIndex((activeIndex + 1) % homeSlider.length)}
     >
       <IoIosArrowRoundForward size="70" color="white" />
@@ -64,9 +74,9 @@ export default function Banner() {
           {nextBtn}
         </div>
       </div>
-      <div className="z-40 mx-auto flex h-[40vh] flex-col items-center justify-center bg-[#F8E2CF] lg:px-40 text-xl font-normal">
+      <div className="z-40 mx-auto flex h-[40vh] flex-col items-center justify-center bg-[#F8E2CF] text-xl font-normal lg:px-40">
         <h2 className="text-4xl font-medium">About Seslong</h2>
-        <p className="lg:w-10/12 w-[90%] lg:py-12 py-3 text-center">
+        <p className="w-[90%] py-3 text-center lg:w-10/12 lg:py-12">
           We are a company involved in manufacturing and global trade. With
           operations strategically located in India, Hong Kong and China, we are
           able to leverage our product knowledge and location to maximise our

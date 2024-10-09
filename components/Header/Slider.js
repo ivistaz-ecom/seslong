@@ -3,10 +3,13 @@ import React, { useState, useRef, useEffect } from "react";
 import { IoMdArrowForward } from "react-icons/io";
 import { quickLinks } from "../../utils/data";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Slider() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const drawerRef = useRef(null);
+
+  const pathname = usePathname();
 
   const toggleDrawer = () => {
     setIsDrawerOpen((prev) => !prev);
@@ -39,7 +42,7 @@ export default function Slider() {
 
   return (
     <>
-      <div className="z-20 flex h-[20vh] text-center">
+      <div className={`z-20 flex text-center`}>
         <button
           className="group flex items-center justify-center gap-1 text-2xl font-normal text-black"
           type="button"
@@ -56,7 +59,7 @@ export default function Slider() {
       <div
         ref={drawerRef}
         id="drawer-right-example"
-        className={`fixed right-0 top-0 z-50 h-[60vh] transform bg-[#E5E5E4] p-4 transition-transform duration-300 ease-in-out lg:w-[26vw] ${isDrawerOpen ? "translate-x-0" : "translate-x-full"}`}
+        className={`fixed right-0 top-0 z-50 ${pathname === "/" ? "h-[80vh]" : "h-[60vh]"} transform bg-[#E5E5E4] p-4 transition-transform duration-300 ease-in-out lg:w-[26vw] ${isDrawerOpen ? "translate-x-0" : "translate-x-full"}`}
         tabIndex="-1"
         aria-labelledby="drawer-right-label"
       >

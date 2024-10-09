@@ -16,9 +16,9 @@ export default function Banner() {
           </div>
         </div>
       </div>
-      <div className="z-40 mx-auto flex h-[40vh] flex-col items-center justify-center bg-[#F8E2CF] lg:px-40 text-xl font-normal">
+      <div className="z-40 mx-auto flex h-[40vh] flex-col items-center justify-center bg-[#F8E2CF] text-xl font-normal lg:px-40">
         <h2 className="text-4xl font-medium">What We Do</h2>
-        <p className="md:w-10/12 lg:py-10 text-center">
+        <p className="text-center md:w-10/12 lg:py-10">
           Seslong operates through three main business verticals:
         </p>
       </div>
