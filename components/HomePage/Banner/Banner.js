@@ -20,7 +20,7 @@ export default function Banner() {
   const prevBtn = (
     <button
       type="button"
-      className="group absolute start-0 top-60 z-30 flex h-full cursor-pointer items-center justify-center px-4 focus:outline-none"
+      className="group absolute start-0 top-60 xl:top-60 lg:top-48 z-30 flex h-full cursor-pointer items-center justify-center px-4 focus:outline-none"
       onClick={() =>
         setActiveIndex(
           (activeIndex - 1 + homeSlider.length) % homeSlider.length,
@@ -34,7 +34,7 @@ export default function Banner() {
   const nextBtn = (
     <button
       type="button"
-      className="group absolute end-0 top-60 z-30 flex h-full cursor-pointer items-center justify-center px-4 focus:outline-none"
+      className="group absolute end-0 top-60 xl:top-60 lg:top-48 z-30 flex h-full cursor-pointer items-center justify-center px-4 focus:outline-none"
       onClick={() => setActiveIndex((activeIndex + 1) % homeSlider.length)}
     >
       <IoIosArrowRoundForward size="70" color="white" />

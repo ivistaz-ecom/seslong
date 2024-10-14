@@ -23,7 +23,7 @@ export default function Page({ banner, title, description, pdfUrl }) {
     <>
       <button
         onClick={() => setOpenModal(true)}
-        className="flex items-center border-b-2 border-white py-1 pt-4 text-center font-medium hover:border-[#f5831fca]"
+        className="flex items-center border-b-2 border-white py-1 pt-4 text-center font-medium hover:text-[#f5831fca]"
       >
         More Details <IoIosArrowForward />
       </button>
@@ -38,7 +38,7 @@ export default function Page({ banner, title, description, pdfUrl }) {
         <div className="relative flex items-center justify-between bg-transparent transition-all duration-300 ease-in-out">
           <button
             type="button"
-            className="absolute bottom-1 right-0 ms-auto inline-flex h-8 w-8 items-center justify-center rounded-lg bg-gray-200 text-2xl text-gray-600 hover:bg-gray-200 hover:text-black"
+            className="absolute bottom-1 right-0 ms-auto inline-flex h-8 w-8 items-center justify-center rounded-lg bg-gray-200 text-2xl text-gray-600 hover:bg-gray-200 hover:text-[#f5831fca]"
             onClick={() => setOpenModal(false)}
           >
             <svg

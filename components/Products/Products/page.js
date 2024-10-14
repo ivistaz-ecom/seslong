@@ -54,42 +54,42 @@ export default function Products() {
       <div className="container mx-auto mt-4 w-10/12 grid-cols-4 gap-4 py-10 lg:grid">
         {loading
           ? Array.from({ length: 4 }).map((_, index) => (
-              <div key={index} className="border p-4">
-                <div className="h-32 w-full animate-pulse rounded bg-gray-300"></div>
-                <div className="mt-4 h-6 w-3/4 animate-pulse rounded bg-gray-300"></div>
-                <div className="mt-2 h-4 w-full animate-pulse rounded bg-gray-300"></div>
-              </div>
-            ))
+            <div key={index} className="border p-4">
+              <div className="h-32 w-full animate-pulse rounded bg-gray-300"></div>
+              <div className="mt-4 h-6 w-3/4 animate-pulse rounded bg-gray-300"></div>
+              <div className="mt-2 h-4 w-full animate-pulse rounded bg-gray-300"></div>
+            </div>
+          ))
           : products[selectedCategory]?.map((product, index) => (
-              <div key={index} className="group mt-4 overflow-hidden border">
-                <Image
-                  src={product.imageSrc}
-                  width={200}
-                  height={200}
-                  className="w-auto transition-all group-hover:scale-105"
-                />
-                <div className="relative top-0 flex flex-col items-center justify-center p-4 text-center">
-                  <h2 className="h-14 text-xl font-medium">{product.name}</h2>
-                  <p className="h-18 line-clamp-4 text-base">
-                    {product.description}
-                  </p>
-                  <div className="flex w-full items-center justify-center bg-white">
-                    <Modal
-                      banner={product.popImageSrc}
-                      title={product.name}
-                      description={product.description}
-                      pdfUrl=""
-                    />
-                  </div>
+            <div key={index} className="group mt-4 overflow-hidden border">
+              <Image
+                src={product.imageSrc}
+                width={200}
+                height={200}
+                className="w-auto transition-all group-hover:scale-105"
+              />
+              <div className="relative top-0 flex flex-col items-center justify-center p-4 text-center">
+                <h2 className="h-14 text-xl font-medium">{product.name}</h2>
+                <p className="h-18 line-clamp-4 text-base">
+                  {product.description}
+                </p>
+                <div className="flex w-full items-center justify-center bg-white">
+                  <Modal
+                    banner={product.popImageSrc}
+                    title={product.name}
+                    description={product.description}
+                    pdfUrl=""
+                  />
                 </div>
               </div>
-            ))}
+            </div>
+          ))}
       </div>
 
-      <div className="mx-auto grid-cols-4 gap-4 px-8 pb-20 lg:grid lg:w-10/12 lg:px-0">
+      <div className="mx-auto  gap-4 px-8 pb-20 lg:grid lg:w-10/12 lg:px-0">
         <Link
           href="/"
-          className="flex items-center border-b-2 border-white py-4 text-center text-xl font-medium hover:border-[#f5831fca]"
+          className=" flex justify-center items-center border-b-2 border-white py-4 text-center text-xl font-medium hover:text-[#f5831fca]"
         >
           Get the Brochure <IoIosArrowForward />
         </Link>

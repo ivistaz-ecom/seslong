@@ -1,14 +1,14 @@
+'use client'
 import React from "react";
 import Image from "next/image";
-import {
-  companyInfo,
-  quickLinks,
-  contactInfo,
-  copyRight,
-} from "../../utils/data";
+import { companyInfo, quickLinks, contactInfo, copyRight } from "../../utils/data";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Footer() {
+  const pathname = usePathname();
+  const isActive = (path) => pathname === path;
+
   return (
     <>
       <div className="bg-[#E5E5E4] p-12">
@@ -34,7 +34,8 @@ export default function Footer() {
               {quickLinks.map((link, index) => (
                 <li
                   key={index}
-                  className="border-b-2 py-1 text-xl font-normal hover:border-[#f5831fca]"
+                  className={`py-1 text-xl font-normal hover:text-[#f5831fca] ${isActive(link.url) ? "text-[#f5831fca]" : ""
+                    }`}
                 >
                   <Link href={link.url}>{link.name}</Link>
                 </li>

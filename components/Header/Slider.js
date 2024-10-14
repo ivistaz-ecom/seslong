@@ -10,7 +10,7 @@ export default function Slider() {
   const drawerRef = useRef(null);
 
   const pathname = usePathname();
-
+  const isActive = (path) => pathname === path;
   const toggleDrawer = () => {
     setIsDrawerOpen((prev) => !prev);
   };
@@ -42,15 +42,15 @@ export default function Slider() {
 
   return (
     <>
-      <div className={`z-20 flex text-center`}>
+      <div className="z-20 flex text-center">
         <button
-          className="group flex items-center justify-center gap-1 border-b-2 text-2xl font-normal text-black hover:border-[#f5831fca]"
+          className="group flex items-center justify-center gap-1 border-b-2 text-2xl font-normal text-black hover:text-[#f5831fca]"
           type="button"
           onClick={toggleDrawer}
         >
           Menu
           <IoMdArrowForward
-            className={`transition-transform duration-300 group-hover:rotate-45 `}
+            className="transition-transform duration-300 group-hover:rotate-45"
             size={30}
           />
         </button>
@@ -59,7 +59,9 @@ export default function Slider() {
       <div
         ref={drawerRef}
         id="drawer-right-example"
-        className={`fixed right-0 top-0 z-50 ${pathname === "/" ? "h-[80vh]" : "h-[60vh]"} transform bg-[#E5E5E4] p-4 transition-transform duration-300 ease-in-out lg:w-[26vw] ${isDrawerOpen ? "translate-x-0" : "translate-x-full"}`}
+        className={`fixed right-0 top-0 z-50 ${pathname === "/" ? "h-[80vh]" : "h-[60vh]"
+          } bg-[#E5E5E4] p-4 transition-transform duration-300 ease-in-out lg:w-[26vw] ${isDrawerOpen ? "translate-x-0" : "translate-x-full"
+          }`}
         tabIndex="-1"
         aria-labelledby="drawer-right-label"
       >
@@ -67,10 +69,10 @@ export default function Slider() {
           type="button"
           onClick={toggleDrawer}
           aria-controls="drawer-right-example"
-          className="group absolute end-2.5 top-2.5 inline-flex h-8 w-8 items-center justify-center rounded-lg bg-transparent text-sm text-gray-400 hover:bg-gray-200 hover:text-gray-900"
+          className="group absolute end-2.5 top-2.5 inline-flex size-8 items-center justify-center rounded-lg bg-transparent text-sm text-gray-400 hover:bg-gray-200 hover:text-gray-900"
         >
           <svg
-            className="h-6 w-6 transition-transform duration-300 group-hover:rotate-180"
+            className="size-6 transition-transform duration-300 group-hover:rotate-180"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -92,16 +94,17 @@ export default function Slider() {
             {quickLinks.map((link, index) => (
               <li
                 key={index}
-                className={`group flex w-full border-b-4 border-[#E5E5E4] py-4 text-2xl font-medium transition-transform duration-300 ease-in-out hover:border-b-4 hover:border-[#F5841F] ${
-                  isDrawerOpen
-                    ? "translate-y-0 transform opacity-100"
-                    : "translate-y-20 transform opacity-0"
-                }`}
+                className={`group flex w-full border-b-4 border-[#E5E5E4] py-4 text-2xl font-medium transition-transform duration-300 ease-in-out hover:border-b-4 hover:text-[#F5841F] ${isDrawerOpen ? "translate-y-0 opacity-100" : "translate-y-20 opacity-0"
+                  }`}
                 style={{
                   transitionDelay: `${index * 50}ms`, // Stagger animation for each link
                 }}
               >
-                <Link href={link.url} onClick={handleLinkClick}>
+                <Link
+                  href={link.url}
+                  onClick={handleLinkClick}
+                  className={isActive(link.url) ? "text-[#F5841F]" : "text-black"}
+                >
                   {link.name}
                 </Link>
               </li>
