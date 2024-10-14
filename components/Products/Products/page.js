@@ -64,7 +64,7 @@ export default function Products() {
             <div key={index} className="group mt-4 overflow-hidden border">
               <Image
                 src={product.imageSrc}
-                width={200}
+                width={300}
                 height={200}
                 className="w-auto transition-all group-hover:scale-105"
               />
@@ -88,11 +88,15 @@ export default function Products() {
 
       <div className="mx-auto  gap-4 px-8 pb-20 lg:grid lg:w-10/12 lg:px-0">
         <Link
-          href="/"
-          className=" flex justify-center items-center border-b-2 border-white py-4 text-center text-xl font-medium hover:text-[#f5831fca]"
+          href="/contact-us"
+          className="flex items-center justify-center  border-white py-4 text-center text-xl font-medium hover:text-[#f5831fca] group"
         >
-          Get the Brochure <IoIosArrowForward />
+          Get the Brochure
+          <span className="ml-2 opacity-0 transform translate-x-0 transition-all duration-200 group-hover:translate-x-1 group-hover:opacity-100">
+            <IoIosArrowForward />
+          </span>
         </Link>
+
       </div>
     </div>
   );

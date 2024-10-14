@@ -1,3 +1,7 @@
+import { MdMailOutline } from "react-icons/md";
+import { MdOutlinePhoneInTalk } from "react-icons/md";
+
+
 export const homeSlider = [
   {
     image: "/Home/main-slider-image-01.png",
@@ -81,9 +85,21 @@ export const quickLinks = [
 ];
 
 export const contactInfo = [
-  "Info.seslong@.com",
-  "IND: +91-99002-88341",
-  "HK: +852-5590-9449",
+  {
+    contact: "Info.seslong@.com",
+    logo: <MdMailOutline className="text-[#E5E5E4]" />,
+    href: "mailto:Info.seslong@.com"
+  },
+  {
+    contact: "IND: +91-99002-88341",
+    logo: <MdOutlinePhoneInTalk className="text-[#E5E5E4]" />,
+    href: "tel:+919900288341"
+  },
+  {
+    contact: "HK: +852-5590-9449",
+    logo: <MdOutlinePhoneInTalk className="text-[#E5E5E4]" />,
+    href: "tel:+85255909449"
+  },
 ];
 
 export const copyRight = [
@@ -184,8 +200,8 @@ export const products = {
       name: "Diapers",
       description:
         "Superior quality and comfort with options in tape and pant style. Our diapers are made for both Babies and Adults.",
-      imageSrc: "/Products/Sanitary-pads.png",
-      popImageSrc: "/Products/popup/Sanitary-pads.png",
+      imageSrc: "/Products/DiapersBaby.png",
+      popImageSrc: "/Products/popup/DiapersBaby.png",
     },
     {
       name: "Sanitary pads",

@@ -3,6 +3,7 @@ import { Modal } from "flowbite-react";
 import { useState, useEffect } from "react";
 import { IoIosArrowForward } from "react-icons/io";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Page({ banner, title, description, pdfUrl }) {
   const [openModal, setOpenModal] = useState(false); // Modal open state
@@ -25,7 +26,9 @@ export default function Page({ banner, title, description, pdfUrl }) {
         onClick={() => setOpenModal(true)}
         className="flex items-center border-b-2 border-white py-1 pt-4 text-center font-medium hover:text-[#f5831fca]"
       >
-        More Details <IoIosArrowForward />
+        More Details <span className=" opacity-0 transform translate-x-0 transition-all duration-200 group-hover:translate-x-1 group-hover:opacity-100">
+          <IoIosArrowForward />
+        </span>
       </button>
 
       {/* Modal Component */}
@@ -92,6 +95,15 @@ export default function Page({ banner, title, description, pdfUrl }) {
               <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
                 {description || "Product description"}
               </p>
+              <Link
+                href="/contact-us"
+                className="flex items-center justify-center  border-white py-4 text-center text-xl font-medium hover:text-[#f5831fca] group"
+              >
+                Get the Brochure
+                <span className="ml-2 opacity-0 transform translate-x-0 transition-all duration-200 group-hover:translate-x-1 group-hover:opacity-100">
+                  <IoIosArrowForward />
+                </span>
+              </Link>
             </div>
           </div>
         </Modal.Body>

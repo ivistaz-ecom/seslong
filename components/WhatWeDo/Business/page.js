@@ -23,7 +23,7 @@ export default function Page() {
             </p>
             <Link
               href="/"
-              className="mb-4 flex items-center justify-center gap-2 border-b-2 border-white text-2xl hover:border-[#f5831fca] lg:mb-0"
+              className="mb-4 flex items-center justify-center gap-2 border-b-2 border-white text-2xl hover:text-[#f5831fca] lg:mb-0"
             >
               Read More <IoMdArrowForward />
             </Link>
