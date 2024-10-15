@@ -127,7 +127,7 @@ export default function Contact() {
               <input
                 type="text"
                 id="name"
-                className="peer block rounded-t-lg px-2.5 pb-1.5 pt-4 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-gray-500 focus:outline-none focus:ring-0 focus:border-gray-600"
+                className="peer block rounded-t-lg px-2.5 pb-1.5 pt-4 w-full text-sm text-gray-900  dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-gray-500 focus:outline-none focus:ring-0 focus:border-gray-600"
                 value={name}
                 placeholder=" "
                 onChange={(e) => setName(e.target.value)}
@@ -149,7 +149,7 @@ export default function Contact() {
                 <input
                   type="email"
                   id="email"
-                  className="peer block rounded-t-lg px-2.5 pb-1.5 pt-4 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-gray-500 focus:outline-none focus:ring-0 focus:border-gray-600"
+                  className="peer block rounded-t-lg px-2.5 pb-1.5 pt-4 w-full text-sm text-gray-900  dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-gray-500 focus:outline-none focus:ring-0 focus:border-gray-600"
                   value={email}
                   placeholder=" "
                   onChange={(e) => setEmail(e.target.value)}
@@ -172,7 +172,7 @@ export default function Contact() {
               <input
                 type="text"
                 id="organization"
-                className="peer block rounded-t-lg px-2.5 pb-1.5 pt-4 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-gray-500 focus:outline-none focus:ring-0 focus:border-gray-600"
+                className="peer block rounded-t-lg px-2.5 pb-1.5 pt-4 w-full text-sm text-gray-900  dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-gray-500 focus:outline-none focus:ring-0 focus:border-gray-600"
                 value={organization}
                 placeholder=" "
                 onChange={(e) => setOrganization(e.target.value)}
@@ -191,7 +191,7 @@ export default function Contact() {
             <div className="relative w-full mt-7 lg:mt-0">
               <select
                 id="product-category"
-                className="peer block rounded-t-lg px-2.5 pb-1.5 pt-4 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-gray-500 focus:outline-none focus:ring-0 focus:border-gray-600"
+                className="peer block rounded-t-lg px-2.5 pb-1.5 pt-4 w-full text-sm text-gray-900  dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-gray-500 focus:outline-none focus:ring-0 focus:border-gray-600"
                 value={productCategory}
                 placeholder=" "
                 onChange={(e) => setProductCategory(e.target.value)}
@@ -225,7 +225,7 @@ export default function Contact() {
               <input
                 type="tel"
                 id="phone-number"
-                className="peer block rounded-t-lg px-2.5 pb-1.5 pt-4 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-gray-500 focus:outline-none focus:ring-0 focus:border-gray-600"
+                className="peer block rounded-t-lg px-2.5 pb-1.5 pt-4 w-full text-sm text-gray-900  dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-gray-500 focus:outline-none focus:ring-0 focus:border-gray-600"
                 value={phone}
                 placeholder=" "
                 onChange={(e) => setPhone(e.target.value)}
@@ -247,7 +247,7 @@ export default function Contact() {
             <div className="relative w-full">
               <textarea
                 id="message"
-                className="peer block rounded-t-lg px-2.5 pb-1.5 pt-4 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-gray-500 focus:outline-none focus:ring-0 focus:border-gray-600"
+                className="peer block rounded-t-lg px-2.5 pb-1.5 pt-4 w-full text-sm text-gray-900  dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-gray-500 focus:outline-none focus:ring-0 focus:border-gray-600"
                 value={message}
                 placeholder=" "
                 onChange={(e) => setMessage(e.target.value)}

@@ -308,13 +308,6 @@ export const products = {
       popImageSrc: "/Products/popup/Exotic-Imported-Fruits-and-Vegetable.png",
     },
     {
-      name: "Acetate Tow",
-      description:
-        "Made from natural wood-pulp, after been acetified into cellulose acetate slice, dissolve, filter, spin, roll, and dry into the product. While there are multiple uses for acetate tow, we supply premium quality tow, which is the key raw material used in making cigarette filters. Aviailable with a wide range of single denier from 2.0 to 9.0 and total denier from 15,000 to 40,000.",
-      imageSrc: "/Products/Acetate-Tow.png",
-      popImageSrc: "/Products/popup/Acetate-Tow.png",
-    },
-    {
       name: "Pet Food",
       description:
         "Our pet food range covers both wet and dry options for dogs and cats, tailored to meet their nutritional needs.",
@@ -336,6 +329,13 @@ export const products = {
         "We supply different types of unmanufactured tobacco such as FCV, Burley, DFC and Oriental Tobaccos from different origins globally.",
       imageSrc: "/Products/Tobacco.png",
       popImageSrc: "/Products/popup/Tobacco.png",
+    },
+    {
+      name: "Acetate Tow",
+      description:
+        "Made from natural wood-pulp, after been acetified into cellulose acetate slice, dissolve, filter, spin, roll, and dry into the product. While there are multiple uses for acetate tow, we supply premium quality tow, which is the key raw material used in making cigarette filters. Aviailable with a wide range of single denier from 2.0 to 9.0 and total denier from 15,000 to 40,000.",
+      imageSrc: "/Products/Acetate-Tow.png",
+      popImageSrc: "/Products/popup/Acetate-Tow.png",
     },
   ],
 };

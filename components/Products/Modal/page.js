@@ -36,9 +36,9 @@ export default function Page({ banner, title, description, pdfUrl }) {
         show={openModal}
         onClose={() => setOpenModal(false)}
         dismissible={true} // Allows closing on outside clicks
-        className="transition-all duration-300 ease-in-out"
+        className="transition-all duration-300 ease-in-out py-28"
       >
-        <div className="relative flex items-center justify-between bg-transparent transition-all duration-300 ease-in-out lg:mt-0 mt-10">
+        <div className="relative flex items-center justify-between bg-transparent transition-all duration-300 ease-in-out">
           <button
             type="button"
             className=" absolute bottom-1 right-0 ms-auto inline-flex size-8 items-center justify-center rounded-lg bg-gray-200 text-2xl text-gray-600 hover:bg-gray-200 hover:text-[#f5831fca]"
