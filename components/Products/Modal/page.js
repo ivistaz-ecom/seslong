@@ -97,7 +97,7 @@ export default function Page({ banner, title, description, pdfUrl }) {
               </p>
               <Link
                 href="/contact-us"
-                className="group flex items-center  justify-center border-white py-4 text-center text-xl font-medium hover:text-[#f5831fca]"
+                className="group flex px-2 items-center border-white py-4 text-xl font-medium hover:text-[#f5831fca]"
               >
                 Get the Brochure
                 <span className="ml-2 translate-x-0 opacity-0 transition-all duration-200 group-hover:translate-x-1 group-hover:opacity-100">
