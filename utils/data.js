@@ -13,18 +13,21 @@ export const homeSlider = [
     image: "/Home/main-slider-image-02.png",
     alt: "Description 2",
     description: "Seslong Your Reliable Partner <br> for Quality Products",
+    text: "Seslong Your Reliable Partner <br> for Quality Products."
 
   },
   {
     image: "/Home/main-slider-image-03.png",
     alt: "Description 2",
     description: "Seslong Your Reliable Partner <br> for Quality Products",
+    text: "Seslong Your Reliable Partner <br> for Quality Products."
 
   },
   {
     image: "/Home/main-slider-image-04.png",
     alt: "Description 2",
     description: "Seslong Your Reliable Partner <br> for Quality Products",
+    text: "Seslong Your Reliable Partner <br> for Quality Products."
 
   },
 ];
