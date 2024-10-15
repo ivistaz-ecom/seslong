@@ -144,7 +144,7 @@ export default function Contact() {
             </div>
             {/* No error message for name */}
 
-            <div className="w-full gap-4 lg:flex">
+            <div className="w-full gap-4 lg:flex lg:mt-0 mt-7">
               <div className="relative w-full">
                 <input
                   type="email"
@@ -167,7 +167,7 @@ export default function Contact() {
             </div>
           </div>
 
-          <div className="flex w-full gap-4 py-6">
+          <div className="lg:flex w-full gap-4 lg:py-6">
             <div className="relative w-full">
               <input
                 type="text"
@@ -188,7 +188,7 @@ export default function Contact() {
               )}{" "}
               {/* Error message */}
             </div>
-            <div className="relative w-full">
+            <div className="relative w-full mt-7 lg:mt-0">
               <select
                 id="product-category"
                 className="peer block rounded-t-lg px-2.5 pb-1.5 pt-4 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-gray-500 focus:outline-none focus:ring-0 focus:border-gray-600"
@@ -220,7 +220,7 @@ export default function Contact() {
 
           </div>
 
-          <div className="flex w-full gap-4 py-6">
+          <div className="flex w-full gap-4 lg:py-6 mt-7 lg:mt-0">
             <div className="relative w-full">
               <input
                 type="tel"
