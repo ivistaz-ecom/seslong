@@ -203,11 +203,7 @@ export default function Contact() {
                   Select Product Category
                 </option>
                 {formCategoryList.map((item, index) => (
-                  <option
-                    value={item.name}
-                    key={index}
-                    selected={category === item.name ? "true" : "false"}
-                  >
+                  <option value={item.name} key={index}>
                     {item.name}
                   </option>
                 ))}
