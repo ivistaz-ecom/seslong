@@ -1,34 +1,30 @@
 import { MdMailOutline } from "react-icons/md";
 import { MdOutlinePhoneInTalk } from "react-icons/md";
 
-
 export const homeSlider = [
   {
     image: "/Home/main-slider-image-01.png",
     alt: "Description 1",
     description: "Seslong Your Reliable Partner for Quality Products",
-    text: "Seslong Your Reliable Partner <br> for Quality Products."
+    text: "Seslong Your Reliable Partner <br> for Quality Products.",
   },
   {
     image: "/Home/main-slider-image-02.png",
     alt: "Description 2",
     description: "Seslong Your Reliable Partner <br> for Quality Products",
-    text: "Seslong Your Reliable Partner <br> for Quality Products."
-
+    text: "Seslong Your Reliable Partner <br> for Quality Products.",
   },
   {
     image: "/Home/main-slider-image-03.png",
     alt: "Description 2",
     description: "Seslong Your Reliable Partner <br> for Quality Products",
-    text: "Seslong Your Reliable Partner <br> for Quality Products."
-
+    text: "Seslong Your Reliable Partner <br> for Quality Products.",
   },
   {
     image: "/Home/main-slider-image-04.png",
     alt: "Description 2",
     description: "Seslong Your Reliable Partner <br> for Quality Products",
-    text: "Seslong Your Reliable Partner <br> for Quality Products."
-
+    text: "Seslong Your Reliable Partner <br> for Quality Products.",
   },
 ];
 
@@ -102,17 +98,17 @@ export const contactInfo = [
   {
     contact: "Info.seslong@.com",
     logo: <MdMailOutline className="text-[#E5E5E4]" />,
-    href: "mailto:Info.seslong@.com"
+    href: "mailto:Info.seslong@.com",
   },
   {
     contact: "IND: +91-99002-88341",
     logo: <MdOutlinePhoneInTalk className="text-[#E5E5E4]" />,
-    href: "tel:+919900288341"
+    href: "tel:+919900288341",
   },
   {
     contact: "HK: +852-5590-9449",
     logo: <MdOutlinePhoneInTalk className="text-[#E5E5E4]" />,
-    href: "tel:+85255909449"
+    href: "tel:+85255909449",
   },
 ];
 
@@ -339,3 +335,12 @@ export const products = {
     },
   ],
 };
+
+export const formCategoryList = [
+  { name: "Personal Care" },
+  { name: "Hygiene" },
+  { name: "Laundry" },
+  { name: "Home Care" },
+  { name: "Food and Agro" },
+  { name: "Tobacco" },
+];

@@ -1,13 +1,15 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { IoMdArrowForward } from "react-icons/io";
-
+import { CategoryContext } from "../../../utils/CategoryContext";
+import { formCategoryList } from "../../../utils/data";
 
 export default function Contact() {
+  const { category } = useContext(CategoryContext);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [organization, setOrganization] = useState("");
-  const [productCategory, setProductCategory] = useState("");
+  const [productCategory, setProductCategory] = useState(category);
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
   const [errors, setErrors] = useState({}); // Track individual errors
@@ -105,8 +107,8 @@ export default function Contact() {
         </h2>
         <p className="text-center text-[20px] font-normal">
           Partner with Seslong for your product needs and discover how our
-          global presence, <br className="hidden sm:block" /> product knowledge, and commitment to quality
-          can help your business.
+          global presence, <br className="hidden sm:block" /> product knowledge,
+          and commitment to quality can help your business.
         </p>
         {/* <h2 className="py-8 text-center text-4xl font-medium">Contact Us</h2> */}
       </div>
@@ -127,7 +129,7 @@ export default function Contact() {
               <input
                 type="text"
                 id="name"
-                className="peer block rounded-t-lg px-2.5 pb-1.5 pt-4 w-full text-sm text-gray-900  dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-gray-500 focus:outline-none focus:ring-0 focus:border-gray-600"
+                className="peer block w-full appearance-none rounded-t-lg border-0 border-b-2 border-gray-300 px-2.5  pb-1.5 pt-4 text-sm text-gray-900 focus:border-gray-600 focus:outline-none focus:ring-0 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:focus:border-gray-500"
                 value={name}
                 placeholder=" "
                 onChange={(e) => setName(e.target.value)}
@@ -135,7 +137,7 @@ export default function Contact() {
               <label
                 htmlFor="name"
                 for="name"
-                className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-3 scale-75 top-3 z-10 origin-[0] start-2.5 peer-focus:text-gray-600 peer-focus:dark:text-gray-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-3 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
+                className="absolute start-2.5 top-3 z-10 origin-[0] -translate-y-3 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:-translate-y-3 peer-focus:scale-75 peer-focus:text-gray-600 dark:text-gray-400 peer-focus:dark:text-gray-500 rtl:peer-focus:left-auto rtl:peer-focus:translate-x-1/4"
               >
                 Name
               </label>
@@ -144,12 +146,12 @@ export default function Contact() {
             </div>
             {/* No error message for name */}
 
-            <div className="w-full gap-4 lg:flex lg:mt-0 mt-7">
+            <div className="mt-7 w-full gap-4 lg:mt-0 lg:flex">
               <div className="relative w-full">
                 <input
                   type="email"
                   id="email"
-                  className="peer block rounded-t-lg px-2.5 pb-1.5 pt-4 w-full text-sm text-gray-900  dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-gray-500 focus:outline-none focus:ring-0 focus:border-gray-600"
+                  className="peer block w-full appearance-none rounded-t-lg border-0 border-b-2 border-gray-300 px-2.5  pb-1.5 pt-4 text-sm text-gray-900 focus:border-gray-600 focus:outline-none focus:ring-0 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:focus:border-gray-500"
                   value={email}
                   placeholder=" "
                   onChange={(e) => setEmail(e.target.value)}
@@ -157,7 +159,7 @@ export default function Contact() {
                 <label
                   htmlFor="email"
                   for="email"
-                  className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-3 scale-75 top-3 z-10 origin-[0] start-2.5 peer-focus:text-gray-600 peer-focus:dark:text-gray-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-3 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
+                  className="absolute start-2.5 top-3 z-10 origin-[0] -translate-y-3 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:-translate-y-3 peer-focus:scale-75 peer-focus:text-gray-600 dark:text-gray-400 peer-focus:dark:text-gray-500 rtl:peer-focus:left-auto rtl:peer-focus:translate-x-1/4"
                 >
                   Email ID
                 </label>
@@ -167,19 +169,20 @@ export default function Contact() {
             </div>
           </div>
 
-          <div className="lg:flex w-full gap-4 lg:py-6">
+          <div className="w-full gap-4 lg:flex lg:py-6">
             <div className="relative w-full">
               <input
                 type="text"
                 id="organization"
-                className="peer block rounded-t-lg px-2.5 pb-1.5 pt-4 w-full text-sm text-gray-900  dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-gray-500 focus:outline-none focus:ring-0 focus:border-gray-600"
+                className="peer block w-full appearance-none rounded-t-lg border-0 border-b-2 border-gray-300 px-2.5  pb-1.5 pt-4 text-sm text-gray-900 focus:border-gray-600 focus:outline-none focus:ring-0 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:focus:border-gray-500"
                 value={organization}
                 placeholder=" "
                 onChange={(e) => setOrganization(e.target.value)}
               />
               <label
-                htmlFor="organization" for="organization"
-                className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-3 scale-75 top-3 z-10 origin-[0] start-2.5 peer-focus:text-gray-600 peer-focus:dark:text-gray-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-3 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
+                htmlFor="organization"
+                for="organization"
+                className="absolute start-2.5 top-3 z-10 origin-[0] -translate-y-3 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:-translate-y-3 peer-focus:scale-75 peer-focus:text-gray-600 dark:text-gray-400 peer-focus:dark:text-gray-500 rtl:peer-focus:left-auto rtl:peer-focus:translate-x-1/4"
               >
                 Organization
               </label>
@@ -188,10 +191,10 @@ export default function Contact() {
               )}{" "}
               {/* Error message */}
             </div>
-            <div className="relative w-full mt-7 lg:mt-0">
+            <div className="relative mt-7 w-full lg:mt-0">
               <select
                 id="product-category"
-                className="peer block rounded-t-lg px-2.5 pb-1.5 pt-4 w-full text-sm text-gray-900  dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-gray-500 focus:outline-none focus:ring-0 focus:border-gray-600"
+                className="peer block w-full appearance-none rounded-t-lg border-0 border-b-2 border-gray-300 px-2.5  pb-1.5 pt-4 text-sm text-gray-900 focus:border-gray-600 focus:outline-none focus:ring-0 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:focus:border-gray-500"
                 value={productCategory}
                 placeholder=" "
                 onChange={(e) => setProductCategory(e.target.value)}
@@ -199,17 +202,20 @@ export default function Contact() {
                 <option value="" disabled>
                   Select Product Category
                 </option>
-                <option value="Personal Care">Personal Care</option>
-                <option value="Hygiene">Hygiene</option>
-                <option value="Laundry">Laundry</option>
-                <option value="Home Care">Home Care</option>
-                <option value="Food and Agro">Food and Agro</option>
-                <option value="Tobacco">Tobacco</option>
+                {formCategoryList.map((item, index) => (
+                  <option
+                    value={item.name}
+                    key={index}
+                    selected={category === item.name ? "true" : "false"}
+                  >
+                    {item.name}
+                  </option>
+                ))}
               </select>
               <label
                 for="product-category"
                 htmlFor="product-category"
-                className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-3 scale-75 top-3 z-10 origin-[0] start-2.5 peer-focus:text-gray-600 peer-focus:dark:text-gray-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-3 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
+                className="absolute start-2.5 top-3 z-10 origin-[0] -translate-y-3 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:-translate-y-3 peer-focus:scale-75 peer-focus:text-gray-600 dark:text-gray-400 peer-focus:dark:text-gray-500 rtl:peer-focus:left-auto rtl:peer-focus:translate-x-1/4"
               >
                 Product Category
               </label>
@@ -217,15 +223,14 @@ export default function Contact() {
                 <p className="text-red-500">{errors.productCategory}</p>
               )}
             </div>
-
           </div>
 
-          <div className="flex w-full gap-4 lg:py-6 mt-7 lg:mt-0">
+          <div className="mt-7 flex w-full gap-4 lg:mt-0 lg:py-6">
             <div className="relative w-full">
               <input
                 type="tel"
                 id="phone-number"
-                className="peer block rounded-t-lg px-2.5 pb-1.5 pt-4 w-full text-sm text-gray-900  dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-gray-500 focus:outline-none focus:ring-0 focus:border-gray-600"
+                className="peer block w-full appearance-none rounded-t-lg border-0 border-b-2 border-gray-300 px-2.5  pb-1.5 pt-4 text-sm text-gray-900 focus:border-gray-600 focus:outline-none focus:ring-0 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:focus:border-gray-500"
                 value={phone}
                 placeholder=" "
                 onChange={(e) => setPhone(e.target.value)}
@@ -234,7 +239,7 @@ export default function Contact() {
               <label
                 htmlFor="phone-number"
                 for="phone-number"
-                className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-3 scale-75 top-3 z-10 origin-[0] start-2.5 peer-focus:text-gray-600 peer-focus:dark:text-gray-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-3 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
+                className="absolute start-2.5 top-3 z-10 origin-[0] -translate-y-3 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:-translate-y-3 peer-focus:scale-75 peer-focus:text-gray-600 dark:text-gray-400 peer-focus:dark:text-gray-500 rtl:peer-focus:left-auto rtl:peer-focus:translate-x-1/4"
               >
                 Phone Number
               </label>
@@ -247,7 +252,7 @@ export default function Contact() {
             <div className="relative w-full">
               <textarea
                 id="message"
-                className="peer block rounded-t-lg px-2.5 pb-1.5 pt-4 w-full text-sm text-gray-900  dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-gray-500 focus:outline-none focus:ring-0 focus:border-gray-600"
+                className="peer block w-full appearance-none rounded-t-lg border-0 border-b-2 border-gray-300 px-2.5  pb-1.5 pt-4 text-sm text-gray-900 focus:border-gray-600 focus:outline-none focus:ring-0 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:focus:border-gray-500"
                 value={message}
                 placeholder=" "
                 onChange={(e) => setMessage(e.target.value)}
@@ -255,7 +260,7 @@ export default function Contact() {
               <label
                 htmlFor="message"
                 for="message"
-                className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-3 scale-75 top-3 z-10 origin-[0] start-2.5 peer-focus:text-gray-600 peer-focus:dark:text-gray-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-3 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
+                className="absolute start-2.5 top-3 z-10 origin-[0] -translate-y-3 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:-translate-y-3 peer-focus:scale-75 peer-focus:text-gray-600 dark:text-gray-400 peer-focus:dark:text-gray-500 rtl:peer-focus:left-auto rtl:peer-focus:translate-x-1/4"
               >
                 Message
               </label>
