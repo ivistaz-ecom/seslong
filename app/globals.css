@@ -106,6 +106,6 @@ body {
   @apply font-gibson;
 }
 
-.fuck{
-  font: optional;t
+.fuck {
+  font: 10px !important;
 }
