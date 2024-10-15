@@ -1,10 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { homeSlider } from "../../../utils/data"; // Ensure this imports correctly
-import { FaArrowRight } from "react-icons/fa";
-import { FaArrowLeft } from "react-icons/fa";
-import { IoIosArrowRoundForward } from "react-icons/io";
-import { IoIosArrowRoundBack } from "react-icons/io";
+import { IoIosArrowRoundForward, IoIosArrowRoundBack } from "react-icons/io";
 
 export default function Banner() {
   const [activeIndex, setActiveIndex] = useState(0); // Track the active slide index
@@ -20,11 +17,9 @@ export default function Banner() {
   const prevBtn = (
     <button
       type="button"
-      className="group absolute start-0 top-60 xl:top-60 lg:top-48 z-30 flex h-full cursor-pointer items-center justify-center px-4 focus:outline-none"
+      className="group absolute start-0 top-48 xl:top-60 lg:top-48 z-30 flex h-full cursor-pointer items-center justify-center px-4 focus:outline-none"
       onClick={() =>
-        setActiveIndex(
-          (activeIndex - 1 + homeSlider.length) % homeSlider.length,
-        )
+        setActiveIndex((activeIndex - 1 + homeSlider.length) % homeSlider.length)
       }
     >
       <IoIosArrowRoundBack size="70" color="white" />
@@ -34,7 +29,7 @@ export default function Banner() {
   const nextBtn = (
     <button
       type="button"
-      className="group absolute end-0 top-60 xl:top-60 lg:top-48 z-30 flex h-full cursor-pointer items-center justify-center px-4 focus:outline-none"
+      className="group absolute end-0 top-48 xl:top-60 lg:top-48 z-30 flex h-full cursor-pointer items-center justify-center px-4 focus:outline-none"
       onClick={() => setActiveIndex((activeIndex + 1) % homeSlider.length)}
     >
       <IoIosArrowRoundForward size="70" color="white" />
@@ -48,13 +43,19 @@ export default function Banner() {
           {homeSlider.map((slide, index) => (
             <div
               key={index}
-              className={`absolute left-1/2 top-1/2 h-full w-full -translate-x-1/2 -translate-y-1/2 transition-opacity duration-700 ease-in-out ${index === activeIndex ? "opacity-100" : "opacity-0"}`}
+              className={`absolute left-1/2 top-1/2 h-full w-full -translate-x-1/2 -translate-y-1/2 transition-opacity duration-700 ease-in-out ${index === activeIndex ? "opacity-100" : "opacity-0"
+                }`}
             >
               <img
                 src={slide.image}
                 className="h-full w-full object-cover"
                 alt={slide.alt || "Slide image"}
               />
+              <div
+                className="absolute lg:bottom-32 bottom-28 bg-black p-2 lg:left-10 left-4 text-white lg:text-5xl text-2xl font-medium bg-opacity-50 lg:px-4 py-2"
+                dangerouslySetInnerHTML={{ __html: slide.text }}
+              ></div>
+
             </div>
           ))}
 
@@ -63,7 +64,8 @@ export default function Banner() {
               <button
                 key={index}
                 type="button"
-                className={`h-1 rounded-lg transition-all duration-300 ease-in-out ${index === activeIndex ? "w-40" : "w-20"} bg-white`}
+                className={`h-1 rounded-lg transition-all duration-300 ease-in-out ${index === activeIndex ? "w-40" : "w-20"
+                  } bg-white`}
                 aria-current={index === activeIndex ? "true" : "false"}
                 onClick={() => setActiveIndex(index)}
               ></button>

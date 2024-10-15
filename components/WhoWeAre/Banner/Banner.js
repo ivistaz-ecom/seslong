@@ -81,7 +81,7 @@ export default function Banner() {
             className={`absolute left-1/2 top-1/2 h-full w-full -translate-x-1/2 -translate-y-1/2 transition-opacity duration-700 ease-in-out `}
           >
             <img
-              src="who-we-are/banner.png"
+              src="who-we-are/banner.jpg"
               className="h-full w-full object-cover"
               alt="bnner image"
             />

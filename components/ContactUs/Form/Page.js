@@ -108,7 +108,7 @@ export default function Contact() {
           global presence, <br className="hidden sm:block" /> product knowledge, and commitment to quality
           can help your business.
         </p>
-        <h2 className="py-8 text-center text-4xl font-medium">Contact Us</h2>
+        {/* <h2 className="py-8 text-center text-4xl font-medium">Contact Us</h2> */}
       </div>
 
       <div>

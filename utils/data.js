@@ -7,21 +7,25 @@ export const homeSlider = [
     image: "/Home/main-slider-image-01.png",
     alt: "Description 1",
     description: "Seslong Your Reliable Partner for Quality Products",
+    text: "Seslong Your Reliable Partner <br> for Quality Products."
   },
   {
     image: "/Home/main-slider-image-02.png",
     alt: "Description 2",
-    description: "Seslong Your Reliable Partner for Quality Products",
+    description: "Seslong Your Reliable Partner <br> for Quality Products",
+
   },
   {
     image: "/Home/main-slider-image-03.png",
     alt: "Description 2",
-    description: "Seslong Your Reliable Partner for Quality Products",
+    description: "Seslong Your Reliable Partner <br> for Quality Products",
+
   },
   {
     image: "/Home/main-slider-image-04.png",
     alt: "Description 2",
-    description: "Seslong Your Reliable Partner for Quality Products",
+    description: "Seslong Your Reliable Partner <br> for Quality Products",
+
   },
 ];
 
@@ -35,7 +39,7 @@ export const ProductsItems = [
   },
   {
     items: "Hygiene",
-    productImage: "/Home/home-hygine.png",
+    productImage: "/Home/home-hygine.jpg",
     description:
       "Our hygiene products for babies and adults include diapers and menstrual hygiene products which are designed for maximum comfort and absorbency.",
     url: "/hygiene",
@@ -49,7 +53,7 @@ export const ProductsItems = [
   },
   {
     items: "Home Care",
-    productImage: "/Home/home-home-care.png",
+    productImage: "/Home/home-home-care.jpg",
     description:
       "We provide a wide array of home care products including wet wipes, air care products and high-quality household appliances like vacuum cleaners and air purifiers.",
     url: "",
@@ -59,6 +63,13 @@ export const ProductsItems = [
     productImage: "/Home/home-food-and-agro.png",
     description:
       "Our offerings include exotic and specialty food such as Asian sauces and seasoning, dried fruits and imported exotic fruits, sourced globally to ensure freshness and quality.",
+    url: "",
+  },
+  {
+    items: "Tobacco",
+    productImage: "/Home/Tobacco and Acetate Tow.jpg",
+    description:
+      "We supply different types of unmanufactured tobacco such as FCV, Burley, DFC and Oriental Tobaccos from different origins globally.",
     url: "",
   },
 ];
