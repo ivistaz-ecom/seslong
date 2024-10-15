@@ -26,7 +26,7 @@ export default function Page({ banner, title, description, pdfUrl }) {
         onClick={() => setOpenModal(true)}
         className="flex items-center border-b-2 border-white py-1 pt-4 text-center font-medium hover:text-[#f5831fca]"
       >
-        More Details <span className=" opacity-0 transform translate-x-0 transition-all duration-200 group-hover:translate-x-1 group-hover:opacity-100">
+        More Details <span className=" translate-x-0 opacity-0 transition-all duration-200 group-hover:translate-x-1 group-hover:opacity-100">
           <IoIosArrowForward />
         </span>
       </button>
@@ -38,14 +38,14 @@ export default function Page({ banner, title, description, pdfUrl }) {
         dismissible={true} // Allows closing on outside clicks
         className="transition-all duration-300 ease-in-out"
       >
-        <div className="relative flex items-center justify-between bg-transparent transition-all duration-300 ease-in-out">
+        <div className="relative flex items-center justify-between bg-transparent transition-all duration-300 ease-in-out lg:mt-0 mt-10">
           <button
             type="button"
-            className="absolute bottom-1 right-0 ms-auto inline-flex h-8 w-8 items-center justify-center rounded-lg bg-gray-200 text-2xl text-gray-600 hover:bg-gray-200 hover:text-[#f5831fca]"
+            className=" absolute bottom-1 right-0 ms-auto inline-flex size-8 items-center justify-center rounded-lg bg-gray-200 text-2xl text-gray-600 hover:bg-gray-200 hover:text-[#f5831fca]"
             onClick={() => setOpenModal(false)}
           >
             <svg
-              className="h-3 w-3"
+              className="size-3"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -84,7 +84,7 @@ export default function Page({ banner, title, description, pdfUrl }) {
                 width={400}
                 height={400}
                 alt={title}
-                className="h-[350px] w-full transition-all duration-300 ease-in-out"
+                className="lg:h-[350px] w-full transition-all duration-300 ease-in-out"
               />
             )}
 
@@ -97,10 +97,10 @@ export default function Page({ banner, title, description, pdfUrl }) {
               </p>
               <Link
                 href="/contact-us"
-                className="flex items-center justify-center  border-white py-4 text-center text-xl font-medium hover:text-[#f5831fca] group"
+                className="group flex items-center  justify-center border-white py-4 text-center text-xl font-medium hover:text-[#f5831fca]"
               >
                 Get the Brochure
-                <span className="ml-2 opacity-0 transform translate-x-0 transition-all duration-200 group-hover:translate-x-1 group-hover:opacity-100">
+                <span className="ml-2 translate-x-0 opacity-0 transition-all duration-200 group-hover:translate-x-1 group-hover:opacity-100">
                   <IoIosArrowForward />
                 </span>
               </Link>
