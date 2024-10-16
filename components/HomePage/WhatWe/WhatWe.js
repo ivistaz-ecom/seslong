@@ -14,7 +14,7 @@ export default function WhatWe() {
           the standards expected by our clients.
         </p>
         <Link
-          href="/"
+          href="/what-we-do"
           className="flex items-center justify-center text-2xl hover:text-[#F5841F] group"
         >
           Read More

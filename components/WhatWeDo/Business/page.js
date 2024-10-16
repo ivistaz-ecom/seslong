@@ -21,12 +21,12 @@ export default function Page() {
             <p className="py-6 text-center text-xl lg:w-10/12">
               {section.description}
             </p>
-            <Link
+            {/* <Link
               href="/"
               className="mb-4 flex items-center justify-center gap-2 border-b-2 border-white text-2xl hover:text-[#f5831fca] lg:mb-0"
             >
               Read More <IoMdArrowForward />
-            </Link>
+            </Link> */}
           </div>
           <div className={`${index % 2 === 0 ? "order-2" : ""}`}>
             <Image

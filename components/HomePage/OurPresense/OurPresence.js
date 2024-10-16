@@ -16,10 +16,10 @@ export default function OurPresence() {
         <h2 className="text-4xl font-medium">Our Presence</h2>
         <p className="py-8 text-center text-[20px] font-normal">
           Seslong supplies products to customers spread across major global
-          markets including
+          markets including{" "}
           <strong>
             North America, South America, Europe, the Middle East, and Asia.
-          </strong>
+          </strong>{" "}
           Our typical client includes retail chains seeking private label
           products, brands looking to expand their product portfolios, and
           importers who further distribute products to local retailers or
