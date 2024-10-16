@@ -16,7 +16,7 @@ export default function Banner() {
           </div>
 
           <div className="absolute bottom-0 mx-auto p-12">
-            <h2 className="text-4xl font-medium">Product Categories</h2>
+            <h2 className="text-4xl font-medium text-white">Product Categories</h2>
           </div>
         </div>
       </div>
