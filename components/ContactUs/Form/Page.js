@@ -267,7 +267,7 @@ export default function Contact() {
           <div className="py-4">
             <button
               type="submit"
-              className="font-regular flex w-6/12 items-center justify-center gap-2 border-2 border-gray-300 px-5 py-2.5 text-center text-xl text-gray-400 hover:bg-gray-800 hover:text-white"
+              className="font-regular flex lg:w-6/12 w-full items-center justify-center gap-2 border-2 border-gray-300 px-5 py-2.5 text-center text-xl text-gray-400 hover:bg-gray-800 hover:text-white"
             >
               Submit <IoMdArrowForward />
             </button>

@@ -158,42 +158,42 @@ export const products = {
     {
       name: "Razors",
       description:
-        "We offer a wide range of razors varying from razors for men and women, disposable razor systems, and custom packaging.",
+        "Our range of disposable and systems razors are suitable for Men and Women. Available in 2, 3, 4, 5 & 6 blades we have a product suitable for all needs. Ergonomic design, comfortable grip and high quality blades offer comfort and precision.",
       imageSrc: "/Products/Razors.png",
       popImageSrc: "/Products/popup/Razors.png",
     },
     {
       name: "Hair Brushes",
       description:
-        "We offer a wide variety of brushes ranging from Detangling Brushes to Wet and Dry Paddle Brush. Our range also include different types of handles and bristle materials. Customised logo and packaging as per client requirement.",
+        "Our hair brush range is expansive and can cater to all your hair care needs. Detangling brushes, wet brushes, paddle brushes, blow dry brushes and a range of fun kids hair brushes all available in attractive designs and packaging.",
       imageSrc: "/Products/Hair-Brushes.png",
       popImageSrc: "/Products/popup/Hair-Brushes.png",
     },
     {
       name: "Make up Brushes",
       description:
-        "We offer Creative Finish Products, First Love Products, Valentine’s Day Products, Multifunctional Products, Minimalism Products, Innovation Plastic Handle Products, Metaverse Design Products, Interchangeable Products, and Upcycled Products.",
+        "We have the perfect tools for your everyday make up regime. Top quality and attractive designs. Our bristles are available in both vegan (super soft nano fibre) and animal hair ranges.",
       imageSrc: "/Products/Make-up-Brushes.png",
       popImageSrc: "/Products/popup/Make-up-Brushes.png",
     },
     {
       name: "Cosmetics",
       description:
-        "We offer a range of colour cosmetics and cosmetic packaging for products related to face, eyes and lips. To complement the products we have make up brushes and pouches which help provide the end customer with an entire range in beauty and make up.",
+        "We have the perfect tools for your everyday make up regime. Top quality and attractive designs. Our bristles are available in both vegan (super soft nano fibre) and animal hair ranges.",
       imageSrc: "/Products/Cosmetics.png",
       popImageSrc: "/Products/popup/Cosmetics.png",
     },
     {
       name: "K-Beauty Range",
       description:
-        "Korean beauty products have achieved cult status in the global market. Known for their high quality products we offer our customers are wide range of care and beauty products for Skin, Hair and Body. These products include toners, serums, lotions/creams, cleansing, masks/patches, shampoos, and conditioners. We can both help curate a new range or we can offer existing brands to distribution.",
+        "Korean beauty products have achieved cult status in the global market. Known for their superior quality, we offer our customers are wide range of care and beauty products for Skin, Hair and Body. These products include toners, serums, lotions/creams, cleansing, masks/patches, shampoos and conditioners. We can help curate a new range or offer existing brands for distribution.",
       imageSrc: "/Products/K-Beauty-Range.png",
       popImageSrc: "/Products/popup/KbeautyRange.png",
     },
     {
       name: "Cotton Products",
       description:
-        "We offer a range of simple everyday cotton products which include cotton pads (face cleansing / make up removal), ear buds, and baby ear buds.",
+        "Simple everyday use products including cotton pads, balls and ear buds (including safety buds for babies). Our cotton pads are suitable for both face cleaning / make up removal. Safe and sterile products with customised pack count and packaging.",
       imageSrc: "/Products/Cotton-Products.png",
       popImageSrc: "/Products/popup/cotton.jpg",
     },
@@ -202,7 +202,7 @@ export const products = {
     {
       name: "Tampons",
       description:
-        "We offer Digital Tampon, Applicator Tampon — Compact and Cardboard and Organic series with 10% Organic Cotton and Eco-Conscious.",
+        "We offer tampons with and without applicator in different sizes to suit different needs. Available in Rayon and Organic cotton series providing extra comfort, longer dryness and freshness.",
       imageSrc: "/Products/Tampons.png",
       popImageSrc: "/Products/popup/Tampons.png",
     },
@@ -216,14 +216,14 @@ export const products = {
     {
       name: "Sanitary pads",
       description:
-        "Our ultra-thin range of sanitary pads is designed for maximum comfort and absorbency. Available in a variety of sizes. Please refer to the Hygiene products catalogue to understand the products. What we offer here is fully customised products in our customers brand.",
+        "Our Ultra thin range of sanitary pads are designed for maximum comfort and absorbency. Super soft material and leak guard technology ensures longer dryness without any irritation. Available in a different sizes. We can customise the pouch and pad wrapper to increase your brand visibility and recall.",
       imageSrc: "/Products/Sanitary-pads.png",
       popImageSrc: "/Products/popup/Sanitary-pads.png",
     },
     {
       name: "Bed Pads",
       description:
-        "Our super-soft and absorbent bed pads have multiple-uses – baby cribs, adult care, hospitals and even with pets.",
+        "Super soft and absorbent bed pads have multiple uses - baby cribs, adult care, hospitals and even for pets. Available in 2 fast selling sizes.",
       imageSrc: "/Products/Bed-Pads.png",
       popImageSrc: "/Products/popup/Bed-Pads.png",
     },
@@ -232,14 +232,14 @@ export const products = {
     {
       name: "Laundry Pods",
       description:
-        "Our product range includes Laundry Capsules, Scent Boosters, Floor Cleaner Pods, Dishwashing Tablets, and more. We also offer Laundry Pods with varying chamber numbers.",
+        "Highly concentrated formulation, easy to use and wide range of fragrances. Our pods are available in attractive designs and hypoallergenic fragrances which are suitable for delicate fabric such as inner wear and children’s wear. Pod size, number of chamber, fragrance, colour, packaging and count per pack can be customised to suit your requirements.",
       imageSrc: "/Products/Laundry-Pods.png",
       popImageSrc: "/Products/popup/Laundry-Pods.png",
     },
     {
       name: "Laundry Detergent Sheets",
       description:
-        "Our ultra-thin range of sanitary pads is designed for maximum comfort and absorbency. Available in a variety of sizes. What we offer here is fully customised products in our customers brand.",
+        "100% Biodegradable and eco friendly product for your daily laundry. Highly concentrated formula where the sheet disintegrates when it comes into contact with water. Natural plant based formulation for a mild yet effective wash. Available in different sizes and packaging options.",
       imageSrc: "/Products/Laundry-Detergent-Sheets.png",
       popImageSrc: "/Products/popup/Laundry-Detergent-Sheets.png",
     },
@@ -253,7 +253,7 @@ export const products = {
     {
       name: "Garment Care",
       description:
-        "Our comprehensive garment care line includes dryer sheets, color grabber sheets, fabric softeners, and scent boosters ensuring optimal care for your clothing.",
+        "Speciality laundry products including colour grabber, white protect, fabric softener sheets and scent booster all of which offer superior care and cleaning for all clothes.",
       imageSrc: "/Products/Garment-Care.png",
       popImageSrc: "/Products/popup/Garment-Care.png",
     },
@@ -262,28 +262,28 @@ export const products = {
     {
       name: "Wet Wipes",
       description:
-        "Our extensive range includes antibacterial, all-purpose, and specialty wipes for various household cleaning needs.",
+        "Gentle yet effective range of wet wipes including baby, antibacterial, all purpose and speciality wipes for home cleaning. Pouch and Tub packing available with different pull counts. We can customise sheet material (Bamboo fibre available), thickness, size, function and fragrance to suit your requirement.",
       imageSrc: "/Products/Wet-Wipes.png",
       popImageSrc: "/Products/popup/Wet-Wipes.png",
     },
     {
       name: "Air care",
       description:
-        "Daily use essential products such as Fridge Odor Absorbers, Moisture Absorbers, Gel Air Fresheners and natural Bamboo based absorbers.",
+        "Daily use essential products such as Fridge Odor Absorbers, Moisture Absorbers, Gel Air Fresheners and Natural Bamboo-Based Absorbers.",
       imageSrc: "/Products/Air-care.png",
       popImageSrc: "/Products/popup/Air-care.png",
     },
     {
       name: "Mops and Brushes",
       description:
-        "Daily use essential products such as Fridge Odor Absorbers, Moisture Absorbers, Gel Air Fresheners and natural Bamboo based absorbers.",
+        "We have an extensive range in home cleaning tools including mops, duster, brushes, scrubbers and cloths. Please do contact us with your requirement so we can offer you the right product and price.",
       imageSrc: "/Products/Mops-and-Brushes.png",
       popImageSrc: "/Products/popup/Mops-and-Brushes.png",
     },
     {
       name: "Household Appliances",
       description:
-        "Our product line includes vacuum cleaners and air purifiers designed for different spaces and uses, enhancing indoor air quality and cleanliness.",
+        "High quality home and kitchen appliances including vacuum cleaners, air purifiers, air fryers and more. Grade A quality products with region specific certification allowing for easy import and sale.",
       imageSrc: "/Products/Household-Appliances.png",
       popImageSrc: "/Products/popup/Household-Appliances.png",
     },
@@ -292,28 +292,28 @@ export const products = {
     {
       name: "Dried Fruits",
       description:
-        "Our dried fruit selection includes Afghan figs, Afghan raisins, California pistachios, almonds, and walnuts, all imported directly from the source, with various packaging options available.",
+        "We import and distribute in India an exotic range of fruits and vegetables including Haas avocados, Thai range (lotus stem, asparagus, chillies), Italian lemons, frozen berries, frozen edamame and others for supply to the HORECA and retail markets across India.",
       imageSrc: "/Products/Dried-Fruits.png",
       popImageSrc: "/Products/popup/Dried-Fruits.png",
     },
     {
       name: "Exotic Imported Fruits and Vegetable",
       description:
-        "Fruits and vegetable (*India market only): We import and distribute Haas Avocados, Thai range (lotus stem, asparagus, chillies), Italian Lemons, frozen berries, frozen edamame and others to the HORECA and retail markets across Southern India.",
+        "We import and distribute in India an exotic range of fruits and vegetables including Haas avocados, Thai range (lotus stem, asparagus, chillies), Italian lemons, frozen berries, frozen edamame and others for supply to the HORECA and retail markets across India.",
       imageSrc: "/Products/Exotic-Imported-Fruits-and-Vegetable.png",
       popImageSrc: "/Products/popup/Exotic-Imported-Fruits-and-Vegetable.png",
     },
     {
       name: "Pet Food",
       description:
-        "Our pet food range covers both wet and dry options for dogs and cats, tailored to meet their nutritional needs.",
+        "Our pet food range includes wet (canned), dry and treats that are specifically curated for dogs and cats. Available in a range of meat and vegetable flavours with customisation of packaging and size.",
       imageSrc: "/Products/Pet-Food.png",
       popImageSrc: "/Products/popup/Pet-Food.png",
     },
     {
       name: "Asian sauces and pastes",
       description:
-        "OEM supplies of an exotic range of asian cooking sauces, dipping sauces and pastes.",
+        "OEM supplies of an exotic range of asian cooking sauces, dipping sauces and pastes. The range includes oyster sauce, soy sauce (light, dark, low sodium, gluten free), chilli sauce, chilli oil, mirin and others.",
       imageSrc: "/Products/Asian-sauces-and-pastes.png",
       popImageSrc: "/Products/popup/Asian-sauces-and-pastes.png",
     },
@@ -322,7 +322,7 @@ export const products = {
     {
       name: "Tobacco",
       description:
-        "We supply different types of unmanufactured tobacco such as FCV, Burley, DFC and Oriental Tobaccos from different origins globally.",
+        "We supply different types of unmanufactured tobacco such as FCV, Burley, DFC and Oriental Tobaccos from different origins globally. Please contact us to enquiry about current availability and quantity.",
       imageSrc: "/Products/Tobacco.png",
       popImageSrc: "/Products/popup/Tobacco.png",
     },
