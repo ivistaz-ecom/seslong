@@ -31,7 +31,7 @@ export default function page() {
       <div className="flex flex-col items-center justify-center p-2 py-12">
         <h2 className="text-4xl font-medium">Seslong Global Limited</h2>
         <p className="py-4 text-center text-xl">
-          Established in 2016 and based in <strong>Hong Kong</strong>, servers
+          Established in 2016 and based in <strong>Hong Kong</strong>, serves
           as a critical bridge between
           <br /> our customers worldwide and our network of{" "}
           <strong>56 factories located in Mainland China</strong>.

@@ -1,30 +1,32 @@
 import { MdMailOutline } from "react-icons/md";
 import { MdOutlinePhoneInTalk } from "react-icons/md";
+import { IoLogoWhatsapp } from "react-icons/io5";
+
 
 export const homeSlider = [
   {
     image: "/Home/main-slider-image-01.png",
     alt: "Description 1",
     description: "Seslong Your Reliable Partner for Quality Products",
-    text: "Seslong Your Reliable Partner <br> for Quality Products.",
+    text: "Seslong Your Reliable Partner <br> for Quality Products",
   },
   {
     image: "/Home/main-slider-image-02.png",
     alt: "Description 2",
     description: "Seslong Your Reliable Partner <br> for Quality Products",
-    text: "Seslong Your Reliable Partner <br> for Quality Products.",
+    text: "Seslong Your Reliable Partner <br> for Quality Products",
   },
   {
     image: "/Home/main-slider-image-03.png",
     alt: "Description 2",
     description: "Seslong Your Reliable Partner <br> for Quality Products",
-    text: "Seslong Your Reliable Partner <br> for Quality Products.",
+    text: "Seslong Your Reliable Partner <br> for Quality Products",
   },
   {
     image: "/Home/main-slider-image-04.png",
     alt: "Description 2",
     description: "Seslong Your Reliable Partner <br> for Quality Products",
-    text: "Seslong Your Reliable Partner <br> for Quality Products.",
+    text: "Seslong Your Reliable Partner <br> for Quality Products",
   },
 ];
 
@@ -65,7 +67,7 @@ export const ProductsItems = [
     url: "",
   },
   {
-    items: "Tobacco",
+    items: "Tobacco and Acetate",
     productImage: "/Home/Tobacco and Acetate Tow.jpg",
     description:
       "We supply different types of unmanufactured tobacco such as FCV, Burley, DFC and Oriental Tobaccos from different origins globally.",
@@ -82,7 +84,7 @@ export const companyInfo = [
   {
     name: "Seslong Global Limited",
     address:
-      "26th Floor, Beautiful Group Tower, 77 Connaught Road, Central, Hong Kong.",
+      "26th Floor, Beautiful Group Tower, 77 Connaught Road, Central, Hong Kong",
   },
 ];
 
@@ -96,18 +98,29 @@ export const quickLinks = [
 
 export const contactInfo = [
   {
-    contact: "Info.seslong@.com",
+    contact: "contact@seslong.com",
     logo: <MdMailOutline className="text-[#E5E5E4]" />,
-    href: "mailto:Info.seslong@.com",
+    href: "mailto:contact@seslong.com",
   },
   {
     contact: "IND: +91-99002-88341",
-    logo: <MdOutlinePhoneInTalk className="text-[#E5E5E4]" />,
+    logo: (
+      <div className="flex items-center gap-1">
+        <MdOutlinePhoneInTalk className="text-[#E5E5E4]" />
+        <IoLogoWhatsapp className="text-[#E5E5E4]" />
+      </div>
+    ),
     href: "tel:+919900288341",
-  },
+},
+
   {
     contact: "HK: +852-5590-9449",
-    logo: <MdOutlinePhoneInTalk className="text-[#E5E5E4]" />,
+    logo: (
+      <div className="flex items-center gap-1">
+        <MdOutlinePhoneInTalk className="text-[#E5E5E4]" />
+        <IoLogoWhatsapp className="text-[#E5E5E4]" />
+      </div>
+    ),
     href: "tel:+85255909449",
   },
 ];
@@ -142,7 +155,7 @@ export const sections = [
   {
     title: "Exports",
     description:
-      "Leveraging strategic locations in India, Hong Kong, and China, we export a broad range of products globally, facilitating the reach of quality products across continents.",
+      "Leveraging our strategic locations in India, Hong Kong and China we export a broad range of quality products to our customers located across different continents.",
     imageSrc: "/what-we-do/Exports.png",
   },
   {
@@ -170,7 +183,7 @@ export const products = {
       popImageSrc: "/Products/popup/Hair-Brushes.png",
     },
     {
-      name: "Make up Brushes",
+      name: "Make Up Brushes",
       description:
         "We have the perfect tools for your everyday make up regime. Top quality and attractive designs. Our bristles are available in both vegan (super soft nano fibre) and animal hair ranges.",
       imageSrc: "/Products/Make-up-Brushes.png",
@@ -179,7 +192,7 @@ export const products = {
     {
       name: "Cosmetics",
       description:
-        "We have the perfect tools for your everyday make up regime. Top quality and attractive designs. Our bristles are available in both vegan (super soft nano fibre) and animal hair ranges.",
+        "We offer a range of trendy colour cosmetics and empty cosmetic containers. Our products cover your beauty needs for face, eyes and lips. To complement these products, we have a range of make up brushes and pouches which help provide the end customer an entire range of products in beauty and make up.",
       imageSrc: "/Products/Cosmetics.png",
       popImageSrc: "/Products/popup/Cosmetics.png",
     },
@@ -214,7 +227,7 @@ export const products = {
       popImageSrc: "/Products/popup/DiapersBaby.png",
     },
     {
-      name: "Sanitary pads",
+      name: "Sanitary Pads",
       description:
         "Our Ultra thin range of sanitary pads are designed for maximum comfort and absorbency. Super soft material and leak guard technology ensures longer dryness without any irritation. Available in a different sizes. We can customise the pouch and pad wrapper to increase your brand visibility and recall.",
       imageSrc: "/Products/Sanitary-pads.png",
@@ -267,7 +280,7 @@ export const products = {
       popImageSrc: "/Products/popup/Wet-Wipes.png",
     },
     {
-      name: "Air care",
+      name: "Air Care",
       description:
         "Daily use essential products such as Fridge Odor Absorbers, Moisture Absorbers, Gel Air Fresheners and Natural Bamboo-Based Absorbers.",
       imageSrc: "/Products/Air-care.png",
@@ -292,33 +305,33 @@ export const products = {
     {
       name: "Dried Fruits",
       description:
-        "We import and distribute in India an exotic range of fruits and vegetables including Haas avocados, Thai range (lotus stem, asparagus, chillies), Italian lemons, frozen berries, frozen edamame and others for supply to the HORECA and retail markets across India.",
+        "Our dried fruit selection includes Afghan figs, Afghan raisins, California pistachios, almonds, and walnuts, all imported directly from the source, with various packaging options available.",
       imageSrc: "/Products/Dried-Fruits.png",
       popImageSrc: "/Products/popup/Dried-Fruits.png",
     },
     {
-      name: "Exotic Imported Fruits and Vegetable",
+      name: "Fruits and Vegetables",
       description:
         "We import and distribute in India an exotic range of fruits and vegetables including Haas avocados, Thai range (lotus stem, asparagus, chillies), Italian lemons, frozen berries, frozen edamame and others for supply to the HORECA and retail markets across India.",
       imageSrc: "/Products/Exotic-Imported-Fruits-and-Vegetable.png",
       popImageSrc: "/Products/popup/Exotic-Imported-Fruits-and-Vegetable.png",
     },
     {
-      name: "Pet Food",
+      name: "Pet Foos",
       description:
         "Our pet food range includes wet (canned), dry and treats that are specifically curated for dogs and cats. Available in a range of meat and vegetable flavours with customisation of packaging and size.",
       imageSrc: "/Products/Pet-Food.png",
       popImageSrc: "/Products/popup/Pet-Food.png",
     },
     {
-      name: "Asian sauces and pastes",
+      name: "Asian Sauces and Pastes",
       description:
         "OEM supplies of an exotic range of asian cooking sauces, dipping sauces and pastes. The range includes oyster sauce, soy sauce (light, dark, low sodium, gluten free), chilli sauce, chilli oil, mirin and others.",
       imageSrc: "/Products/Asian-sauces-and-pastes.png",
       popImageSrc: "/Products/popup/Asian-sauces-and-pastes.png",
     },
   ],
-  Tobacco: [
+  "Tobacco and Acetate": [
     {
       name: "Tobacco",
       description:
@@ -342,5 +355,5 @@ export const formCategoryList = [
   { name: "Laundry" },
   { name: "Home Care" },
   { name: "Food and Agro" },
-  { name: "Tobacco" },
+  { name: "Tobacco and Acetate" },
 ];
