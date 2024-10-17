@@ -188,14 +188,14 @@ export const products = {
       description:
         "Korean beauty products have achieved cult status in the global market. Known for their high quality products we offer our customers are wide range of care and beauty products for Skin, Hair and Body. These products include toners, serums, lotions/creams, cleansing, masks/patches, shampoos, and conditioners. We can both help curate a new range or we can offer existing brands to distribution.",
       imageSrc: "/Products/K-Beauty-Range.png",
-      popImageSrc: "/Products/popup/KBeautyRange.png",
+      popImageSrc: "/Products/popup/KbeautyRange.png",
     },
     {
       name: "Cotton Products",
       description:
         "We offer a range of simple everyday cotton products which include cotton pads (face cleansing / make up removal), ear buds, and baby ear buds.",
       imageSrc: "/Products/Cotton-Products.png",
-      popImageSrc: "/Products/popup/Cotton.jpg",
+      popImageSrc: "/Products/popup/cotton.jpg",
     },
   ],
   Hygiene: [
