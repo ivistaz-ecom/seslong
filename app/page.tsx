@@ -4,6 +4,7 @@ import OurPresence from "../components/HomePage/OurPresense/OurPresence";
 import Product from "../components/HomePage/ProductRage/Product";
 // import Contact from "../components/HomePage/Contact/Contact";
 import Contact from "@/components/ContactUs/Form/Page";
+import FloatingButton from "../components/FloatingButton/floatingbutton.js"
 export default function Home() {
   return (
     <>
@@ -12,6 +13,7 @@ export default function Home() {
       <OurPresence />
       <Product />
       <Contact />
+      <FloatingButton />
     </>
   );
 }
