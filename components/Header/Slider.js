@@ -60,7 +60,7 @@ export default function Slider() {
         ref={drawerRef}
         id="drawer-right-example"
         className={`fixed right-0 top-0 z-50 ${pathname === "/" ? "h-[80vh]" : "h-[60vh]"
-          } bg-[#E5E5E4] p-4 transition-transform duration-300 ease-in-out lg:w-[16vw] ${isDrawerOpen ? "translate-x-0" : "translate-x-full"
+          } bg-[#E5E5E4] p-4 transition-transform duration-300 ease-in-out lg:w-[16vw] w-[60vw] ${isDrawerOpen ? "translate-x-0" : "translate-x-full"
           }`}
         tabIndex="-1"
         aria-labelledby="drawer-right-label"
@@ -72,7 +72,7 @@ export default function Slider() {
           className="group absolute end-2.5 top-2.5 inline-flex size-8 items-center justify-center rounded-lg bg-transparent text-sm text-gray-400 hover:bg-gray-200 hover:text-gray-900"
         >
           <svg
-            className="size-6 transition-transform duration-300 group-hover:rotate-180"
+            className="lg:size-6 size-16 transition-transform duration-300 group-hover:rotate-180"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
