@@ -100,7 +100,7 @@ export default function Contact() {
   }
 
   return (
-    <div id="contact-form" className="container mx-auto w-10/12 py-10">
+    <div id="contact-form" className="container mx-auto w-10/12 py-10 lg:-mt-0 -mt-40">
       <div className="mx-auto flex w-full flex-col">
         <h2 className="py-4 text-center text-4xl font-medium">
           Connect With Us

@@ -39,7 +39,7 @@ export default function Products() {
   };
 
   return (
-    <div className="z-20">
+    <div className="z-20 lg:-mt-0 -mt-28">
       <div className="p-12">
         <h2 className="text-center text-4xl font-medium">Our Products</h2>
       </div>
