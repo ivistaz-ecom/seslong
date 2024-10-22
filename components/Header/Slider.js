@@ -46,7 +46,7 @@ export default function Slider() {
         <button
           className="group flex items-center justify-center gap-1 border-b-2 text-2xl font-normal text-black hover:text-[#f5831fca]"
           type="button"
-          onClick={toggleDrawer}
+          onMouseOver={toggleDrawer}
         >
           Menu
           <IoMdArrowForward
@@ -60,7 +60,7 @@ export default function Slider() {
         ref={drawerRef}
         id="drawer-right-example"
         className={`fixed right-0 top-0 z-50 ${pathname === "/" ? "h-[80vh]" : "h-[60vh]"
-          } bg-[#E5E5E4] p-4 transition-transform duration-300 ease-in-out lg:w-[26vw] ${isDrawerOpen ? "translate-x-0" : "translate-x-full"
+          } bg-[#E5E5E4] p-4 transition-transform duration-300 ease-in-out lg:w-[16vw] ${isDrawerOpen ? "translate-x-0" : "translate-x-full"
           }`}
         tabIndex="-1"
         aria-labelledby="drawer-right-label"

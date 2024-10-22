@@ -90,7 +90,7 @@ export default function Products() {
             ))}
       </div>
 
-      <div className="mx-auto  gap-4 px-8 pb-20 lg:grid lg:w-10/12 lg:px-0">
+      {/* <div className="mx-auto  gap-4 px-8 pb-20 lg:grid lg:w-10/12 lg:px-0">
         <Link
           href="/contact-us"
           className="group flex items-center  justify-center border-white py-4 text-center text-xl font-medium hover:text-[#f5831fca]"
@@ -100,7 +100,7 @@ export default function Products() {
             <IoIosArrowForward />
           </span>
         </Link>
-      </div>
+      </div> */}
     </div>
   );
 }

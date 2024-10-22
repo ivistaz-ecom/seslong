@@ -9,15 +9,17 @@ export default function Banner() {
             className={`absolute left-1/2 top-1/2 h-full w-full -translate-x-1/2 -translate-y-1/2 transition-opacity duration-700 ease-in-out `}
           >
             <img
-              src="Products/products-banner.jpg"
-              className="h-full w-full object-cover"
+              src="Products/banner.jpg"
+              className="size-full object-cover"
               alt="Slide image"
             />
           </div>
 
-          <div className="absolute bottom-0 mx-auto p-12">
-            <h2 className="text-4xl font-medium text-white">Product Categories</h2>
-          </div>
+          {/* <div className="absolute bottom-0 mx-auto p-12">
+            <h2 className="text-4xl font-medium text-white">
+              Product Categories
+            </h2>
+          </div> */}
         </div>
       </div>
     </div>

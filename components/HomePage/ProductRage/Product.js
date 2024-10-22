@@ -6,6 +6,7 @@ import { IoMdArrowForward } from "react-icons/io";
 
 export default function Product() {
   return (
+    <>
     <div className=" w-full py-8">
       <h2 className="py-8 text-center text-4xl font-medium">Product Range</h2>
       <div className="container mx-auto w-10/12 grid-cols-3 gap-6 lg:grid">
@@ -34,7 +35,7 @@ export default function Product() {
                   }}
                   className="flex items-center justify-center gap-1 py-10 text-lg font-medium "
                 >
-                  Show More <IoMdArrowForward />
+                  Show More<IoMdArrowForward />
                 </Link>
               </div>
             </div>
@@ -42,5 +43,6 @@ export default function Product() {
         ))}
       </div>
     </div>
+    </>
   );
 }
