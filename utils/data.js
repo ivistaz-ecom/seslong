@@ -11,24 +11,36 @@ export const homeSlider = [
     text: "Seslong Your Reliable Partner <br> for Quality Products",
   },
   {
-    image: "/Home/main-slider-image-02.png",
+    image: "/Home/main-slider-image-02.jpg",
     alt: "Description 2",
     description: "Seslong Your Reliable Partner <br> for Quality Products",
     text: "Seslong Your Reliable Partner <br> for Quality Products",
   },
   {
     image: "/Home/main-slider-image-03.png",
-    alt: "Description 2",
+    alt: "Description 3",
     description: "Seslong Your Reliable Partner <br> for Quality Products",
     text: "Seslong Your Reliable Partner <br> for Quality Products",
   },
   {
     image: "/Home/main-slider-image-04.png",
-    alt: "Description 2",
+    alt: "Description 4",
     description: "Seslong Your Reliable Partner <br> for Quality Products",
     text: "Seslong Your Reliable Partner <br> for Quality Products",
   },
-];
+  {
+    image: "/Home/main-slider-image-05.jpg",
+    alt: "Description 5",
+    description: "Seslong Your Reliable Partner <br> for Quality Products",
+    text: "Seslong Your Reliable Partner <br> for Quality Products",
+  },
+
+  {
+    image: "/Home/main-slider-image-06.jpg",
+    alt: "Description 6",
+    description: "Seslong Your Reliable Partner <br> for Quality Products",
+    text: "Seslong Your Reliable Partner <br> for Quality Products",
+  },];
 
 export const ProductsItems = [
   {
@@ -156,13 +168,13 @@ export const sections = [
     title: "Exports",
     description:
       "Leveraging our strategic locations in India, Hong Kong and China we export a broad range of quality products to our customers located across different continents.",
-    imageSrc: "/what-we-do/Exports.png",
+    imageSrc: "/what-we-do/Exports.jpg",
   },
   {
     title: "Distribution",
     description:
       "Our distribution network (across India) is optimized to deliver products efficiently and effectively to various customer segments including large hotel chains, individual restaurants and retailers.",
-    imageSrc: "/what-we-do/Distribution.png",
+    imageSrc: "/what-we-do/Distribution.jpg",
   },
 ];
 
