@@ -100,10 +100,10 @@ export default function Contact() {
   }
 
   return (
-    <div id="contact-form" className="container mx-auto w-10/12 py-10">
+    <div id="form" className="container mx-auto w-10/12 py-10">
       <div className="mx-auto flex w-full flex-col">
         <h2 className="py-4 text-center text-4xl font-medium">
-          Connect With Us
+          Get The Brochure
         </h2>
         <p className="text-center text-[20px] font-normal">
           Partner with Seslong for your product needs and discover how our
@@ -191,7 +191,7 @@ export default function Contact() {
               )}{" "}
               {/* Error message */}
             </div>
-            {/* <div className="relative mt-7 w-full lg:mt-0">
+            <div className="relative mt-7 w-full lg:mt-0">
               <select
                 id="product-category"
                 className="peer block w-full appearance-none rounded-t-lg border-0 border-b-2 border-gray-300 px-2.5  pb-1.5 pt-4 text-sm text-gray-900 focus:border-gray-600 focus:outline-none focus:ring-0 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:focus:border-gray-500"
@@ -218,7 +218,7 @@ export default function Contact() {
               {errors.productCategory && (
                 <p className="text-red-500">{errors.productCategory}</p>
               )}
-            </div> */}
+            </div>
           </div>
 
           <div className="mt-7 flex w-full gap-4 lg:mt-0 lg:py-6">

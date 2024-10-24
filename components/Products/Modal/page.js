@@ -96,7 +96,7 @@ export default function Page({ banner, title, description, pdfUrl }) {
                 {description || "Product description"}
               </p>
               <Link
-                href="/contact-us"
+                href="/get-the-brochure"
                 className="group flex px-2 items-center border-white py-4 text-xl font-medium hover:text-[#f5831fca]"
               >
                 Get the Brochure

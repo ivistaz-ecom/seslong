@@ -4,6 +4,8 @@ import { IoMdArrowForward } from "react-icons/io";
 import { quickLinks } from "../../utils/data";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { RiMenuUnfold3Fill } from "react-icons/ri";
+
 
 export default function Slider() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -44,15 +46,15 @@ export default function Slider() {
     <>
       <div className="z-20 flex text-center">
         <button
-          className="group flex items-center justify-center gap-1 border-b-2 text-2xl font-normal text-black hover:text-[#f5831fca]"
+          className="lg:pe-10 group flex items-center justify-center gap-1 border-b-2 text-2xl font-normal text-[#9EA1A4] hover:text-[#f5831fca]"
           type="button"
           onMouseOver={toggleDrawer}
         >
-          Menu
-          <IoMdArrowForward
+          <RiMenuUnfold3Fill className="transition-transform duration-300 group-hover:rotate-180 cursor-pointer" size={40} />
+          {/* <IoMdArrowForward
             className="transition-transform duration-300 group-hover:rotate-45"
             size={30}
-          />
+          /> */}
         </button>
       </div>
 
