@@ -2,14 +2,14 @@
 import React, { useState, useContext } from "react";
 import { IoMdArrowForward } from "react-icons/io";
 import { CategoryContext } from "../../../utils/CategoryContext";
-import { formCategoryList } from "../../../utils/data";
+// import { formCategoryList } from "../../../utils/data";
 
 export default function Contact() {
   const { category } = useContext(CategoryContext);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [organization, setOrganization] = useState("");
-  const [productCategory, setProductCategory] = useState(category);
+  // const [productCategory, setProductCategory] = useState(category);
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
   const [errors, setErrors] = useState({}); // Track individual errors
@@ -41,9 +41,9 @@ export default function Contact() {
     }
 
     // Validate product category
-    if (!productCategory.trim()) {
-      newErrors.productCategory = "Product category is required.";
-    }
+    // if (!productCategory.trim()) {
+    //   newErrors.productCategory = "Product category is required.";
+    // }
 
     // Add any other validation rules here
 
@@ -70,7 +70,7 @@ export default function Contact() {
         name,
         email,
         organization,
-        productCategory,
+        // productCategory,
         phone,
         message,
       }),
@@ -93,7 +93,7 @@ export default function Contact() {
     setName("");
     setEmail("");
     setOrganization("");
-    setProductCategory("");
+    // setProductCategory("");
     setPhone("");
     setMessage("");
     setErrors({});
