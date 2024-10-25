@@ -50,16 +50,33 @@ export default function Footer() {
               ))}
             </ul>
           </div>
-          <div className="mx-auto ">
+          <div className="mx-auto">
             <h4 className="mt-5 text-2xl font-medium lg:mt-0">Connect</h4>
             <ul>
               {contactInfo.map((contact, index) => (
-                <li
-                  key={index}
-                  className=" text-xl hover:text-[#f5831fca]"
-                >
-                  <a href={contact.href} className="flex gap-2 py-1">
-                    <span className="mt-1">{contact.logo}</span> {contact.contact}
+                <li key={index} className="text-xl hover:text-[#f5831fca]">
+                  <a
+                    href={contact.href}
+                    className="flex items-center gap-2 py-1"
+                  >
+                    <span className="mt-1">{contact.logo}</span>
+                    <div className="flex w-full justify-between">
+                      {/* Handle both string and JSX cases */}
+                      {typeof contact.contact === "string" &&
+                        contact.contact.includes(":") ? (
+                        <>
+                          <span className="flex-shrink-0">
+                            {contact.contact.split(":")[0]} :
+                          </span>
+                          <span className="ml-2 flex-grow">
+                            {contact.contact.split(":")[1].trim()}
+                          </span>
+                        </>
+                      ) : (
+                        // Render the contact directly if it's not a string
+                        <span>{contact.contact}</span>
+                      )}
+                    </div>
                   </a>
                 </li>
               ))}

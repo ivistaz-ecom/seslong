@@ -2,10 +2,11 @@
 import React, { useState, useContext } from "react";
 import { IoMdArrowForward } from "react-icons/io";
 import { CategoryContext } from "../../../utils/CategoryContext";
-import { useRouter } from "next/navigation"; // Import useRouter
+import { useRouter } from "next/navigation";
+import emailjs from "emailjs-com";
 
 export default function Contact() {
-  const router = useRouter(); // Initialize useRouter
+  const router = useRouter();
   const { category } = useContext(CategoryContext);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -49,33 +50,34 @@ export default function Contact() {
     const isValid = validateForm();
     if (!isValid) return;
 
-    fetch("https://formcarry.com/s/VQmxImepSma", {
-      method: "POST",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        name,
-        email,
-        organization,
-        phone,
-        message,
-      }),
-    })
-      .then((response) => response.json())
-      .then((response) => {
-        if (response.code === 200) {
+    const templateParams = {
+      name,
+      to_email: email,
+      subject: "We've Received Your Message!",
+      organization,
+      phone,
+      message,
+    };
+
+    emailjs
+      .send(
+        "default_service", // Replace with your EmailJS service ID
+        "template_81ng8dr", // Replace with your EmailJS template ID
+        templateParams,
+        "hsxWBIOu96PDlE41t" // Replace with your EmailJS user ID (API Key)
+      )
+      .then(
+        () => {
+          console.log("Form sent successfully!");
           setSubmitted(true);
           resetForm();
           router.push("/thank-you-by-seslong"); // Redirect to Thank You page
-        } else {
-          setErrors({ form: response.message });
+        },
+        (error) => {
+          console.error("Failed to send email:", error.text);
+          setErrors({ form: "Failed to send email. Please try again." });
         }
-      })
-      .catch((error) => {
-        setErrors({ form: error.message || "An unexpected error occurred." });
-      });
+      );
   }
 
   function resetForm() {
@@ -88,14 +90,9 @@ export default function Contact() {
   }
 
   return (
-    <div
-      id="contact-form"
-      className="container mx-auto mt-52 w-10/12 py-10 lg:mt-0"
-    >
+    <div id="contact-form" className="container mx-auto mt-52 w-10/12 py-10 lg:mt-0">
       <div className="mx-auto flex w-full flex-col">
-        <h2 className="py-4 text-center text-4xl font-medium">
-          Connect With Us
-        </h2>
+        <h2 className="py-4 text-center text-4xl font-medium">Connect With Us</h2>
         <p className="text-center text-[20px] font-normal">
           Partner with Seslong for your product needs and discover how our
           global presence, <br className="hidden sm:block" /> product knowledge,
@@ -103,107 +100,104 @@ export default function Contact() {
         </p>
       </div>
 
-      <div>
-        <form className="mx-auto py-8" onSubmit={onSubmit}>
-          {errors.form && (
-            <div className="py-2 text-center text-red-500">{errors.form}</div>
-          )}
-          {submitted && (
-            <div className="py-2 text-center text-green-500">
-              your From is Submitting...
-            </div>
-          )}
-
-          <div className="w-full gap-4 py-6 lg:flex">
-            <div className="relative w-full">
-              <input
-                type="text"
-                id="name"
-                className="peer block w-full appearance-none rounded-t-lg border-0 border-b-2 border-gray-300 px-2.5  pb-1.5 pt-4 text-sm text-gray-900 focus:border-gray-600 focus:outline-none focus:ring-0 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:focus:border-gray-500"
-                value={name}
-                placeholder=" "
-                onChange={(e) => setName(e.target.value)}
-              />
-              <label
-                htmlFor="name"
-                for="name"
-                className="absolute start-2.5 top-3 z-10 origin-[0] -translate-y-3 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:-translate-y-3 peer-focus:scale-75 peer-focus:text-gray-600 dark:text-gray-400 peer-focus:dark:text-gray-500 rtl:peer-focus:left-auto rtl:peer-focus:translate-x-1/4"
-              >
-                Name <span className="text-red-500">*</span>
-              </label>
-
-              {errors.name && <p className="text-red-500">{errors.name}</p>}
-            </div>
-            {/* No error message for name */}
-
-            <div className="mt-7 w-full gap-4 lg:mt-0 lg:flex">
-              <div className="relative w-full">
-                <input
-                  type="email"
-                  id="email"
-                  className="peer block w-full appearance-none rounded-t-lg border-0 border-b-2 border-gray-300 px-2.5  pb-1.5 pt-4 text-sm text-gray-900 focus:border-gray-600 focus:outline-none focus:ring-0 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:focus:border-gray-500"
-                  value={email}
-                  placeholder=" "
-                  onChange={(e) => setEmail(e.target.value)}
-                />
-                <label
-                  htmlFor="email"
-                  for="email"
-                  className="absolute start-2.5 top-3 z-10 origin-[0] -translate-y-3 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:-translate-y-3 peer-focus:scale-75 peer-focus:text-gray-600 dark:text-gray-400 peer-focus:dark:text-gray-500 rtl:peer-focus:left-auto rtl:peer-focus:translate-x-1/4"
-                >
-                  Email ID <span className="text-red-500">*</span>
-                </label>
-                {errors.email && <p className="text-red-500">{errors.email}</p>}{" "}
-                {/* Error message */}
-              </div>
-            </div>
+      <form className="mx-auto py-8" onSubmit={onSubmit}>
+        {errors.form && (
+          <div className="py-2 text-center text-red-500">{errors.form}</div>
+        )}
+        {submitted && (
+          <div className="py-2 text-center text-green-500">
+            Your form has been submitted!
           </div>
+        )}
 
-          <div className="w-full gap-4 lg:flex lg:py-6">
+        <div className="w-full gap-4 py-6 lg:flex">
+          <div className="relative w-full">
+            <input
+              type="text"
+              id="name"
+              className="peer block w-full appearance-none rounded-t-lg border-0 border-b-2 border-gray-300 px-2.5  pb-1.5 pt-4 text-sm text-gray-900 focus:border-gray-600 focus:outline-none focus:ring-0 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:focus:border-gray-500"
+              value={name}
+              placeholder=" "
+              onChange={(e) => setName(e.target.value)}
+            />
+            <label htmlFor="name" className="absolute start-2.5 top-3 z-10 origin-[0] -translate-y-3 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:-translate-y-3 peer-focus:scale-75 peer-focus:text-gray-600 dark:text-gray-400 peer-focus:dark:text-gray-500">
+              Name <span className="text-red-500">*</span>
+            </label>
+            {errors.name && <p className="text-red-500">{errors.name}</p>}
+          </div>
+          {/* Repeat similar input structure for Email, Organization, Phone, and Message */}
+
+
+          {/* No error message for name */}
+
+          <div className="mt-7 w-full gap-4 lg:mt-0 lg:flex">
             <div className="relative w-full">
               <input
-                type="text"
-                id="organization"
+                type="email"
+                id="email"
                 className="peer block w-full appearance-none rounded-t-lg border-0 border-b-2 border-gray-300 px-2.5  pb-1.5 pt-4 text-sm text-gray-900 focus:border-gray-600 focus:outline-none focus:ring-0 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:focus:border-gray-500"
-                value={organization}
+                value={email}
                 placeholder=" "
-                onChange={(e) => setOrganization(e.target.value)}
+                onChange={(e) => setEmail(e.target.value)}
               />
               <label
-                htmlFor="organization"
-                for="organization"
+                htmlFor="email"
+                for="email"
                 className="absolute start-2.5 top-3 z-10 origin-[0] -translate-y-3 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:-translate-y-3 peer-focus:scale-75 peer-focus:text-gray-600 dark:text-gray-400 peer-focus:dark:text-gray-500 rtl:peer-focus:left-auto rtl:peer-focus:translate-x-1/4"
               >
-                Organization
+                Email ID <span className="text-red-500">*</span>
               </label>
-              {errors.organization && (
-                <p className="text-red-500">{errors.organization}</p>
-              )}{" "}
+              {errors.email && <p className="text-red-500">{errors.email}</p>}{" "}
               {/* Error message */}
             </div>
-            <div className="mt-7 flex w-full gap-4 lg:mt-0 ">
-              <div className="relative w-full">
-                <input
-                  type="tel"
-                  id="phone-number"
-                  className="peer block w-full appearance-none rounded-t-lg border-0 border-b-2 border-gray-300 px-2.5  pb-1.5 pt-4 text-sm text-gray-900 focus:border-gray-600 focus:outline-none focus:ring-0 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:focus:border-gray-500"
-                  value={phone}
-                  placeholder=" "
-                  onChange={(e) => setPhone(e.target.value)}
-                  maxLength={10}
-                />
-                <label
-                  htmlFor="phone-number"
-                  for="phone-number"
-                  className="absolute start-2.5 top-3 z-10 origin-[0] -translate-y-3 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:-translate-y-3 peer-focus:scale-75 peer-focus:text-gray-600 dark:text-gray-400 peer-focus:dark:text-gray-500 rtl:peer-focus:left-auto rtl:peer-focus:translate-x-1/4"
-                >
-                  Phone Number <span className="text-red-500">*</span>
-                </label>
-                {errors.phone && <p className="text-red-500">{errors.phone}</p>}{" "}
-                {/* Error message */}
-              </div>
+          </div>
+        </div >
+
+        <div className="w-full gap-4 lg:flex lg:py-6">
+          <div className="relative w-full">
+            <input
+              type="text"
+              id="organization"
+              className="peer block w-full appearance-none rounded-t-lg border-0 border-b-2 border-gray-300 px-2.5  pb-1.5 pt-4 text-sm text-gray-900 focus:border-gray-600 focus:outline-none focus:ring-0 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:focus:border-gray-500"
+              value={organization}
+              placeholder=" "
+              onChange={(e) => setOrganization(e.target.value)}
+            />
+            <label
+              htmlFor="organization"
+              for="organization"
+              className="absolute start-2.5 top-3 z-10 origin-[0] -translate-y-3 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:-translate-y-3 peer-focus:scale-75 peer-focus:text-gray-600 dark:text-gray-400 peer-focus:dark:text-gray-500 rtl:peer-focus:left-auto rtl:peer-focus:translate-x-1/4"
+            >
+              Organization
+            </label>
+            {errors.organization && (
+              <p className="text-red-500">{errors.organization}</p>
+            )}{" "}
+            {/* Error message */}
+          </div>
+          <div className="mt-7 flex w-full gap-4 lg:mt-0 ">
+            <div className="relative w-full">
+              <input
+                type="tel"
+                id="phone-number"
+                className="peer block w-full appearance-none rounded-t-lg border-0 border-b-2 border-gray-300 px-2.5  pb-1.5 pt-4 text-sm text-gray-900 focus:border-gray-600 focus:outline-none focus:ring-0 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:focus:border-gray-500"
+                value={phone}
+                placeholder=" "
+                onChange={(e) => setPhone(e.target.value)}
+                maxLength={10}
+              />
+              <label
+                htmlFor="phone-number"
+                for="phone-number"
+                className="absolute start-2.5 top-3 z-10 origin-[0] -translate-y-3 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:-translate-y-3 peer-focus:scale-75 peer-focus:text-gray-600 dark:text-gray-400 peer-focus:dark:text-gray-500 rtl:peer-focus:left-auto rtl:peer-focus:translate-x-1/4"
+              >
+                Phone Number <span className="text-red-500">*</span>
+              </label>
+              {errors.phone && <p className="text-red-500">{errors.phone}</p>}{" "}
+              {/* Error message */}
             </div>
-            {/* <div className="relative mt-7 w-full lg:mt-0">
+          </div>
+          {/* <div className="relative mt-7 w-full lg:mt-0">
               <select
                 id="product-category"
                 className="peer block w-full appearance-none rounded-t-lg border-0 border-b-2 border-gray-300 px-2.5  pb-1.5 pt-4 text-sm text-gray-900 focus:border-gray-600 focus:outline-none focus:ring-0 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:focus:border-gray-500"
@@ -231,38 +225,38 @@ export default function Contact() {
                 <p className="text-red-500">{errors.productCategory}</p>
               )}
             </div> */}
-          </div>
+        </div>
 
-          <div className="flex w-full gap-4 py-6">
-            <div className="relative w-full">
-              <textarea
-                id="message"
-                className="peer block w-full appearance-none rounded-t-lg border-0 border-b-2 border-gray-300 px-2.5  pb-1.5 pt-4 text-sm text-gray-900 focus:border-gray-600 focus:outline-none focus:ring-0 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:focus:border-gray-500"
-                value={message}
-                placeholder=" "
-                onChange={(e) => setMessage(e.target.value)}
-              />
-              <label
-                htmlFor="message"
-                for="message"
-                className="absolute start-2.5 top-3 z-10 origin-[0] -translate-y-3 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:-translate-y-3 peer-focus:scale-75 peer-focus:text-gray-600 dark:text-gray-400 peer-focus:dark:text-gray-500 rtl:peer-focus:left-auto rtl:peer-focus:translate-x-1/4"
-              >
-                Message
-              </label>
-              {/* No error message for message */}
-            </div>
-          </div>
-
-          <div className="py-4">
-            <button
-              type="submit"
-              className="font-regular flex w-full items-center justify-center gap-2 border-2 border-gray-300 px-5 py-2.5 text-center text-xl text-gray-400 hover:bg-gray-800 hover:text-white lg:w-6/12"
+        <div className="flex w-full gap-4 py-6">
+          <div className="relative w-full">
+            <textarea
+              id="message"
+              className="peer block w-full appearance-none rounded-t-lg border-0 border-b-2 border-gray-300 px-2.5  pb-1.5 pt-4 text-sm text-gray-900 focus:border-gray-600 focus:outline-none focus:ring-0 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:focus:border-gray-500"
+              value={message}
+              placeholder=" "
+              onChange={(e) => setMessage(e.target.value)}
+            />
+            <label
+              htmlFor="message"
+              for="message"
+              className="absolute start-2.5 top-3 z-10 origin-[0] -translate-y-3 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:-translate-y-3 peer-focus:scale-75 peer-focus:text-gray-600 dark:text-gray-400 peer-focus:dark:text-gray-500 rtl:peer-focus:left-auto rtl:peer-focus:translate-x-1/4"
             >
-              Submit <IoMdArrowForward />
-            </button>
+              Message
+            </label>
+            {/* No error message for message */}
           </div>
-        </form>
-      </div>
-    </div>
+        </div>
+
+        <div className="py-4">
+          <button
+            type="submit"
+            className="font-regular flex w-full items-center justify-center gap-2 border-2 border-gray-300 px-5 py-2.5 text-center text-xl text-gray-400 hover:bg-gray-800 hover:text-white lg:w-6/12"
+          >
+            Submit <IoMdArrowForward />
+          </button>
+        </div>
+      </form >
+    </div >
+
   );
 }

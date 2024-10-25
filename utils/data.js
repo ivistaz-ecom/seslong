@@ -134,7 +134,7 @@ export const contactInfo = [
   {
     contact: (
       <div className="flex space-x-2">
-        <span className=""><span className=""></span> HK :</span>
+        <span className="">HK <span className="pl-2"></span> :</span>
         <span className="">+852-5590-9449</span>
       </div>
     ),
@@ -206,7 +206,7 @@ export const products = {
       popImageSrc: "/Products/popup/Hair-Brushes.png",
     },
     {
-      name: "Make Up Brushes",
+      name: "Makeup Brushes",
       description:
         "We have the perfect tools for your everyday make up regime. Top quality and attractive designs. Our bristles are available in both vegan (super soft nano fibre) and animal hair ranges.",
       imageSrc: "/Products/Make-up-Brushes.png",

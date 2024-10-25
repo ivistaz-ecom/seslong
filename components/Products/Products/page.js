@@ -75,7 +75,7 @@ export default function Products() {
               />
               <div className="relative top-0 flex flex-col items-center justify-center p-4 text-center">
                 <h2 className="h-14 text-xl font-medium">{product.name}</h2>
-                <p className="line-clamp-4 h-16 text-base">
+                <p className="line-clamp-4 text-base post-content">
                   {product.description}
                 </p>
                 <div className="flex w-full items-center justify-center bg-white">
