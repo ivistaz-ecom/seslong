@@ -19,7 +19,7 @@ export default function Banner() {
             <Image
               width={500}
               height={500}
-              src="Products/mobile-banner.jpg"
+              src="/Products/mobile-banner.jpg"
               className="block size-full object-cover sm:hidden"
               alt="Slide image"
             />

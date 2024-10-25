@@ -23,6 +23,8 @@ export default function Contact() {
     // Validate name
     if (!name.trim()) {
       newErrors.name = "Name is required.";
+    } else if (!/^[a-zA-Z\s-]+$/.test(name)) {
+      newErrors.name = "Name can only contain letters, spaces, and hyphens.";
     }
 
     // Validate email

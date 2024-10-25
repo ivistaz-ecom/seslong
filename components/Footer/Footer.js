@@ -59,8 +59,7 @@ export default function Footer() {
                   className=" text-xl hover:text-[#f5831fca]"
                 >
                   <a href={contact.href} className="flex gap-2 py-1">
-                    <span className="mt-1">{contact.logo}</span>
-                    {contact.contact}
+                    <span className="mt-1">{contact.logo}</span> {contact.contact}
                   </a>
                 </li>
               ))}

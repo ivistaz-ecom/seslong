@@ -2,7 +2,6 @@ import { MdMailOutline } from "react-icons/md";
 import { MdOutlinePhoneInTalk } from "react-icons/md";
 import { IoLogoWhatsapp } from "react-icons/io5";
 
-
 export const homeSlider = [
   {
     image: "/Home/main-slider-image-01.png",
@@ -46,7 +45,8 @@ export const homeSlider = [
     alt: "Description 6",
     description: "Seslong Your Reliable Partner <br> for Quality Products",
     text: "Seslong Your Reliable Partner <br> for Quality Products",
-  },];
+  },
+];
 
 export const ProductsItems = [
   {
@@ -132,7 +132,12 @@ export const contactInfo = [
   },
 
   {
-    contact: "HK: +852-5590-9449",
+    contact: (
+      <div className="flex space-x-2">
+        <span className=""><span className=""></span> HK :</span>
+        <span className="">+852-5590-9449</span>
+      </div>
+    ),
     logo: (
       <div className="flex items-center gap-1">
         <MdOutlinePhoneInTalk className="text-[#E5E5E4]" />
