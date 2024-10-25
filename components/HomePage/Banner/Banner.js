@@ -48,7 +48,12 @@ export default function Banner() {
             >
               <img
                 src={slide.image}
-                className="h-full w-full object-cover"
+                className="h-full w-full object-cover hidden sm:block"
+                alt={slide.alt || "Slide image"}
+              />
+              <img
+                src={slide.mobImage}
+                className="h-full w-full object-cover block sm:hidden"
                 alt={slide.alt || "Slide image"}
               />
               <div

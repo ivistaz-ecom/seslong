@@ -2,15 +2,20 @@ import React from "react";
 
 export default function Banner() {
   return (
-    <div className="z-50 h-[90vh]">
-      <div className="h-[50vh] bg-[#F8E2CF]">
+    <div className="z-50 h-[90vh] mb-36 lg:mb-0">
+      <div className="lg:h-[50vh] h-[70vh] bg-[#F8E2CF]">
         <div className="relative h-full w-full overflow-hidden">
           <div
             className={`absolute left-1/2 top-1/2 h-full w-full -translate-x-1/2 -translate-y-1/2 transition-opacity duration-700 ease-in-out `}
           >
             <img
               src="what-we-do/banner.jpg"
-              className="h-full w-full object-cover"
+              className="h-full w-full object-cover hidden sm:block"
+              alt="Slide image"
+            />
+            <img
+              src="/what-we-do/mobile-banner.jpg"
+              className="h-full w-full object-cover block sm:hidden"
               alt="Slide image"
             />
           </div>
@@ -18,7 +23,7 @@ export default function Banner() {
       </div>
       <div className="z-40 mx-auto flex h-[40vh] flex-col items-center justify-center bg-[#F8E2CF] text-xl font-normal lg:px-40">
         <h2 className="text-4xl font-medium">What We Do</h2>
-        <p className="text-center md:w-10/12 lg:py-10">
+        <p className="text-center md:w-10/12 lg:py-10 ">
           Seslong operates through three main business verticals:
         </p>
       </div>

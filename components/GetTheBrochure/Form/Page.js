@@ -105,11 +105,11 @@ export default function Contact() {
         <h2 className="py-4 text-center text-4xl font-medium">
           Get The Brochure
         </h2>
-        <p className="text-center text-[20px] font-normal">
+        {/* <p className="text-center text-[20px] font-normal">
           Partner with Seslong for your product needs and discover how our
           global presence, <br className="hidden sm:block" /> product knowledge,
           and commitment to quality can help your business.
-        </p>
+        </p> */}
         {/* <h2 className="py-8 text-center text-4xl font-medium">Contact Us</h2> */}
       </div>
 

@@ -15,7 +15,7 @@ export default function Page() {
           <div
             className={`mx-auto flex-col items-center justify-center lg:flex ${index % 2 === 0 ? "order-2" : "order-1"}`}
           >
-            <h2 className="pt-5 text-4xl font-medium lg:pt-0">
+            <h2 className="pt-5 text-4xl font-medium lg:pt-0 text-center">
               {section.title}
             </h2>
             <p className="py-6 text-center text-xl lg:w-10/12">

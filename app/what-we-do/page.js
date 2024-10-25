@@ -8,8 +8,8 @@ export default function page() {
     <>
       <Banner />
       <Business />
-      <Quality />
-      <FloatingButton/>
+      {/* <Quality /> */}
+      <FloatingButton />
     </>
   );
 }
