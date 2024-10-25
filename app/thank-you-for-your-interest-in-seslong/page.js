@@ -15,9 +15,9 @@ const page = () => {
                     <p className="text-4xl">Our team will get back to you soon.</p>
                 </div>
                 <div>
-                    <p className="animate-bounce py-3 text-xl text-[#F58420]">
-                        "Interested in discovering more of our product range?
-                        <br /> Click the button below to view our complete selection."
+                    <p className="animate-bounce py-3 text-xl text-[#F58420] p-4">
+                        Interested in discovering more of our product range?
+                        <br /> Click the button below to view our complete selection.
                         <span>
                             <FaHandPointDown className="text-center flex justify-center items-center m-auto" />
                         </span>

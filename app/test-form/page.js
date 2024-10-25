@@ -11,7 +11,7 @@ function ContactForm() {
     }
     return (
         <form onSubmit={handleSubmit} className="flex flex-col justify-center items-center">
-            <div className="py-4 flex gap-4">
+            {/* <div className="py-4 flex gap-4">
                 <label htmlFor="email">name</label>
                 <input id="name" type="text" name="name" />
                 <ValidationError prefix="Name" field="name" errors={state.errors} />
@@ -33,7 +33,7 @@ function ContactForm() {
             </div>
             <button type="submit" disabled={state.submitting} className="border border-2 p-4 bg-red-200">
                 Submit
-            </button>
+            </button> */}
         </form>
     );
 }
