@@ -7,7 +7,7 @@ export default function FloatingButton() {
   const router = useRouter();
 
   const handleClick = () => {
-    router.push("/get-the-brochure"); // Adjust URL as needed
+    router.push("/get-the-brochure");
   };
   return (
     <div className="fixed bottom-40 right-2 z-50 flex items-center space-x-2 lg:right-8">
@@ -21,6 +21,10 @@ export default function FloatingButton() {
         onClick={handleClick}
         className="flex size-14 items-center justify-center rounded-full bg-[#f5831fca] text-2xl text-white shadow-lg  transition duration-300 ease-in-out"
       >
+
+
+
+
         <IoMdMail size={28} />
       </button>
     </div>
