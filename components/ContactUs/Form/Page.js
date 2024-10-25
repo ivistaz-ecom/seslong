@@ -2,53 +2,44 @@
 import React, { useState, useContext } from "react";
 import { IoMdArrowForward } from "react-icons/io";
 import { CategoryContext } from "../../../utils/CategoryContext";
-// import { formCategoryList } from "../../../utils/data";
+import { useRouter } from "next/navigation"; // Import useRouter
 
 export default function Contact() {
+  const router = useRouter(); // Initialize useRouter
   const { category } = useContext(CategoryContext);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [organization, setOrganization] = useState("");
-  // const [productCategory, setProductCategory] = useState(category);
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
-  const [errors, setErrors] = useState({}); // Track individual errors
+  const [errors, setErrors] = useState({});
   const [submitted, setSubmitted] = useState(false);
 
   function validateForm() {
     const newErrors = {};
 
-    // Validate name
     if (!name.trim()) {
       newErrors.name = "Name is required.";
+    } else if (!/^[a-zA-Z\s-]+$/.test(name)) {
+      newErrors.name = "Name can only contain letters, spaces, and hyphens.";
     }
 
-    // Validate email
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
       newErrors.email = "Please enter a valid email address.";
     }
 
-    // Validate organization
     if (!organization.trim()) {
       newErrors.organization = "Organization is required.";
     }
 
-    // Validate phone number (10 digits)
     const phoneRegex = /^\d{10}$/;
     if (!phoneRegex.test(phone)) {
       newErrors.phone = "Phone number must be 10 digits.";
     }
 
-    // Validate product category
-    // if (!productCategory.trim()) {
-    //   newErrors.productCategory = "Product category is required.";
-    // }
-
-    // Add any other validation rules here
-
-    setErrors(newErrors); // Update state with any new errors
-    return Object.keys(newErrors).length === 0; // Return true if no errors
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
   }
 
   function onSubmit(e) {
@@ -56,9 +47,7 @@ export default function Contact() {
     e.stopPropagation();
 
     const isValid = validateForm();
-    if (!isValid) {
-      return; // If invalid, don't proceed
-    }
+    if (!isValid) return;
 
     fetch("https://formcarry.com/s/VQmxImepSma", {
       method: "POST",
@@ -70,7 +59,6 @@ export default function Contact() {
         name,
         email,
         organization,
-        // productCategory,
         phone,
         message,
       }),
@@ -80,8 +68,9 @@ export default function Contact() {
         if (response.code === 200) {
           setSubmitted(true);
           resetForm();
+          router.push("/thank-you-by-seslong"); // Redirect to Thank You page
         } else {
-          setErrors({ form: response.message }); // Set form error if needed
+          setErrors({ form: response.message });
         }
       })
       .catch((error) => {
@@ -93,7 +82,6 @@ export default function Contact() {
     setName("");
     setEmail("");
     setOrganization("");
-    // setProductCategory("");
     setPhone("");
     setMessage("");
     setErrors({});
@@ -110,7 +98,6 @@ export default function Contact() {
           global presence, <br className="hidden sm:block" /> product knowledge,
           and commitment to quality can help your business.
         </p>
-        {/* <h2 className="py-8 text-center text-4xl font-medium">Contact Us</h2> */}
       </div>
 
       <div>
@@ -120,7 +107,7 @@ export default function Contact() {
           )}
           {submitted && (
             <div className="py-2 text-center text-green-500">
-              Thank you for your submission!
+              your From is Submitting...
             </div>
           )}
 

@@ -3,8 +3,10 @@ import React, { useState, useContext } from "react";
 import { IoMdArrowForward } from "react-icons/io";
 import { CategoryContext } from "../../../utils/CategoryContext";
 import { formCategoryList } from "../../../utils/data";
+import { useRouter } from "next/navigation"; // Import useRouter
 
 export default function Contact() {
+  const router = useRouter(); // Initialize useRouter
   const { category } = useContext(CategoryContext);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -75,13 +77,15 @@ export default function Contact() {
         message,
       }),
     })
+
       .then((response) => response.json())
       .then((response) => {
         if (response.code === 200) {
           setSubmitted(true);
           resetForm();
+          router.push("/thank-you-for-your-interest-in-seslong"); // Redirect to Thank You page
         } else {
-          setErrors({ form: response.message }); // Set form error if needed
+          setErrors({ form: response.message });
         }
       })
       .catch((error) => {
@@ -120,7 +124,7 @@ export default function Contact() {
           )}
           {submitted && (
             <div className="py-2 text-center text-green-500">
-              Thank you for your submission!
+              your From is Submitting...
             </div>
           )}
 

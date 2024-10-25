@@ -7,7 +7,7 @@ export default function FloatingButton() {
   const router = useRouter();
 
   const handleClick = () => {
-    router.push("/get-the-brochure#contact-form"); // Adjust URL as needed
+    router.push("/get-the-brochure"); // Adjust URL as needed
   };
   return (
     <div className="fixed bottom-40 lg:right-8 right-2 z-50 flex items-center space-x-2">
