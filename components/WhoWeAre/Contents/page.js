@@ -4,9 +4,9 @@ import { whoWeAre } from "../../../utils/data";
 
 export default function page() {
   return (
-    <div className="py-12 mt-32 lg:mt-0">
+    <div className="mt-32 py-12 lg:mt-0">
       <div className="flex flex-col items-center justify-center">
-        <h2 className="text-center text-4xl font-medium p-4 lg:p-0">
+        <h2 className="p-4 text-center text-4xl font-medium lg:p-0">
           Seslong Traders Private Limited
         </h2>
         <p className="p-2 py-4 text-center text-xl">
@@ -22,7 +22,8 @@ export default function page() {
             className="mt-4 flex flex-col items-center justify-center border border-black p-8 hover:border-[#f5831fca]"
             key={index}
           >
-            <Image src={items.icon} width={200} height={200} className="w-24" />
+            <Image src={items.icon} width={200} height={200} className="w-24"
+              alt="images" />
             <p className="pt-6 text-center text-xl">{items.expert}</p>
           </div>
         ))}
@@ -31,8 +32,8 @@ export default function page() {
       <div className="flex flex-col items-center justify-center p-2 py-12">
         <h2 className="text-4xl font-medium">Seslong Global Limited</h2>
         <p className="py-4 text-center text-xl">
-          Established in 2016 and based in <strong>Hong Kong</strong>, serves
-          as a critical bridge between
+          Established in 2016 and based in <strong>Hong Kong</strong>, serves as
+          a critical bridge between
           <br /> our customers worldwide and our network of{" "}
           <strong>56 factories located in Mainland China</strong>.
         </p>
@@ -53,6 +54,7 @@ export default function page() {
             src="/who-we-are/world-map.svg"
             width={400}
             height={400}
+            alt="image"
             className="mt-4 w-full lg:mt-0"
           />
         </div>

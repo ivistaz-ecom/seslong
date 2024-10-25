@@ -16,7 +16,7 @@ export default function Page() {
             className={`mx-auto flex-col items-center justify-center lg:flex ${index % 2 === 0 ? "lg:order-2" : "lg:order-1"
               }`}
           >
-            <h2 className="pt-5 text-4xl font-medium lg:pt-0 text-center">
+            <h2 className="pt-5 text-center text-4xl font-medium lg:pt-0">
               {section.title}
             </h2>
             <p className="py-6 text-center text-xl lg:w-10/12">
@@ -31,7 +31,9 @@ export default function Page() {
             </Link>
             */}
           </div>
-          <div className={`${index % 2 === 0 ? "lg:order-1" : "lg:order-2"} order-2`}>
+          <div
+            className={`${index % 2 === 0 ? "lg:order-1" : "lg:order-2"} order-2`}
+          >
             <Image
               src={section.imageSrc}
               width={400}

@@ -88,7 +88,10 @@ export default function Contact() {
   }
 
   return (
-    <div id="contact-form" className="container mx-auto w-10/12 py-10 mt-52 lg:mt-0">
+    <div
+      id="contact-form"
+      className="container mx-auto mt-52 w-10/12 py-10 lg:mt-0"
+    >
       <div className="mx-auto flex w-full flex-col">
         <h2 className="py-4 text-center text-4xl font-medium">
           Connect With Us
@@ -230,8 +233,6 @@ export default function Contact() {
             </div> */}
           </div>
 
-
-
           <div className="flex w-full gap-4 py-6">
             <div className="relative w-full">
               <textarea
@@ -255,7 +256,7 @@ export default function Contact() {
           <div className="py-4">
             <button
               type="submit"
-              className="font-regular flex lg:w-6/12 w-full items-center justify-center gap-2 border-2 border-gray-300 px-5 py-2.5 text-center text-xl text-gray-400 hover:bg-gray-800 hover:text-white"
+              className="font-regular flex w-full items-center justify-center gap-2 border-2 border-gray-300 px-5 py-2.5 text-center text-xl text-gray-400 hover:bg-gray-800 hover:text-white lg:w-6/12"
             >
               Submit <IoMdArrowForward />
             </button>

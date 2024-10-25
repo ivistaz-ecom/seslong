@@ -10,7 +10,10 @@ function ContactForm() {
         return <p>Thanks for joining!</p>;
     }
     return (
-        <form onSubmit={handleSubmit} className="flex flex-col justify-center items-center">
+        <form
+            onSubmit={handleSubmit}
+            className="flex flex-col items-center justify-center"
+        >
             {/* <div className="py-4 flex gap-4">
                 <label htmlFor="email">name</label>
                 <input id="name" type="text" name="name" />

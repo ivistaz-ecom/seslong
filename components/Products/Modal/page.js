@@ -26,7 +26,8 @@ export default function Page({ banner, title, description, pdfUrl }) {
         onClick={() => setOpenModal(true)}
         className="flex items-center border-b-2 border-white py-1 pt-4 text-center font-medium hover:text-[#f5831fca]"
       >
-        More Details <span className=" translate-x-0 opacity-0 transition-all duration-200 group-hover:translate-x-1 group-hover:opacity-100">
+        More Details{" "}
+        <span className=" translate-x-0 opacity-0 transition-all duration-200 group-hover:translate-x-1 group-hover:opacity-100">
           <IoIosArrowForward />
         </span>
       </button>
@@ -36,7 +37,7 @@ export default function Page({ banner, title, description, pdfUrl }) {
         show={openModal}
         onClose={() => setOpenModal(false)}
         dismissible={true} // Allows closing on outside clicks
-        className="transition-all duration-300 ease-in-out py-28"
+        className="py-28 transition-all duration-300 ease-in-out"
       >
         <div className="relative flex items-center justify-between bg-transparent transition-all duration-300 ease-in-out">
           <button
@@ -84,7 +85,7 @@ export default function Page({ banner, title, description, pdfUrl }) {
                 width={400}
                 height={400}
                 alt={title}
-                className="lg:h-[350px] w-full transition-all duration-300 ease-in-out"
+                className="w-full transition-all duration-300 ease-in-out lg:h-[350px]"
               />
             )}
 
@@ -97,7 +98,7 @@ export default function Page({ banner, title, description, pdfUrl }) {
               </p>
               <Link
                 href="/get-the-brochure"
-                className="group flex px-2 items-center border-white py-4 text-xl font-medium hover:text-[#f5831fca]"
+                className="group flex items-center border-white px-2 py-4 text-xl font-medium hover:text-[#f5831fca]"
               >
                 Get the Brochure
                 <span className="ml-2 translate-x-0 opacity-0 transition-all duration-200 group-hover:translate-x-1 group-hover:opacity-100">

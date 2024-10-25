@@ -15,7 +15,7 @@ export default function WhatWe() {
         </p>
         <Link
           href="/what-we-do"
-          className="flex items-center justify-center text-2xl hover:text-[#F5841F] group"
+          className="group flex items-center justify-center text-2xl hover:text-[#F5841F]"
         >
           Read More
           <span className="ml-2 translate-x-0 transform opacity-0 transition-all duration-200 group-hover:translate-x-1 group-hover:opacity-100">
@@ -29,6 +29,7 @@ export default function WhatWe() {
           width={400}
           height={400}
           className="w-full"
+          alt="image"
         />
       </div>
     </div>

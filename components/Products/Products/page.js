@@ -39,7 +39,7 @@ export default function Products() {
   };
 
   return (
-    <div className="z-20 lg:-mt-0 mt-36">
+    <div className="z-20 mt-36 lg:-mt-0">
       <div className="p-12">
         <h2 className="text-center text-4xl font-medium">Our Products</h2>
       </div>
@@ -70,11 +70,12 @@ export default function Products() {
                 src={product.imageSrc}
                 width={300}
                 height={200}
+                alt="image"
                 className="w-auto transition-all group-hover:scale-105"
               />
               <div className="relative top-0 flex flex-col items-center justify-center p-4 text-center">
                 <h2 className="h-14 text-xl font-medium">{product.name}</h2>
-                <p className="h-18 line-clamp-4 text-base">
+                <p className="line-clamp-4 h-16 text-base">
                   {product.description}
                 </p>
                 <div className="flex w-full items-center justify-center bg-white">

@@ -97,9 +97,9 @@ export default function Contact() {
   }
 
   return (
-    <div className="mx-auto lg:w-10/12 p-2">
+    <div className="mx-auto p-2 lg:w-10/12">
       <div className="mx-auto flex w-full flex-col">
-        <h2 className="lg:py-4 text-center text-4xl font-medium" >
+        <h2 className="text-center text-4xl font-medium lg:py-4">
           Connect With Us
         </h2>
         <p className="text-center text-[20px] font-normal">
@@ -111,7 +111,10 @@ export default function Contact() {
       </div>
 
       <div>
-        <form className="mx-auto py-8 container lg:w-full w-11/12" onSubmit={onSubmit}>
+        <form
+          className="container mx-auto w-11/12 py-8 lg:w-full"
+          onSubmit={onSubmit}
+        >
           {errors.form && (
             <div className="py-2 text-center text-red-500">{errors.form}</div>
           )}

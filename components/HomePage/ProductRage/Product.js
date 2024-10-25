@@ -9,12 +9,9 @@ export default function Product() {
     <>
       <div className=" w-full lg:py-8">
         <h2 className="py-8 text-center text-4xl font-medium">Product Range</h2>
-        <div className="container mx-auto w-10/12 grid-cols-3 lg:gap-6 lg:space-y-0 space-y-5 lg:grid">
+        <div className="container mx-auto w-10/12 grid-cols-3 space-y-5 lg:grid lg:gap-6 lg:space-y-0">
           {ProductsItems.map((items, index) => (
-            <div
-              className="group relative overflow-hidden "
-              key={index}
-            >
+            <div className="group relative overflow-hidden " key={index}>
               <Image
                 src={items.productImage}
                 width={300}
@@ -35,7 +32,8 @@ export default function Product() {
                     }}
                     className="flex items-center justify-center gap-1 py-10 text-lg font-medium "
                   >
-                    Show More<IoMdArrowForward />
+                    Show More
+                    <IoMdArrowForward />
                   </Link>
                 </div>
               </div>

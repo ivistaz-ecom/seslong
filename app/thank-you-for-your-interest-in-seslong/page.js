@@ -15,11 +15,11 @@ const page = () => {
                     <p className="text-4xl">Our team will get back to you soon.</p>
                 </div>
                 <div>
-                    <p className="animate-bounce py-3 text-xl text-[#F58420] p-4">
+                    <p className="animate-bounce p-4 py-3 text-xl text-[#F58420]">
                         Interested in discovering more of our product range?
                         <br /> Click the button below to view our complete selection.
                         <span>
-                            <FaHandPointDown className="text-center flex justify-center items-center m-auto" />
+                            <FaHandPointDown className="m-auto flex items-center justify-center text-center" />
                         </span>
                     </p>
                 </div>
