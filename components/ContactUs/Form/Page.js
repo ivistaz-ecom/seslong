@@ -191,6 +191,28 @@ export default function Contact() {
               )}{" "}
               {/* Error message */}
             </div>
+            <div className="mt-7 flex w-full gap-4 lg:mt-0 ">
+              <div className="relative w-full">
+                <input
+                  type="tel"
+                  id="phone-number"
+                  className="peer block w-full appearance-none rounded-t-lg border-0 border-b-2 border-gray-300 px-2.5  pb-1.5 pt-4 text-sm text-gray-900 focus:border-gray-600 focus:outline-none focus:ring-0 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:focus:border-gray-500"
+                  value={phone}
+                  placeholder=" "
+                  onChange={(e) => setPhone(e.target.value)}
+                  maxLength={10}
+                />
+                <label
+                  htmlFor="phone-number"
+                  for="phone-number"
+                  className="absolute start-2.5 top-3 z-10 origin-[0] -translate-y-3 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:-translate-y-3 peer-focus:scale-75 peer-focus:text-gray-600 dark:text-gray-400 peer-focus:dark:text-gray-500 rtl:peer-focus:left-auto rtl:peer-focus:translate-x-1/4"
+                >
+                  Phone Number <span className="text-red-500">*</span>
+                </label>
+                {errors.phone && <p className="text-red-500">{errors.phone}</p>}{" "}
+                {/* Error message */}
+              </div>
+            </div>
             {/* <div className="relative mt-7 w-full lg:mt-0">
               <select
                 id="product-category"
@@ -221,28 +243,7 @@ export default function Contact() {
             </div> */}
           </div>
 
-          <div className="mt-7 flex w-full gap-4 lg:mt-0 lg:py-6">
-            <div className="relative w-full">
-              <input
-                type="tel"
-                id="phone-number"
-                className="peer block w-full appearance-none rounded-t-lg border-0 border-b-2 border-gray-300 px-2.5  pb-1.5 pt-4 text-sm text-gray-900 focus:border-gray-600 focus:outline-none focus:ring-0 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:focus:border-gray-500"
-                value={phone}
-                placeholder=" "
-                onChange={(e) => setPhone(e.target.value)}
-                maxLength={10}
-              />
-              <label
-                htmlFor="phone-number"
-                for="phone-number"
-                className="absolute start-2.5 top-3 z-10 origin-[0] -translate-y-3 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:-translate-y-3 peer-focus:scale-75 peer-focus:text-gray-600 dark:text-gray-400 peer-focus:dark:text-gray-500 rtl:peer-focus:left-auto rtl:peer-focus:translate-x-1/4"
-              >
-                Phone Number <span className="text-red-500">*</span>
-              </label>
-              {errors.phone && <p className="text-red-500">{errors.phone}</p>}{" "}
-              {/* Error message */}
-            </div>
-          </div>
+
 
           <div className="flex w-full gap-4 py-6">
             <div className="relative w-full">

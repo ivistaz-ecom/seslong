@@ -99,7 +99,7 @@ export default function Contact() {
   return (
     <div className="mx-auto lg:w-10/12 p-2">
       <div className="mx-auto flex w-full flex-col">
-        <h2 className="py-4 text-center text-4xl font-medium">
+        <h2 className="lg:py-4 text-center text-4xl font-medium" >
           Connect With Us
         </h2>
         <p className="text-center text-[20px] font-normal">

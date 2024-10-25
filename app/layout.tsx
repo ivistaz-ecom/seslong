@@ -6,6 +6,7 @@ import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 import Script from "next/script";
 import { CategoryProvider } from "../utils/CategoryContext";
+import ScrollFloatingButton from "../components/ScrollFloatingButton/page"
 
 export const metadata: Metadata = {
   title: "Seslong",
@@ -26,6 +27,7 @@ export default function RootLayout({
         <Script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></Script>
         <CategoryProvider>
           <Header />
+          <ScrollFloatingButton />
           {children}
           <Footer />
         </CategoryProvider>

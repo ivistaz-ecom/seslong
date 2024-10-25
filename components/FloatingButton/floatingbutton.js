@@ -10,7 +10,7 @@ export default function FloatingButton() {
     router.push("/get-the-brochure#contact-form"); // Adjust URL as needed
   };
   return (
-    <div className="fixed bottom-60 lg:right-5 right-2 z-50 flex items-center space-x-2">
+    <div className="fixed bottom-40 lg:right-8 right-2 z-50 flex items-center space-x-2">
       <span onClick={handleClick} className="text-white font-semibold bg-[#f5831fca] px-2 py-1 rounded-md shadow-lg hidden lg:block cursor-pointer">
         Get the Brochure
       </span>
