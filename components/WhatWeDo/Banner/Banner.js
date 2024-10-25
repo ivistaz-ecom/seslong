@@ -12,7 +12,7 @@ export default function Banner() {
             <Image
               width={1200}
               height={900}
-              src="what-we-do/banner.jpg"
+              src="/what-we-do/banner.jpg"
               className="hidden size-full object-cover sm:block"
               alt="Slide image"
             />

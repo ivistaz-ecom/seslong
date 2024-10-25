@@ -51,7 +51,7 @@ export const homeSlider = [
 export const ProductsItems = [
   {
     items: "Personal Care",
-    productImage: "/Home/home-product01.png",
+    productImage: "/Home/home-product1.png",
     description:
       "We offer a variety of cosmetics, beauty and personal care products.",
     url: "/product-care",
