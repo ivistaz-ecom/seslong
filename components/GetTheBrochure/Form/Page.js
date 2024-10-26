@@ -4,6 +4,7 @@ import { IoMdArrowForward } from "react-icons/io";
 import { CategoryContext } from "../../../utils/CategoryContext";
 import { formCategoryList } from "../../../utils/data";
 import { useRouter } from "next/navigation"; // Import useRouter
+import emailjs from "emailjs-com";
 
 export default function Contact() {
   const router = useRouter(); // Initialize useRouter
@@ -63,6 +64,32 @@ export default function Contact() {
     if (!isValid) {
       return; // If invalid, don't proceed
     }
+    const templateParams = {
+      name,
+      to_email: email,
+      subject: "Thank You for Your Interest!",
+      organization,
+      productCategory,
+      phone,
+      message,
+    };
+
+    emailjs
+      .send(
+        "default_service", // Replace with your actual EmailJS service ID
+        "template_ah6kbqn", // Replace with your EmailJS template ID
+        templateParams,
+        "hsxWBIOu96PDlE41t" // Replace with your EmailJS user ID (API Key)
+      )
+      .then(
+        (result) => {
+          console.log("Email successfully sent:", result.text);
+        },
+        (error) => {
+          console.error("Email sending failed:", error);
+          setErrors({ form: "Failed to send email. Please try again later." });
+        }
+      );
 
     fetch("https://formcarry.com/s/VQmxImepSma", {
       method: "POST",

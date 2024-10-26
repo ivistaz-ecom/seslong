@@ -68,16 +68,40 @@ export default function Contact() {
       )
       .then(
         () => {
-          console.log("Form sent successfully!");
-          setSubmitted(true);
-          resetForm();
-          router.push("/thank-you-by-seslong"); // Redirect to Thank You page
+          // Proceed with form submission if email is successfully sent
+          fetch("https://formcarry.com/s/VQmxImepSma", {
+            method: "POST",
+            headers: {
+              Accept: "application/json",
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              name,
+              email,
+              organization,
+              productCategory: category, // Update to match the context state if needed
+              phone,
+              message,
+            }),
+          })
+            .then((response) => response.json())
+            .then(() => {
+              console.log("Form sent successfully!");
+              setSubmitted(true);
+              resetForm();
+              router.push("/thank-you-by-seslong"); // Redirect to Thank You page
+            })
+            .catch((error) => {
+              console.error("Failed to send form data:", error);
+              setErrors({ form: "Failed to send form data. Please try again." });
+            });
         },
         (error) => {
           console.error("Failed to send email:", error.text);
           setErrors({ form: "Failed to send email. Please try again." });
         }
       );
+
   }
 
   function resetForm() {
