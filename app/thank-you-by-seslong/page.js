@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect } from "react";
 import Link from "next/link";
-
+import ThankouCss from "./thankyou.css"
 const Page = () => {
     useEffect(() => {
         const letterImage = document.querySelector(".letter-image");

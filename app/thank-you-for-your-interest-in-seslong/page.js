@@ -3,6 +3,7 @@ import React, { useEffect } from "react";
 import { RiMailSendLine } from "react-icons/ri";
 import { FaHandPointDown } from "react-icons/fa";
 import Link from "next/link";
+import ThankouCss from "../thank-you-by-seslong/thankyou.css"
 
 const Page = () => {  // Changed 'page' to 'Page'
     useEffect(() => {

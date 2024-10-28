@@ -82,7 +82,7 @@ export default function Page({ banner, title, description, pdfUrl }) {
             ) : (
               <Image
                 src={banner}
-                width={400}
+                width={500}
                 height={400}
                 alt={title}
                 className="w-full transition-all duration-300 ease-in-out lg:h-[350px]"
