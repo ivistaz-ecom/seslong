@@ -134,7 +134,7 @@ export const contactInfo = [
   {
     contact: (
       <div className="flex space-x-2">
-        <span className="">HK <span className="pl-2"></span> :</span>
+        <span className="pl-2">HK<span className="pl-1"></span> :</span>
         <span className="">+852-5590-9449</span>
       </div>
     ),

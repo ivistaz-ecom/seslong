@@ -130,7 +130,7 @@ export default function Contact() {
         )}
         {submitted && (
           <div className="py-2 text-center text-green-500">
-            Your form has been submitted!
+            your From is Submitting...
           </div>
         )}
 
