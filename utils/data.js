@@ -112,6 +112,7 @@ export const quickLinks = [
   { name: "What we do", url: "/what-we-do" },
   { name: "Products", url: "/products" },
   { name: "Contact Us", url: "/contact-us" },
+  { name: "Get The Brochure", url: "/get-the-brochure" },
 ];
 
 export const contactInfo = [

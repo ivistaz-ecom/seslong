@@ -7,6 +7,7 @@ import Footer from "../components/Footer/Footer";
 import Script from "next/script";
 import { CategoryProvider } from "../utils/CategoryContext";
 import ScrollFloatingButton from "../components/ScrollFloatingButton/page"
+import WhatsaapFloatingButton from "../components/WhatsAppFloatingButton/page"
 
 export const metadata: Metadata = {
   title: "Seslong",
@@ -28,6 +29,7 @@ export default function RootLayout({
         <CategoryProvider>
           <Header />
           <ScrollFloatingButton />
+          <WhatsaapFloatingButton />
           {children}
           <Footer />
         </CategoryProvider>

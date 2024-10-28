@@ -43,12 +43,12 @@ export default function Products() {
       <div className="p-12">
         <h2 className="text-center text-4xl font-medium">Our Products</h2>
       </div>
-      <div className="container mx-auto w-9/12 grid-cols-6 lg:grid lg:gap-4">
+      <div className="container mx-auto w-9/12 grid-cols-6 lg:grid gap-4">
         {Object.keys(products).map((category) => (
           <button
             key={category}
             onClick={() => handleCategoryChange(category)}
-            className={`p-2 ${selectedCategory === category ? "border-b-4 border-b-[#F5841F] text-xl font-medium text-black" : "text-xl font-medium"}`}
+            className={`border-b-4 mx-3 p-2 ${selectedCategory === category ? "border-b-4 border-b-[#F5841F] text-xl font-medium text-black" : "text-xl font-medium"}`}
           >
             {category}
           </button>
@@ -75,7 +75,7 @@ export default function Products() {
               />
               <div className="relative top-0 flex flex-col items-center justify-center p-4 text-center">
                 <h2 className="h-14 text-xl font-medium">{product.name}</h2>
-                <p className="line-clamp-4 text-base post-content">
+                <p className="post-content line-clamp-4 text-base">
                   {product.description}
                 </p>
                 <div className="flex w-full items-center justify-center bg-white">

@@ -29,7 +29,7 @@ export default function FloatingButton() {
   }, []);
 
   return (
-    <div className="fixed bottom-28 right-4 z-50 flex items-center space-x-2 lg:right-8">
+    <div className="fixed bottom-40 right-4 z-50 flex items-center space-x-2 lg:right-8">
       {isTextVisible && (
         <span
           onClick={handleClick}

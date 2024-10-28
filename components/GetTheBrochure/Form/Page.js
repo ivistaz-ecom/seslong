@@ -79,7 +79,7 @@ export default function Contact() {
         "default_service", // Replace with your actual EmailJS service ID
         "template_ah6kbqn", // Replace with your EmailJS template ID
         templateParams,
-        "hsxWBIOu96PDlE41t" // Replace with your EmailJS user ID (API Key)
+        "hsxWBIOu96PDlE41t", // Replace with your EmailJS user ID (API Key)
       )
       .then(
         (result) => {
@@ -88,7 +88,7 @@ export default function Contact() {
         (error) => {
           console.error("Email sending failed:", error);
           setErrors({ form: "Failed to send email. Please try again later." });
-        }
+        },
       );
 
     fetch("https://formcarry.com/s/VQmxImepSma", {
@@ -216,7 +216,7 @@ export default function Contact() {
                 for="organization"
                 className="absolute start-2.5 top-3 z-10 origin-[0] -translate-y-3 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:-translate-y-3 peer-focus:scale-75 peer-focus:text-gray-600 dark:text-gray-400 peer-focus:dark:text-gray-500 rtl:peer-focus:left-auto rtl:peer-focus:translate-x-1/4"
               >
-                Organization
+                Organization <span className="text-red-500">*</span>
               </label>
               {errors.organization && (
                 <p className="text-red-500">{errors.organization}</p>

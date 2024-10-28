@@ -30,7 +30,7 @@ const ScrollToTopButton = () => {
                 onClick={scrollToTop}
                 className="fixed bottom-3 right-4 z-50 rounded-full bg-[#f5831fca] p-3 text-white shadow-lg md:bottom-8 md:right-8"
             >
-                <IoIosArrowUp size={20} />
+                <IoIosArrowUp size={24} />
             </button>
         )
     );
