@@ -32,7 +32,7 @@ export default function FloatingButton() {
 
     return (
         <div className="fixed bottom-24 right-4 z-50 flex items-center space-x-2 lg:right-8">
-            <Link href="https://wa.me/9500642143?text=Hi, I have an enquiry!" target="_blank">
+            <Link href="https://wa.me/+91 9500642143?text=Hi, I have an enquiry!" target="_blank">
                 <button
                     // onClick={handleClick}
                     className="flex items-center justify-center rounded-full  bg-green-500 p-3 text-2xl text-white shadow-lg transition duration-300 ease-in-out"
