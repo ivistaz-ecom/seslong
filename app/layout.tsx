@@ -10,8 +10,8 @@ import ScrollFloatingButton from "../components/ScrollFloatingButton/page"
 import WhatsaapFloatingButton from "../components/WhatsAppFloatingButton/page"
 
 export const metadata: Metadata = {
-  title: "Seslong",
-  description: "Seslong",
+  // title: "Seslong",
+  // description: "Seslong",
 };
 
 export default function RootLayout({
