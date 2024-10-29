@@ -1,29 +1,32 @@
 import React from "react";
 import Banner from "../../components/WhoWeAre/Banner/Banner";
 import WhoWeAre from "../../components/WhoWeAre/Contents/page";
-import FloatingButton from "../../components/FloatingButton/floatingbutton"
+import FloatingButton from "../../components/FloatingButton/floatingbutton";
 import Quality from "@/components/WhatWeDo/Quality/Quality";
-import Seo from "../../components/SeoComponents/Seo"
+
+export const metadata = {
+  title: "Connecting Global Markets with Quality Manufacturing Solutions",
+  description:
+    "Explore Seslong's manufacturing expertise and trading solutions, bridging markets from India to Hong Kong with high-quality products and reliable partnerships.",
+  alternates: {
+    canonical: "https://staging.seslong.com/who-we-are",
+  },
+  openGraph: {
+    title: "Connecting Global Markets with Quality Manufacturing Solutions",
+    description:
+      "Explore Seslong's manufacturing expertise and trading solutions, bridging markets from India to Hong Kong with high-quality products and reliable partnerships.",
+    url: "https://staging.seslong.com/who-we-are",
+    images: "/what-we-do/Quality.png",
+  },
+};
+
 export default function page() {
-  const title =
-    "Connecting Global Markets with Quality Manufacturing Solutions";
-  const description =
-    "Explore Seslong's manufacturing expertise and trading solutions, bridging markets from India to Hong Kong with high-quality products and reliable partnerships.";
-  const path = "https://staging.seslong.com/who-we-are";
-  const metaImage = "/contactUs/banner.png";
   return (
     <>
-      <Seo
-        title={title}
-        description={description}
-        path={path}
-        metaImage={metaImage}
-      />
       <Banner />
       <WhoWeAre />
       <Quality />
       <FloatingButton />
-
     </>
   );
 }
