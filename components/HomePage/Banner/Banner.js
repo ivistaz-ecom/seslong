@@ -17,9 +17,11 @@ export default function Banner() {
   const prevBtn = (
     <button
       type="button"
-      className="group absolute start-0 top-48 xl:top-60 lg:top-48 z-30 flex h-full cursor-pointer items-center justify-center px-4 focus:outline-none"
+      className="group absolute start-0 top-48 z-30 flex h-full cursor-pointer items-center justify-center px-4 focus:outline-none lg:top-48 xl:top-60"
       onClick={() =>
-        setActiveIndex((activeIndex - 1 + homeSlider.length) % homeSlider.length)
+        setActiveIndex(
+          (activeIndex - 1 + homeSlider.length) % homeSlider.length,
+        )
       }
     >
       <IoIosArrowRoundBack size="70" color="white" />
@@ -29,7 +31,7 @@ export default function Banner() {
   const nextBtn = (
     <button
       type="button"
-      className="group absolute end-0 top-48 xl:top-60 lg:top-48 z-30 flex h-full cursor-pointer items-center justify-center px-4 focus:outline-none"
+      className="group absolute end-0 top-48 z-30 flex h-full cursor-pointer items-center justify-center px-4 focus:outline-none lg:top-48 xl:top-60"
       onClick={() => setActiveIndex((activeIndex + 1) % homeSlider.length)}
     >
       <IoIosArrowRoundForward size="70" color="white" />
@@ -48,19 +50,18 @@ export default function Banner() {
             >
               <img
                 src={slide.image}
-                className="h-full w-full object-cover hidden sm:block"
+                className="hidden h-full w-full object-cover sm:block"
                 alt={slide.alt || "Slide image"}
               />
               <img
                 src={slide.mobImage}
-                className="h-full w-full object-cover block sm:hidden"
+                className="block h-full w-full object-cover sm:hidden"
                 alt={slide.alt || "Slide image"}
               />
               <div
-                className="absolute lg:bottom-32 bottom-28 bg-black p-2 lg:left-10 left-4 text-white lg:text-5xl text-2xl font-medium bg-opacity-50 lg:px-4 py-2"
+                className="absolute bottom-28 left-4 bg-black bg-opacity-50 p-2 py-2 text-2xl font-medium text-white lg:bottom-32 lg:left-10 lg:px-4 lg:text-5xl"
                 dangerouslySetInnerHTML={{ __html: slide.text }}
               ></div>
-
             </div>
           ))}
 
