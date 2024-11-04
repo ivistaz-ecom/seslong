@@ -38,6 +38,8 @@ export default function Contact() {
     if (!phoneRegex.test(phone)) {
       newErrors.phone = "Phone number must be 10 digits.";
     }
+    if (!message.trim() || message.length < 20)
+      newErrors.message = "Message must be at least 20 characters.";
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
@@ -64,7 +66,7 @@ export default function Contact() {
         "default_service", // Replace with your EmailJS service ID
         "template_81ng8dr", // Replace with your EmailJS template ID
         templateParams,
-        "hsxWBIOu96PDlE41t" // Replace with your EmailJS user ID (API Key)
+        "hsxWBIOu96PDlE41t", // Replace with your EmailJS user ID (API Key)
       )
       .then(
         () => {
@@ -93,15 +95,16 @@ export default function Contact() {
             })
             .catch((error) => {
               console.error("Failed to send form data:", error);
-              setErrors({ form: "Failed to send form data. Please try again." });
+              setErrors({
+                form: "Failed to send form data. Please try again.",
+              });
             });
         },
         (error) => {
           console.error("Failed to send email:", error.text);
           setErrors({ form: "Failed to send email. Please try again." });
-        }
+        },
       );
-
   }
 
   function resetForm() {
@@ -114,9 +117,14 @@ export default function Contact() {
   }
 
   return (
-    <div id="contact-form" className="container mx-auto mt-52 w-10/12 py-10 lg:mt-0">
+    <div
+      id="contact-form"
+      className="container mx-auto mt-52 w-10/12 py-10 lg:mt-0"
+    >
       <div className="mx-auto flex w-full flex-col">
-        <h2 className="py-4 text-center text-4xl font-medium">Connect With Us</h2>
+        <h2 className="py-4 text-center text-4xl font-medium">
+          Connect With Us
+        </h2>
         <p className="text-center text-[20px] font-normal">
           Partner with Seslong for your product needs and discover how our
           global presence, <br className="hidden sm:block" /> product knowledge,
@@ -144,13 +152,15 @@ export default function Contact() {
               placeholder=" "
               onChange={(e) => setName(e.target.value)}
             />
-            <label htmlFor="name" className="absolute start-2.5 top-3 z-10 origin-[0] -translate-y-3 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:-translate-y-3 peer-focus:scale-75 peer-focus:text-gray-600 dark:text-gray-400 peer-focus:dark:text-gray-500">
+            <label
+              htmlFor="name"
+              className="absolute start-2.5 top-3 z-10 origin-[0] -translate-y-3 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:-translate-y-3 peer-focus:scale-75 peer-focus:text-gray-600 dark:text-gray-400 peer-focus:dark:text-gray-500"
+            >
               Name <span className="text-red-500">*</span>
             </label>
             {errors.name && <p className="text-red-500">{errors.name}</p>}
           </div>
           {/* Repeat similar input structure for Email, Organization, Phone, and Message */}
-
 
           {/* No error message for name */}
 
@@ -175,7 +185,7 @@ export default function Contact() {
               {/* Error message */}
             </div>
           </div>
-        </div >
+        </div>
 
         <div className="w-full gap-4 lg:flex lg:py-6">
           <div className="relative w-full">
@@ -267,7 +277,7 @@ export default function Contact() {
             >
               Message
             </label>
-            {/* No error message for message */}
+            {errors.message && <p className="text-red-500">{errors.message}</p>}{" "}
           </div>
         </div>
 
@@ -279,8 +289,7 @@ export default function Contact() {
             Submit <IoMdArrowForward />
           </button>
         </div>
-      </form >
-    </div >
-
+      </form>
+    </div>
   );
 }

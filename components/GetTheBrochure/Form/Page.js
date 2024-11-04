@@ -22,17 +22,25 @@ export default function Contact() {
     const newErrors = {};
 
     if (!name.trim()) newErrors.name = "Name is required.";
-    else if (!/^[a-zA-Z\s-]+$/.test(name)) newErrors.name = "Name can only contain letters, spaces, and hyphens.";
+    else if (!/^[a-zA-Z\s-]+$/.test(name))
+      newErrors.name = "Name can only contain letters, spaces, and hyphens.";
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) newErrors.email = "Please enter a valid email address.";
+    if (!emailRegex.test(email))
+      newErrors.email = "Please enter a valid email address.";
 
-    if (!organization.trim()) newErrors.organization = "Organization is required.";
+    if (!organization.trim())
+      newErrors.organization = "Organization is required.";
 
     const phoneRegex = /^\d{10}$/;
-    if (!phoneRegex.test(phone)) newErrors.phone = "Phone number must be 10 digits.";
+    if (!phoneRegex.test(phone))
+      newErrors.phone = "Phone number must be 10 digits.";
 
-    if (!productCategory.trim()) newErrors.productCategory = "Product category is required.";
+    if (!productCategory.trim())
+      newErrors.productCategory = "Product category is required.";
+
+    if (!message.trim() || message.length < 20)
+      newErrors.message = "Message must be at least 20 characters.";
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
@@ -60,11 +68,12 @@ export default function Contact() {
         "default_service",
         "template_ah6kbqn",
         templateParams,
-        "hsxWBIOu96PDlE41t"
+        "hsxWBIOu96PDlE41t",
       )
       .then(
         (result) => console.log("Email successfully sent:", result.text),
-        (error) => setErrors({ form: "Failed to send email. Please try again later." })
+        (error) =>
+          setErrors({ form: "Failed to send email. Please try again later." }),
       );
 
     // Send data to Formspree
@@ -89,10 +98,16 @@ export default function Contact() {
           resetForm();
           router.push("/thank-you-for-your-interest-in-seslong");
         } else {
-          return response.json().then((data) => setErrors({ form: data.message || "Submission failed." }));
+          return response
+            .json()
+            .then((data) =>
+              setErrors({ form: data.message || "Submission failed." }),
+            );
         }
       })
-      .catch((error) => setErrors({ form: error.message || "An unexpected error occurred." }));
+      .catch((error) =>
+        setErrors({ form: error.message || "An unexpected error occurred." }),
+      );
   }
 
   function resetForm() {
@@ -108,12 +123,16 @@ export default function Contact() {
   return (
     <div id="form" className="container mx-auto w-10/12 py-10">
       <div className="mx-auto flex w-full flex-col">
-        <h2 className="py-4 text-center text-4xl font-medium">Get The Brochure</h2>
+        <h2 className="py-4 text-center text-4xl font-medium">
+          Get The Brochure
+        </h2>
       </div>
 
       <div>
         <form className="mx-auto py-8" onSubmit={onSubmit}>
-          {errors.form && <div className="py-2 text-center text-red-500">{errors.form}</div>}
+          {errors.form && (
+            <div className="py-2 text-center text-red-500">{errors.form}</div>
+          )}
           {submitted && (
             <div className="py-2 text-center text-green-500">
               Your form is Submitting...!
@@ -255,7 +274,9 @@ export default function Contact() {
               >
                 Message
               </label>
-              {/* No error message for message */}
+              {errors.message && (
+                <p className="text-red-500">{errors.message}</p>
+              )}
             </div>
           </div>
 
