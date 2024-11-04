@@ -89,7 +89,6 @@
 //         </>
 //     );
 // }
-
 'use client'
 import React, { useState } from 'react';
 import { FaWhatsapp } from "react-icons/fa6";
@@ -97,7 +96,6 @@ import { IoLogoWhatsapp } from "react-icons/io5";
 import Link from 'next/link';
 
 const WhatsappWidgetKumarkom = () => {
-
     const phone = '+919946105501';
     const text = 'Hello%20I%20have%20an%20enquiry.';
     const [isShow, setIsShow] = useState(true);
@@ -118,48 +116,48 @@ const WhatsappWidgetKumarkom = () => {
                 </button>
             </div>
 
-            {isShow && (
-                <div className="fixed bottom-56 right-4 lg:right-8 z-50 w-64 shadow-lg">
-                    <div className="bg-white text-gray-800 rounded-lg overflow-hidden border border-gray-200">
-                        <div className="bg-[#f5831fca] p-2 flex items-center justify-between">
-                            <p className="text-white text-sm font-semibold">
-                                Seslong
-                            </p>
-                            <button
-                                className="text-white text-lg cursor-pointer"
-                                onClick={handleOnClick}
+            {/* Popup with animation */}
+            <div
+                className={`fixed bottom-56 right-4 lg:right-8 z-50 w-64 shadow-lg transition-transform duration-300 ease-in-out ${isShow ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0 pointer-events-none'
+                    }`}
+            >
+                <div className="bg-white text-gray-800 rounded-lg overflow-hidden border border-gray-200">
+                    <div className="bg-[#f5831fca] p-2 flex items-center justify-between">
+                        <p className="text-white text-sm font-semibold">Seslong</p>
+                        <button
+                            className="text-white text-lg cursor-pointer"
+                            onClick={handleOnClick}
+                        >
+                            &times;
+                        </button>
+                    </div>
+                    <div className="p-2">
+                        <p className="text-gray-800 font-medium">
+                            <Link
+                                className="hover:text-green-500"
+                                href="https://wa.me/+919900288341?text=Hi, I have an enquiry!"
+                                target="_blank"
                             >
-                                &times;
-                            </button>
-                        </div>
-                        <div className="p-2">
-                            <p className="text-gray-800 font-medium">
-                                <Link
-                                    className="hover:text-green-500"
-                                    href="https://wa.me/+919900288341?text=Hi, I have an enquiry!"
-                                    target="_blank"
-                                >
-                                    <span className="flex mt-1 gap-2 cursor-pointer">
-                                        <IoLogoWhatsapp className="mt-1" /> IND: +91-99002-88341
-                                    </span>
-                                </Link>
-                                <Link
-                                    className="hover:text-green-500"
-                                    href="https://wa.me/+85255909449?text=Hi, I have an enquiry!"
-                                    target="_blank"
-                                >
-                                    <span className="flex mt-1 gap-2">
-                                        <IoLogoWhatsapp className="mt-1" /> HK: +85255909449
-                                    </span>
-                                </Link>
-                            </p>
-                        </div>
-
+                                <span className="flex mt-1 gap-2 cursor-pointer">
+                                    <IoLogoWhatsapp className="mt-1" /> IND: +91-99002-88341
+                                </span>
+                            </Link>
+                            <Link
+                                className="hover:text-green-500"
+                                href="https://wa.me/+85255909449?text=Hi, I have an enquiry!"
+                                target="_blank"
+                            >
+                                <span className="flex mt-1 gap-2">
+                                    <IoLogoWhatsapp className="mt-1" /> HK: +85255909449
+                                </span>
+                            </Link>
+                        </p>
                     </div>
                 </div>
-            )}
+            </div>
         </>
     );
 }
 
 export default WhatsappWidgetKumarkom;
+

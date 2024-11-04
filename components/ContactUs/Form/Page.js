@@ -69,7 +69,7 @@ export default function Contact() {
       .then(
         () => {
           // Proceed with form submission if email is successfully sent
-          fetch("https://formcarry.com/s/VQmxImepSma", {
+          fetch("https://formspree.io/f/mqakpjdj", {
             method: "POST",
             headers: {
               Accept: "application/json",
