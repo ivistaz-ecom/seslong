@@ -108,7 +108,7 @@ const WhatsappWidgetKumarkom = () => {
 
     return (
         <>
-            <div className="fixed right-4 lg:right-8 lg:bottom-24 z-50">
+            <div className="fixed right-4 lg:right-8 bottom-24 z-50">
                 <button
                     type="button"
                     className="bg-green-500 flex justify-center items-center rounded-full p-3 shadow-lg"
@@ -132,10 +132,10 @@ const WhatsappWidgetKumarkom = () => {
                                 &times;
                             </button>
                         </div>
-                        <div className="p-4">
+                        <div className="p-2">
                             <p className="text-gray-800 font-medium">
                                 <Link
-                                    className="hover:text-[#f5831fca]"
+                                    className="hover:text-green-500"
                                     href="https://wa.me/+919900288341?text=Hi, I have an enquiry!"
                                     target="_blank"
                                 >
@@ -144,7 +144,7 @@ const WhatsappWidgetKumarkom = () => {
                                     </span>
                                 </Link>
                                 <Link
-                                    className="hover:text-[#f5831fca]"
+                                    className="hover:text-green-500"
                                     href="https://wa.me/+85255909449?text=Hi, I have an enquiry!"
                                     target="_blank"
                                 >
