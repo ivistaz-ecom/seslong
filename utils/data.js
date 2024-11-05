@@ -338,7 +338,7 @@ export const products = {
       description:
         "We import and distribute in India an exotic range of fruits and vegetables including Haas avocados, Thai range (lotus stem, asparagus, chillies), Italian lemons, frozen berries, frozen edamame and others for supply to the HORECA and retail markets across India.",
       imageSrc: "/Products/Exotic-Imported-Fruits-and-Vegetable.png",
-      popImageSrc: "/Products/popup/Exotic-Imported-Fruits-and-Vegetable.png",
+      popImageSrc: "/Products/popup/Exotic-Imported-Fruits-and-Vegetabless.png",
     },
     {
       name: "Pet Foos",
