@@ -4,35 +4,35 @@ import { IoLogoWhatsapp } from "react-icons/io5";
 
 export const homeSlider = [
   {
-    image: "/Home/main-slider-image-01.png",
+    image: "/Home/slider-image-01.png",
     mobImage: "/Home/mobile-slider-01.jpg",
     alt: "Description 1",
     description: "Seslong Your Reliable Partner for Quality Products",
     text: "Seslong Your Reliable Partner <br> for Quality Products",
   },
   {
-    image: "/Home/main-slider-image-02.jpg",
+    image: "/Home/slider-image-02.jpg",
     mobImage: "/Home/mobile-slider-02.jpg",
     alt: "Description 2",
     description: "Seslong Your Reliable Partner <br> for Quality Products",
     text: "Seslong Your Reliable Partner <br> for Quality Products",
   },
   {
-    image: "/Home/main-slider-image-03.png",
+    image: "/Home/slider-image-03.png",
     mobImage: "/Home/mobile-slider-03.jpg",
     alt: "Description 3",
     description: "Seslong Your Reliable Partner <br> for Quality Products",
     text: "Seslong Your Reliable Partner <br> for Quality Products",
   },
   {
-    image: "/Home/main-slider-image-04.png",
+    image: "/Home/slider-image-04.png",
     mobImage: "/Home/mobile-slider-04.jpg",
     alt: "Description 4",
     description: "Seslong Your Reliable Partner <br> for Quality Products",
     text: "Seslong Your Reliable Partner <br> for Quality Products",
   },
   {
-    image: "/Home/main-slider-image-05.jpg",
+    image: "/Home/slider-image-05.jpg",
     mobImage: "/Home/mobile-slider-05.jpg",
     alt: "Description 5",
     description: "Seslong Your Reliable Partner <br> for Quality Products",
@@ -40,7 +40,7 @@ export const homeSlider = [
   },
 
   {
-    image: "/Home/main-slider-image-06.jpg",
+    image: "/Home/slider-image-06.jpg",
     mobImage: "/Home/mobile-slider-06.jpg",
     alt: "Description 6",
     description: "Seslong Your Reliable Partner <br> for Quality Products",
