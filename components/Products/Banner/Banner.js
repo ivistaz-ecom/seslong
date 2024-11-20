@@ -8,14 +8,11 @@ export default function Banner() {
         <div className="relative mx-auto h-full w-full overflow-hidden">
           <div className="absolute left-1/2 top-1/2 h-full w-full -translate-x-1/2 -translate-y-1/2 transition-opacity duration-700 ease-in-out">
             {/* Video for larger screens */}
-            <video
+            <Image
               width={1200}
               height={900}
-              src="/Products/video/seslong-products-banner-video.mp4"
+              src="/Products/video/seslong-products-banner.gif"
               className="hidden h-full w-full object-cover sm:block"
-              autoPlay
-              loop
-              muted
             />
 
             {/* Image for smaller screens */}
