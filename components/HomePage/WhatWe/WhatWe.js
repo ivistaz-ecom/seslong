@@ -5,9 +5,9 @@ import { IoMdArrowForward } from "react-icons/io";
 
 export default function WhatWe() {
   return (
-    <div className="grid-cols-2 lg:grid">
-      <div className="flex flex-col items-center justify-center p-3 py-16 lg:p-12 lg:py-0  lg:pl-40">
-        <h2 className="text-4xl font-medium">What We Offer</h2>
+    <div className="grid-cols-2 lg:grid ">
+      <div className="container mx-auto flex flex-col items-center justify-center p-3  py-16 lg:p-12 lg:pl-40">
+        <h2 className="text-4xl font-medium">What We Do</h2>
         <p className="py-8 text-center text-[20px] font-normal">
           Our core activities encompass manufacturing, export, and distribution.
           We emphasize quality control across all operations to meet and exceed
@@ -23,12 +23,12 @@ export default function WhatWe() {
           </span>
         </Link>
       </div>
-      <div className=" ">
+      <div className="container mx-auto -mt-10 flex items-center lg:-mt-0">
         <Image
-          src="/Home/what-we-offer-img.png"
+          src="/Home/hands.png"
           width={400}
           height={400}
-          className="w-full"
+          className="p-7 lg:w-[70%] lg:p-0"
           alt="image"
         />
       </div>

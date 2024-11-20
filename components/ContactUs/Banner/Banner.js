@@ -21,7 +21,7 @@ export default function Banner() {
             <Image
               height={500}
               width={600}
-              src="/mobile-contact.jpg"
+              src="/mobile-contact.png"
               className="block size-full object-cover sm:hidden"
               alt="Mobile banner"
             />

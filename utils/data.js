@@ -8,43 +8,50 @@ export const homeSlider = [
     mobImage: "/Home/mobile-slider-01.jpg",
     alt: "Description 1",
     description: "Seslong Your Reliable Partner for Quality Products",
-    text: "Seslong Your Reliable Partner <br> for Quality Products",
+    text: "Your Reliable Partner For <br/> Quality Products",
   },
   {
     image: "/Home/slider-image-02.jpg",
     mobImage: "/Home/mobile-slider-02.jpg",
     alt: "Description 2",
-    description: "Seslong Your Reliable Partner <br> for Quality Products",
-    text: "Seslong Your Reliable Partner <br> for Quality Products",
+    description: "Your Reliable Partner For <br/> Quality Products",
+    text: "Your Reliable Partner For <br/> Quality Products",
   },
   {
     image: "/Home/slider-image-03.png",
     mobImage: "/Home/mobile-slider-03.jpg",
     alt: "Description 3",
-    description: "Seslong Your Reliable Partner <br> for Quality Products",
-    text: "Seslong Your Reliable Partner <br> for Quality Products",
+    description: "Your Reliable Partner For <br/> Quality Products",
+    text: "Your Reliable Partner For <br/> Quality Products",
   },
   {
     image: "/Home/slider-image-04.png",
     mobImage: "/Home/mobile-slider-04.jpg",
     alt: "Description 4",
-    description: "Seslong Your Reliable Partner <br> for Quality Products",
-    text: "Seslong Your Reliable Partner <br> for Quality Products",
+    description: "Your Reliable Partner For <br/> Quality Products",
+    text: "Your Reliable Partner For <br/> Quality Products",
   },
   {
     image: "/Home/slider-image-05.jpg",
     mobImage: "/Home/mobile-slider-05.jpg",
     alt: "Description 5",
-    description: "Seslong Your Reliable Partner <br> for Quality Products",
-    text: "Seslong Your Reliable Partner <br> for Quality Products",
+    description: "Your Reliable Partner For <br/> Quality Products",
+    text: "Your Reliable Partner For <br/> Quality Products",
   },
 
   {
     image: "/Home/slider-image-06.jpg",
     mobImage: "/Home/mobile-slider-06.jpg",
     alt: "Description 6",
-    description: "Seslong Your Reliable Partner <br> for Quality Products",
-    text: "Seslong Your Reliable Partner <br> for Quality Products",
+    description: "Your Reliable Partner For <br/> Quality Products",
+    text: "Your Reliable Partner For <br/> Quality Products",
+  },
+  {
+    image: "/contact-banner.png",
+    mobImage: "/mobile-contact.jpg",
+    alt: "Description 7",
+    description: "Your Reliable Partner For <br/> Quality Products",
+    text: "Your Reliable Partner For <br/> Quality Products",
   },
 ];
 
@@ -135,7 +142,9 @@ export const contactInfo = [
   {
     contact: (
       <div className="flex space-x-2">
-        <span className="pl-2">HK<span className="pl-1"></span> :</span>
+        <span className="pl-2">
+          HK<span className="pl-1"></span> :
+        </span>
         <span className="">+852-5590-9449</span>
       </div>
     ),
@@ -156,7 +165,8 @@ export const copyRight = [
 export const whoWeAre = [
   {
     icon: "/who-we-are/oem-icon.svg",
-    expert: "OEM supply of consumer products to brands and retails pan India.",
+    expert:
+      "OEM supply of consumer products to brands and retailers pan India.",
   },
   {
     icon: "/who-we-are/fruits.svg",
@@ -210,8 +220,8 @@ export const products = {
       name: "Makeup Brushes",
       description:
         "We have the perfect tools for your everyday make up regime. Top quality and attractive designs. Our bristles are available in both vegan (super soft nano fibre) and animal hair ranges.",
-      imageSrc: "/Products/Make-up-Brushes.png",
-      popImageSrc: "/Products/popup/Make-up-Brushes.png",
+      imageSrc: "/Products/make-up.png",
+      popImageSrc: "/Products/make-up.png",
     },
     {
       name: "Cosmetics",
@@ -269,7 +279,7 @@ export const products = {
     {
       name: "Laundry Pods",
       description:
-        "Highly concentrated formulation, easy to use and wide range of fragrances. Our pods are available in attractive designs and hypoallergenic fragrances which are suitable for delicate fabric such as inner wear and children’s wear. Pod size, number of chamber, fragrance, colour, packaging and count per pack can be customised to suit your requirements.",
+        "Highly concentrated formulation, easy to use and wide range of fragrances. Our pods are available in attractive designs and hypoallergenic fragrances which are suitable for delicate fabric such as inner wear and children’s wear. Pod size, number of chambers, fragrance, colour, packaging and count per pack can be customised to suit your requirements.",
       imageSrc: "/Products/Laundry-Pods.png",
       popImageSrc: "/Products/popup/Laundry-Pods.png",
     },
@@ -314,8 +324,8 @@ export const products = {
       name: "Mops and Brushes",
       description:
         "We have an extensive range in home cleaning tools including mops, duster, brushes, scrubbers and cloths. Please do contact us with your requirement so we can offer you the right product and price.",
-      imageSrc: "/Products/Mops-and-Brushes.png",
-      popImageSrc: "/Products/popup/Mops-and-Brushes.png",
+      imageSrc: "/Products/popup/mops.png",
+      popImageSrc: "/Products/popup/mops.png",
     },
     {
       name: "Household Appliances",

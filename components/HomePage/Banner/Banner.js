@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { homeSlider } from "../../../utils/data"; // Ensure this imports correctly
 import { IoIosArrowRoundForward, IoIosArrowRoundBack } from "react-icons/io";
+import Image from "next/image";
 
 export default function Banner() {
   const [activeIndex, setActiveIndex] = useState(0); // Track the active slide index
@@ -39,14 +40,15 @@ export default function Banner() {
   );
 
   return (
-    <div className="z-50 h-[90vh]">
-      <div className="h-[70vh] bg-[#F8E2CF]">
+    <div className="z-50 h-[75vh]">
+      {/* <div className="h-[70vh] bg-[#F8E2CF]">
         <div className="relative h-full w-full overflow-hidden">
           {homeSlider.map((slide, index) => (
             <div
               key={index}
-              className={`absolute left-1/2 top-1/2 h-full w-full -translate-x-1/2 -translate-y-1/2 transition-opacity duration-700 ease-in-out ${index === activeIndex ? "opacity-100" : "opacity-0"
-                }`}
+              className={`absolute left-1/2 top-1/2 h-full w-full -translate-x-1/2 -translate-y-1/2 transition-opacity duration-700 ease-in-out ${
+                index === activeIndex ? "opacity-100" : "opacity-0"
+              }`}
             >
               <img
                 src={slide.image}
@@ -70,8 +72,9 @@ export default function Banner() {
               <button
                 key={index}
                 type="button"
-                className={`h-1 rounded-lg transition-all duration-300 ease-in-out ${index === activeIndex ? "w-40" : "w-20"
-                  } bg-white`}
+                className={`h-1 rounded-lg transition-all duration-300 ease-in-out ${
+                  index === activeIndex ? "w-40" : "w-20"
+                } bg-white`}
                 aria-current={index === activeIndex ? "true" : "false"}
                 onClick={() => setActiveIndex(index)}
               ></button>
@@ -81,12 +84,43 @@ export default function Banner() {
           {prevBtn}
           {nextBtn}
         </div>
+      </div> */}
+      <div className="z-50 h-[50vh]">
+        <div className="h-[70vh] bg-[#F8E2CF] lg:h-[50vh]">
+          <div className="relative size-full overflow-hidden">
+            <div
+              className={`absolute left-1/2 top-1/2 size-full -translate-x-1/2 -translate-y-1/2 transition-opacity duration-700 ease-in-out`}
+            >
+              {/* Desktop image */}
+              <Image
+                width={1200}
+                height={900}
+                src="/contact-banner.png"
+                className="hidden size-full object-cover sm:block"
+                alt="Desktop banner"
+              />
+              {/* Mobile image */}
+              <Image
+                height={500}
+                width={600}
+                src="/mobile-contact.jpg"
+                className="block size-full object-cover sm:hidden"
+                alt="Mobile banner"
+              />
+            </div>
+            <div className="absolute bottom-28 left-4 bg-black bg-opacity-65 p-2 py-2 text-2xl font-medium text-white lg:bottom-32 lg:left-16 lg:px-4 lg:text-5xl">
+              <p>
+                Your Reliable Partner For <br /> Quality Products
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
       <div className="z-40 mx-auto flex items-center justify-center bg-[#F8E2CF] p-5 text-xl font-normal lg:h-[20vh] lg:px-40">
-        <p className="lg:w-10/12">
-          Seslong is a global trading house with operations strategically
-          located across India, Hong Kong, and China, enabling us to supply a
-          diverse range of products to customers worldwide.
+        <p className="lg:w-10/12w container mx-auto">
+          Seslong is a global trading house with operations and manufacturing
+          strategically located across India, Hong Kong, China, enabling us to
+          supply a diverse range of products to customers worldwide.
         </p>
       </div>
     </div>

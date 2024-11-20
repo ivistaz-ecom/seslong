@@ -17,7 +17,7 @@ export default function Footer() {
 
   return (
     <>
-      <div className="bg-[#E5E5E4] p-12">
+      <div className="bg-[#000] p-12 text-white">
         <div className="container mx-auto w-11/12 grid-cols-3 gap-4 lg:grid">
           <div className="mx-auto lg:w-11/12">
             <Link href="/">
@@ -42,8 +42,9 @@ export default function Footer() {
               {quickLinks.map((link, index) => (
                 <li
                   key={index}
-                  className={`py-1 text-xl font-normal hover:text-[#f5831fca] ${isActive(link.url) ? "text-[#f5831fca]" : ""
-                    }`}
+                  className={`py-1 text-xl font-normal hover:text-[#f5831fca] ${
+                    isActive(link.url) ? "text-[#f5831fca]" : ""
+                  }`}
                 >
                   <Link href={link.url}>{link.name}</Link>
                 </li>
@@ -63,7 +64,7 @@ export default function Footer() {
                     <div className="flex w-full justify-between">
                       {/* Handle both string and JSX cases */}
                       {typeof contact.contact === "string" &&
-                        contact.contact.includes(":") ? (
+                      contact.contact.includes(":") ? (
                         <>
                           <span className="flex-shrink-0">
                             {contact.contact.split(":")[0]} :
