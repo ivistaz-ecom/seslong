@@ -351,7 +351,7 @@ export const products = {
       popImageSrc: "/Products/popup/Exotic-Imported-Fruits-and-Vegetabless.png",
     },
     {
-      name: "Pet Foos",
+      name: "Pet Foods",
       description:
         "Our pet food range includes wet (canned), dry and treats that are specifically curated for dogs and cats. Available in a range of meat and vegetable flavours with customisation of packaging and size.",
       imageSrc: "/Products/Pet-Food.png",
