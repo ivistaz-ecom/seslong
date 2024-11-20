@@ -95,7 +95,7 @@ export default function Banner() {
               <Image
                 width={1200}
                 height={900}
-                src="/contact-banner-01.png"
+                src="/Home/contact-banner.png"
                 className="hidden size-full object-cover sm:block"
                 alt="Desktop banner"
               />
@@ -103,7 +103,7 @@ export default function Banner() {
               <Image
                 height={500}
                 width={600}
-                src="/mobile-contact.jpg"
+                src="/Home/mobile-contact.jpg"
                 className="block size-full object-cover sm:hidden"
                 alt="Mobile banner"
               />
