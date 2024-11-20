@@ -95,7 +95,7 @@ export default function Banner() {
               <Image
                 width={1200}
                 height={900}
-                src="/contact-banner.png"
+                src="/contact-banner-01.png"
                 className="hidden size-full object-cover sm:block"
                 alt="Desktop banner"
               />
