@@ -48,6 +48,12 @@ export default function FloatingButton() {
       onMouseLeave={() => {
         if (window.innerWidth > 768) setIsTextVisible(false); // Hide text on hover leave for desktop
       }}
+      onMouseOver={() => {
+        if (window.innerWidth < 768) setIsTextVisible(true); // Hide text on hover leave for desktop
+      }}
+      onMouseOut={() => {
+        if (window.innerWidth < 768) setIsTextVisible(false); // Hide text on hover leave for desktop
+      }}
     >
       {isTextVisible && (
         <span
