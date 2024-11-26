@@ -7,6 +7,16 @@ import Link from "next/link";
 const WhatsappWidgetKumarkom = () => {
   const [isShow, setIsShow] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  let timer;
+
+  const startTimerToHide = () => {
+    // Clear any existing timer
+    clearTimeout(timer);
+    // Hide popup after 3 seconds
+    timer = setTimeout(() => {
+      setIsShow(false);
+    }, 3000);
+  };
 
   const handleOnClick = () => {
     setIsShow(false); // Hide the popup on click
@@ -15,11 +25,7 @@ const WhatsappWidgetKumarkom = () => {
   useEffect(() => {
     // Show popup on page load
     setIsShow(true);
-
-    // Hide popup after 10 seconds
-    const timer = setTimeout(() => {
-      setIsShow(false);
-    }, 10000);
+    startTimerToHide();
 
     // Cleanup timeout on unmount
     return () => clearTimeout(timer);
@@ -34,6 +40,11 @@ const WhatsappWidgetKumarkom = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const handleButtonClick = () => {
+    setIsShow((prev) => !prev); // Toggle visibility
+    if (!isShow) startTimerToHide(); // Restart timer when showing the popup
+  };
+
   return (
     <>
       {/* Floating Button */}
@@ -44,7 +55,7 @@ const WhatsappWidgetKumarkom = () => {
             ? "lg:bottom-22 fixed bottom-24 right-4 lg:right-8"
             : "lg:bottom-13 bottom-2 right-4 lg:right-8"
         }`}
-        onClick={() => setIsShow((prev) => !prev)} // Toggle visibility on button click
+        onClick={handleButtonClick} // Toggle visibility on button click
       >
         <FaWhatsapp size="28" className="text-white" />
       </button>

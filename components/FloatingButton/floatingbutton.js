@@ -5,28 +5,24 @@ import { useRouter } from "next/navigation";
 
 export default function FloatingButton() {
   const router = useRouter();
-  const [isTextVisible, setIsTextVisible] = useState(true);
+  const [isTextVisible, setIsTextVisible] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
   const handleClick = () => {
     router.push("/get-the-brochure");
   };
 
-  // Toggle text visibility based on scroll position
+  // Check for screen size to conditionally handle text visibility
   useEffect(() => {
-    const handleScroll = () => {
+    const handleResize = () => {
       if (window.innerWidth <= 768) {
-        // Mobile screens
-        if (window.scrollY > 100) {
-          setIsTextVisible(false);
-        } else {
-          setIsTextVisible(false);
-        }
+        setIsTextVisible(false); // Always hide text on mobile
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   useEffect(() => {
@@ -36,8 +32,9 @@ export default function FloatingButton() {
     };
 
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll); // Cleanup the event listener
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
   return (
     <div
       className={`fixed bottom-20 right-4 z-50 flex items-center space-x-2 lg:right-9${
@@ -45,6 +42,12 @@ export default function FloatingButton() {
           ? "bottom-20 right-4 mb-20 lg:bottom-40 lg:right-8 lg:mb-0"
           : "lg:bottom-13 bottom-2 right-4 lg:right-8"
       }`}
+      onMouseEnter={() => {
+        if (window.innerWidth > 768) setIsTextVisible(true); // Show text on hover for desktop only
+      }}
+      onMouseLeave={() => {
+        if (window.innerWidth > 768) setIsTextVisible(false); // Hide text on hover leave for desktop
+      }}
     >
       {isTextVisible && (
         <span
