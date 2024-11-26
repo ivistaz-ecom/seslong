@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 export default function FloatingButton() {
   const router = useRouter();
   const [isTextVisible, setIsTextVisible] = useState(true);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const handleClick = () => {
     router.push("/get-the-brochure");
@@ -19,7 +20,7 @@ export default function FloatingButton() {
         if (window.scrollY > 100) {
           setIsTextVisible(false);
         } else {
-          setIsTextVisible(true);
+          setIsTextVisible(false);
         }
       }
     };
@@ -28,8 +29,23 @@ export default function FloatingButton() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    // Check if the user has scrolled
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 100);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll); // Cleanup the event listener
+  }, []);
   return (
-    <div className="fixed bottom-40 right-4 z-50 flex items-center space-x-2 lg:right-8">
+    <div
+      className={`fixed bottom-20 right-4 z-50 flex items-center space-x-2 lg:right-9${
+        isScrolled
+          ? "bottom-20 right-4 mb-20 lg:bottom-40 lg:right-8 lg:mb-0"
+          : "lg:bottom-13 bottom-2 right-4 lg:right-8"
+      }`}
+    >
       {isTextVisible && (
         <span
           onClick={handleClick}
