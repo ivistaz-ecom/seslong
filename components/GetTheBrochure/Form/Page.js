@@ -124,7 +124,7 @@ export default function Contact() {
     <div id="form" className="container mx-auto w-10/12 py-10">
       <div className="mx-auto flex w-full flex-col">
         <h2 className="py-4 text-center text-4xl font-medium">
-          Get The Brochure
+          Request Catalogue
         </h2>
       </div>
 

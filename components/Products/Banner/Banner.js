@@ -11,19 +11,16 @@ export default function Banner() {
             <Image
               width={1200}
               height={900}
-              src="/Products/video/seslong-products-banner.gif"
+              src="/Products/products-banner.jpg"
               className="hidden h-full w-full object-cover sm:block"
             />
 
             {/* Image for smaller screens */}
-            <video
-              width={1200}
+            <Image
+              width={800}
               height={900}
-              src="/Products/video/seslong-products-banner-mob.gif.mp4"
+              src="/Products/mobile-banner.jpg"
               className="block h-full w-full object-cover sm:hidden"
-              autoPlay
-              loop
-              muted
             />
           </div>
 

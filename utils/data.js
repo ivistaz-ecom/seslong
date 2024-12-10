@@ -119,7 +119,7 @@ export const quickLinks = [
   { name: "What we do", url: "/what-we-do" },
   { name: "Products", url: "/products" },
   { name: "Contact Us", url: "/contact-us" },
-  { name: "Get The Brochure", url: "/get-the-brochure" },
+  { name: "Request Catalogue", url: "/request-catalogue" },
 ];
 
 export const contactInfo = [
@@ -175,7 +175,7 @@ export const whoWeAre = [
   },
   {
     icon: "/who-we-are/indian.svg",
-    expert: "Exports of Indian original products to International markets.",
+    expert: "Exports of Indian origin products to International markets.",
   },
 ];
 
@@ -233,7 +233,7 @@ export const products = {
     {
       name: "K-Beauty Range",
       description:
-        "Korean beauty products have achieved cult status in the global market. Known for their superior quality, we offer our customers are wide range of care and beauty products for Skin, Hair and Body. These products include toners, serums, lotions/creams, cleansing, masks/patches, shampoos and conditioners. We can help curate a new range or offer existing brands for distribution.",
+        "Korean beauty products have achieved cult status in the global market. Known for their superior quality, we offer our customers a wide range of care and beauty products for Skin, Hair and Body. These products include toners, serums, lotions/creams, cleansing, masks/patches, shampoos and conditioners. We can help curate a new range or offer existing brands for distribution.",
       imageSrc: "/Products/K-Beauty-Range.png",
       popImageSrc: "/Products/popup/KbeautyRange.png",
     },
@@ -263,7 +263,7 @@ export const products = {
     {
       name: "Sanitary Pads",
       description:
-        "Our Ultra thin range of sanitary pads are designed for maximum comfort and absorbency. Super soft material and leak guard technology ensures longer dryness without any irritation. Available in a different sizes. We can customise the pouch and pad wrapper to increase your brand visibility and recall.",
+        "Our Ultra thin range of sanitary pads are designed for maximum comfort and absorbency. Super soft material and leak guard technology ensures longer dryness without any irritation. Available in different sizes. We can customise the pouch and pad wrapper to increase your brand visibility and recall.",
       imageSrc: "/Products/Sanitary-pads.png",
       popImageSrc: "/Products/popup/Sanitary-pads.png",
     },
@@ -300,7 +300,7 @@ export const products = {
     {
       name: "Garment Care",
       description:
-        "Speciality laundry products including colour grabber, white protect, fabric softener sheets and scent booster all of which offer superior care and cleaning for all clothes.",
+        "Our speciality laundry products include colour grabber, white protect, fabric softener sheets and scent booster all of which offer superior care and cleaning for all clothes.",
       imageSrc: "/Products/Garment-Care.png",
       popImageSrc: "/Products/popup/Garment-Care.png",
     },
@@ -369,7 +369,7 @@ export const products = {
     {
       name: "Tobacco",
       description:
-        "We supply different types of unmanufactured tobacco such as FCV, Burley, DFC and Oriental Tobaccos from different origins globally. Please contact us to enquiry about current availability and quantity.",
+        "We supply different types of unmanufactured tobacco such as FCV, Burley, DFC and Oriental Tobaccos from different origins globally. Please contact us to understand current availability and quantity.",
       imageSrc: "/Products/Tobacco.png",
       popImageSrc: "/Products/popup/Tobacco.png",
     },

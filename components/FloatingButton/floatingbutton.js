@@ -9,7 +9,7 @@ export default function FloatingButton() {
   const [isScrolled, setIsScrolled] = useState(false);
 
   const handleClick = () => {
-    router.push("/get-the-brochure");
+    router.push("/request-catalogue");
   };
 
   // Check for screen size to conditionally handle text visibility
@@ -60,7 +60,7 @@ export default function FloatingButton() {
           onClick={handleClick}
           className="cursor-pointer rounded-md bg-[#f5831fca] px-2 py-1 font-semibold text-white shadow-lg"
         >
-          Get the Brochure
+          Request Catalogue
         </span>
       )}
       <button

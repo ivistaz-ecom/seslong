@@ -97,10 +97,10 @@ export default function Page({ banner, title, description, pdfUrl }) {
                 {description || "Product description"}
               </p>
               <Link
-                href="/get-the-brochure"
+                href="/request-catalogue"
                 className="group flex items-center border-white px-2 py-4 text-xl font-medium hover:text-[#f5831fca]"
               >
-                Get the Brochure
+                Request Catalogue
                 <span className="ml-2 translate-x-0 opacity-0 transition-all duration-200 group-hover:translate-x-1 group-hover:opacity-100">
                   <IoIosArrowForward />
                 </span>
