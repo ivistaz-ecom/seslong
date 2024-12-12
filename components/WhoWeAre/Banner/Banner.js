@@ -41,7 +41,7 @@ export default function Banner() {
   );
   return (
     <>
-      <div className="z-50 h-[90vh]">
+      <div className="z-50">
         <div className="h-[70vh] bg-[#F8E2CF] lg:h-[50vh]">
           <div className="relative size-full overflow-hidden">
             <div
@@ -64,9 +64,9 @@ export default function Banner() {
             </div>
           </div>
         </div>
-        <div className="z-40 mx-auto flex h-[40vh] flex-col items-center justify-center bg-[#F8E2CF] text-xl font-normal lg:px-40">
-          <h2 className="mt-10 text-4xl font-medium lg:mt-0">About Seslong</h2>
-          <p className="w-[90%] py-3 text-center lg:w-10/12 lg:py-12">
+        <div className="z-40 mx-auto flex flex-col items-center justify-center bg-[#F8E2CF] p-0 text-xl font-normal lg:p-5 lg:px-40">
+          <h2 className="mt-10 text-4xl font-medium lg:mt-5">About Seslong</h2>
+          <p className="w-[90%] py-3 text-center lg:w-10/12 lg:py-5">
             We are a company involved in manufacturing and global trade. With
             operations strategically located in India, Hong Kong and China, we
             are able to leverage our product knowledge and location to maximise

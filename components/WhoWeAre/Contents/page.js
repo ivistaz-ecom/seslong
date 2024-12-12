@@ -4,7 +4,7 @@ import { whoWeAre } from "../../../utils/data";
 
 export default function page() {
   return (
-    <div className="mt-32 py-12 lg:mt-0">
+    <div className="mt-0 py-12">
       <div className="flex flex-col items-center justify-center">
         <h2 className="p-4 text-center text-4xl font-medium lg:p-0">
           Seslong Traders Private Limited
@@ -22,8 +22,13 @@ export default function page() {
             className="mt-4 flex flex-col items-center justify-center border border-black p-8 hover:border-[#f5831fca]"
             key={index}
           >
-            <Image src={items.icon} width={200} height={200} className="w-24"
-              alt="images" />
+            <Image
+              src={items.icon}
+              width={200}
+              height={200}
+              className="w-24"
+              alt="images"
+            />
             <p className="pt-6 text-center text-xl">{items.expert}</p>
           </div>
         ))}

@@ -85,7 +85,7 @@ export default function Banner() {
           {nextBtn}
         </div>
       </div> */}
-      <div className="z-50 h-[50vh]">
+      <div className="z-50 ">
         <div className="h-[70vh] bg-[#F8E2CF] lg:h-[50vh]">
           <div className="relative size-full overflow-hidden">
             <div
