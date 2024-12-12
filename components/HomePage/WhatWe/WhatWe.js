@@ -23,7 +23,7 @@ export default function WhatWe() {
           </span>
         </Link>
       </div>
-      <div className="container mx-auto -mt-10 flex items-center lg:-mt-0">
+      <div className="container mx-auto  flex items-center lg:-mt-0">
         <Image
           src="/Home/hands.png"
           width={400}
