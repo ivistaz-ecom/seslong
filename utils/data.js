@@ -119,7 +119,7 @@ export const quickLinks = [
   { name: "What we do", url: "/what-we-do" },
   { name: "Products", url: "/products" },
   { name: "Contact Us", url: "/contact-us" },
-  { name: "Request Catalogue", url: "/request-catalogue" },
+  // { name: "Request Catalogue", url: "/request-catalogue" },
 ];
 
 export const contactInfo = [

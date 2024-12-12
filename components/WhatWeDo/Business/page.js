@@ -10,7 +10,7 @@ export default function Page() {
       {sections.map((section, index) => (
         <div
           key={index}
-          className="container mx-auto grid w-9/12 py-4 lg:grid-cols-2"
+          className="container mx-auto grid w-9/12 py-4 lg:my-10 lg:grid-cols-2"
         >
           <div
             className={`mx-auto flex-col items-center justify-center lg:flex ${
