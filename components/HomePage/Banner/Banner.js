@@ -40,7 +40,7 @@ export default function Banner() {
   );
 
   return (
-    <div className="z-50 h-[75vh]">
+    <div className="z-50">
       {/* <div className="h-[70vh] bg-[#F8E2CF]">
         <div className="relative h-full w-full overflow-hidden">
           {homeSlider.map((slide, index) => (

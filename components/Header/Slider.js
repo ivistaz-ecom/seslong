@@ -64,7 +64,7 @@ export default function Slider() {
         ref={drawerRef}
         id="drawer-right-example"
         className={`fixed right-0 top-0 z-50 ${
-          pathname === "/" ? "h-[80vh]" : "h-[60vh]"
+          pathname === "/" ? "h-[60vh]" : "h-[60vh]"
         } w-[60vw] bg-[#000] p-4 transition-transform duration-300 ease-in-out lg:w-[16vw] ${
           isDrawerOpen ? "translate-x-0" : "translate-x-full"
         }`}
