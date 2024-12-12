@@ -108,7 +108,7 @@ export default function Banner() {
                 alt="Mobile banner"
               />
             </div>
-            <div className="absolute bottom-28 left-4 bg-black bg-opacity-65 p-2 py-2 text-2xl font-medium text-white lg:bottom-32 lg:left-16 lg:px-4 lg:text-5xl">
+            <div className="absolute bottom-28  left-4 bg-black bg-opacity-65 p-2 py-2 text-2xl font-medium text-white lg:bottom-12 lg:left-16 lg:px-4 lg:text-5xl">
               <p>
                 Your Reliable Partner For <br /> Quality Products
               </p>

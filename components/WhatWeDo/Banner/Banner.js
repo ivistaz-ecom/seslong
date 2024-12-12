@@ -12,14 +12,14 @@ export default function Banner() {
             <Image
               width={1200}
               height={900}
-              src="/what-we-do/what-we-do-banner.png"
+              src="/what-we-do/WhatWeDoBanner.png"
               className="hidden size-full object-cover sm:block"
               alt="Slide image"
             />
             <Image
-              width={500}
+              width={600}
               height={500}
-              src="/what-we-do/what-we-do-banner-mob.png"
+              src="/what-we-do/whatWeDoMobile.png"
               className="block size-full object-cover sm:hidden"
               alt="Slide image"
             />
