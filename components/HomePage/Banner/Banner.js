@@ -53,8 +53,8 @@ export default function Banner() {
         </div>
       </div>
 
-      <div className="z-40 mx-auto flex items-center justify-center bg-[#F8E2CF] p-5 text-xl font-normal lg:h-[20vh] lg:px-40">
-        <p className="container mx-auto lg:w-10/12">
+      <div className="z-40 mx-auto  flex items-center justify-center bg-[#F8E2CF] p-5 text-xl font-normal lg:p-14  lg:px-40">
+        <p className="container mx-auto text-center lg:w-10/12 ">
           Seslong is a global trading house with operations and manufacturing
           strategically located across India, Hong Kong, China, enabling us to
           supply a diverse range of products to customers worldwide.
