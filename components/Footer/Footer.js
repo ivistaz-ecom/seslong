@@ -17,7 +17,7 @@ export default function Footer() {
 
   return (
     <>
-      <div className="bg-[#000] p-12 text-white">
+      <div className="bg-[#000] p-3 py-10 text-white lg:p-5">
         <div className="container mx-auto w-11/12 grid-cols-3 gap-4 lg:grid">
           <div className="mx-auto lg:w-11/12">
             <Link href="/">
@@ -25,7 +25,7 @@ export default function Footer() {
                 src="/seslong-logo.svg"
                 width={400}
                 height={400}
-                className="w-auto"
+                className="mt-5 w-auto lg:mt-0"
                 alt="Company Logo"
               />
             </Link>

@@ -8,7 +8,9 @@ export default function Product() {
   return (
     <>
       <div className=" w-full lg:py-8">
-        <h2 className="py-8 text-center text-4xl font-medium">Product Range</h2>
+        <h2 className="py-8 text-center text-3xl font-medium lg:text-4xl">
+          Product Range
+        </h2>
         <div className="container mx-auto w-10/12 grid-cols-3 space-y-5 lg:grid lg:gap-6 lg:space-y-0">
           {ProductsItems.map((items, index) => (
             <div className="group relative overflow-hidden " key={index}>

@@ -41,14 +41,16 @@ export default function Products() {
   return (
     <div className="z-20 mt-36 lg:-mt-0">
       <div className="p-12">
-        <h2 className="text-center text-4xl font-medium">Our Products</h2>
+        <h2 className="text-center text-3xl font-medium lg:text-4xl">
+          Our Products
+        </h2>
       </div>
-      <div className="container mx-auto w-9/12 grid-cols-6 lg:grid gap-4">
+      <div className="container mx-auto w-9/12 grid-cols-6 gap-4 lg:grid">
         {Object.keys(products).map((category) => (
           <button
             key={category}
             onClick={() => handleCategoryChange(category)}
-            className={`border-b-4 mx-3 p-2 ${selectedCategory === category ? "border-b-4 border-b-[#F5841F] text-xl font-medium text-black" : "text-xl font-medium"}`}
+            className={`mx-3 border-b-4 p-2 ${selectedCategory === category ? "border-b-4 border-b-[#F5841F] text-xl font-medium text-black" : "text-xl font-medium"}`}
           >
             {category}
           </button>
@@ -58,37 +60,37 @@ export default function Products() {
       <div className="container mx-auto mt-4 w-10/12 grid-cols-4 gap-4 py-10 lg:grid">
         {loading
           ? Array.from({ length: 4 }).map((_, index) => (
-            <div key={index} className="border p-4">
-              <div className="h-32 w-full animate-pulse rounded bg-gray-300"></div>
-              <div className="mt-4 h-6 w-3/4 animate-pulse rounded bg-gray-300"></div>
-              <div className="mt-2 h-4 w-full animate-pulse rounded bg-gray-300"></div>
-            </div>
-          ))
+              <div key={index} className="border p-4">
+                <div className="h-32 w-full animate-pulse rounded bg-gray-300"></div>
+                <div className="mt-4 h-6 w-3/4 animate-pulse rounded bg-gray-300"></div>
+                <div className="mt-2 h-4 w-full animate-pulse rounded bg-gray-300"></div>
+              </div>
+            ))
           : products[selectedCategory]?.map((product, index) => (
-            <div key={index} className="group mt-4 overflow-hidden border">
-              <Image
-                src={product.imageSrc}
-                width={300}
-                height={200}
-                alt="image"
-                className="w-auto transition-all group-hover:scale-105"
-              />
-              <div className="relative top-0 flex flex-col items-center justify-center p-4 text-center">
-                <h2 className="h-14 text-xl font-medium">{product.name}</h2>
-                <p className="post-content line-clamp-4 text-base">
-                  {product.description}
-                </p>
-                <div className="flex w-full items-center justify-center bg-white">
-                  <Modal
-                    banner={product.popImageSrc}
-                    title={product.name}
-                    description={product.description}
-                    pdfUrl="/contact-us"
-                  />
+              <div key={index} className="group mt-4 overflow-hidden border">
+                <Image
+                  src={product.imageSrc}
+                  width={300}
+                  height={200}
+                  alt="image"
+                  className="w-auto transition-all group-hover:scale-105"
+                />
+                <div className="relative top-0 flex flex-col items-center justify-center p-4 text-center">
+                  <h2 className="h-14 text-xl font-medium">{product.name}</h2>
+                  <p className="post-content line-clamp-4 text-base">
+                    {product.description}
+                  </p>
+                  <div className="flex w-full items-center justify-center bg-white">
+                    <Modal
+                      banner={product.popImageSrc}
+                      title={product.name}
+                      description={product.description}
+                      pdfUrl="/contact-us"
+                    />
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
       </div>
 
       {/* <div className="mx-auto  gap-4 px-8 pb-20 lg:grid lg:w-10/12 lg:px-0">

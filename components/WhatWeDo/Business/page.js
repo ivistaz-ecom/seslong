@@ -17,7 +17,7 @@ export default function Page() {
               index % 2 === 0 ? "lg:order-2" : "lg:order-1"
             }`}
           >
-            <h2 className="pt-5 text-center text-4xl font-medium lg:pt-0">
+            <h2 className="pt-5 text-center text-3xl font-medium lg:pt-0 lg:text-4xl">
               {section.title}
             </h2>
             <p className="py-6 text-center text-xl lg:w-10/12">

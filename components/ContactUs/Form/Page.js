@@ -71,7 +71,7 @@ export default function Contact() {
       .then(
         () => {
           // Proceed with form submission if email is successfully sent
-          fetch("https://formspree.io/f/mqakpjdj", {
+          fetch("https://formspree.io/f/manygeye", {
             method: "POST",
             headers: {
               Accept: "application/json",
@@ -122,7 +122,7 @@ export default function Contact() {
       className="container mx-auto mt-52 w-10/12 py-10 lg:mt-0"
     >
       <div className="mx-auto flex w-full flex-col">
-        <h2 className="py-4 text-center text-4xl font-medium">
+        <h2 className="py-4 text-center text-3xl font-medium lg:text-4xl">
           Connect With Us
         </h2>
         <p className="text-center text-[20px] font-normal">
@@ -152,10 +152,7 @@ export default function Contact() {
               placeholder=" "
               onChange={(e) => setName(e.target.value)}
             />
-            <label
-              htmlFor="name"
-              className="absolute start-2.5 top-3 z-10 origin-[0] -translate-y-3 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:-translate-y-3 peer-focus:scale-75 peer-focus:text-gray-600 dark:text-gray-400 peer-focus:dark:text-gray-500"
-            >
+            <label className="absolute start-2.5 top-3 z-10 origin-[0] -translate-y-3 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:-translate-y-3 peer-focus:scale-75 peer-focus:text-gray-600 dark:text-gray-400 peer-focus:dark:text-gray-500">
               Name <span className="text-red-500">*</span>
             </label>
             {errors.name && <p className="text-red-500">{errors.name}</p>}
@@ -175,7 +172,6 @@ export default function Contact() {
                 onChange={(e) => setEmail(e.target.value)}
               />
               <label
-                htmlFor="email"
                 for="email"
                 className="absolute start-2.5 top-3 z-10 origin-[0] -translate-y-3 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:-translate-y-3 peer-focus:scale-75 peer-focus:text-gray-600 dark:text-gray-400 peer-focus:dark:text-gray-500 rtl:peer-focus:left-auto rtl:peer-focus:translate-x-1/4"
               >
@@ -198,7 +194,6 @@ export default function Contact() {
               onChange={(e) => setOrganization(e.target.value)}
             />
             <label
-              htmlFor="organization"
               for="organization"
               className="absolute start-2.5 top-3 z-10 origin-[0] -translate-y-3 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:-translate-y-3 peer-focus:scale-75 peer-focus:text-gray-600 dark:text-gray-400 peer-focus:dark:text-gray-500 rtl:peer-focus:left-auto rtl:peer-focus:translate-x-1/4"
             >
@@ -221,7 +216,6 @@ export default function Contact() {
                 maxLength={10}
               />
               <label
-                htmlFor="phone-number"
                 for="phone-number"
                 className="absolute start-2.5 top-3 z-10 origin-[0] -translate-y-3 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:-translate-y-3 peer-focus:scale-75 peer-focus:text-gray-600 dark:text-gray-400 peer-focus:dark:text-gray-500 rtl:peer-focus:left-auto rtl:peer-focus:translate-x-1/4"
               >
@@ -271,7 +265,6 @@ export default function Contact() {
               onChange={(e) => setMessage(e.target.value)}
             />
             <label
-              htmlFor="message"
               for="message"
               className="absolute start-2.5 top-3 z-10 origin-[0] -translate-y-3 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:-translate-y-3 peer-focus:scale-75 peer-focus:text-gray-600 dark:text-gray-400 peer-focus:dark:text-gray-500 rtl:peer-focus:left-auto rtl:peer-focus:translate-x-1/4"
             >

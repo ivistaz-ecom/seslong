@@ -43,7 +43,7 @@ export default function Banner() {
     <div className="">
       <div className="">
         <div className="flex h-[50vh] w-screen bg-[url('/home-page-banner-mobile.png')] bg-cover bg-center bg-no-repeat lg:bg-[url('/home-page-banner.png')]">
-          <div className="container mx-auto flex items-center justify-center p-5 text-center text-3xl text-white lg:text-5xl">
+          <div className="container mx-auto flex items-center justify-center p-5 text-center text-2xl text-white lg:text-5xl">
             <div className="inline-block bg-black bg-opacity-65 px-6 py-4">
               <p>
                 Your Reliable Partner For <br /> Quality Products

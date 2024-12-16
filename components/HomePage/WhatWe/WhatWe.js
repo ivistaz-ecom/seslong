@@ -7,7 +7,7 @@ export default function WhatWe() {
   return (
     <div className="grid-cols-2 lg:grid ">
       <div className="container mx-auto mt-10 flex flex-col items-center justify-center p-3  lg:mt-0 lg:p-12 lg:pl-40">
-        <h2 className="text-4xl font-medium">What We Do</h2>
+        <h2 className="text-3xl font-medium lg:text-4xl">What We Do</h2>
         <p className="py-8 text-center text-[20px] font-normal">
           Our core activities encompass manufacturing, export, and distribution.
           We emphasize quality control across all operations to meet and exceed

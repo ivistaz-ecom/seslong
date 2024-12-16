@@ -13,6 +13,15 @@ const config: Config = {
       fontFamily: {
         gibson: ["Gibson", "sans-serif"], // Add your custom font
       },
+      animation: {
+        swirl: "swirls 2s linear infinite",
+      },
+      keyframes: {
+        swirls: {
+          from: { strokeDashoffset: "0" },
+          to: { strokeDashoffset: "300" },
+        },
+      },
     },
   },
   plugins: [flowbite.plugin()],

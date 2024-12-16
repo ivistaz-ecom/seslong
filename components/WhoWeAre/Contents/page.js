@@ -6,7 +6,7 @@ export default function page() {
   return (
     <div className="mt-0 py-12">
       <div className="flex flex-col items-center justify-center">
-        <h2 className="p-4 text-center text-4xl font-medium lg:p-0">
+        <h2 className="p-4 text-center text-3xl font-medium lg:p-0 lg:text-4xl">
           Seslong Traders Private Limited
         </h2>
         <p className="p-2 py-4 text-center text-xl">
@@ -35,7 +35,9 @@ export default function page() {
       </div>
 
       <div className="flex flex-col items-center justify-center p-2 py-12">
-        <h2 className="text-4xl font-medium">Seslong Global Limited</h2>
+        <h2 className="text-3xl font-medium lg:text-4xl">
+          Seslong Global Limited
+        </h2>
         <p className="py-4 text-center text-xl">
           Established in 2016 and based in <strong>Hong Kong</strong>, serves as
           a critical bridge between

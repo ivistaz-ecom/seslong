@@ -65,7 +65,9 @@ export default function Banner() {
           </div>
         </div>
         <div className="z-40 mx-auto flex flex-col items-center justify-center bg-[#F8E2CF] p-0 text-xl font-normal lg:p-5 lg:px-40">
-          <h2 className="mt-10 text-4xl font-medium lg:mt-5">About Seslong</h2>
+          <h2 className="mt-10 text-3xl font-medium lg:mt-5 lg:text-4xl">
+            About Seslong
+          </h2>
           <p className="w-[90%] py-3 text-center lg:w-10/12 lg:py-5">
             We are a company involved in manufacturing and global trade. With
             operations strategically located in India, Hong Kong and China, we
