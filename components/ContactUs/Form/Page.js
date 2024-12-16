@@ -38,8 +38,8 @@ export default function Contact() {
     if (!phoneRegex.test(phone)) {
       newErrors.phone = "Phone number must be 10 digits.";
     }
-    if (!message.trim() || message.length < 20)
-      newErrors.message = "Message must be at least 20 characters.";
+    // if (!message.trim() || message.length < 20)
+    //   newErrors.message = "Message must be at least 20 characters.";
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
@@ -270,7 +270,7 @@ export default function Contact() {
             >
               Message
             </label>
-            {errors.message && <p className="text-red-500">{errors.message}</p>}{" "}
+            {/* {errors.message && <p className="text-red-500">{errors.message}</p>}{" "} */}
           </div>
         </div>
 
