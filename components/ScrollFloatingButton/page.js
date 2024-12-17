@@ -8,7 +8,7 @@ const ScrollToTopButton = () => {
   // Toggle button visibility based on scroll position
   useEffect(() => {
     const toggleVisibility = () => {
-      if (window.scrollY > 60) {
+      if (window.scrollY > 300) {
         setIsVisible(true);
       } else {
         setIsVisible(false);
