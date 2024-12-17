@@ -39,27 +39,32 @@ export default function Banner() {
       <IoIosArrowRoundForward size="70" color="white" />
     </button>
   );
+
   return (
     <>
       <div className="z-50">
-        <div className="h-[70vh] bg-[#F8E2CF] lg:h-[50vh]">
+        <div className="h-[70vh] lg:h-[50vh]">
           <div className="relative size-full overflow-hidden">
             <div
               className={`absolute left-1/2 top-1/2 size-full -translate-x-1/2 -translate-y-1/2 transition-opacity duration-700 ease-in-out `}
             >
+              {/* Desktop banner image with lazy loading */}
               <Image
                 width={1200}
                 height={900}
                 src="/who-we-are/banner.jpg"
                 className="hidden size-full object-cover sm:block"
-                alt="bnner image"
+                alt="banner image"
+                loading="lazy"
               />
+              {/* Mobile banner image with lazy loading */}
               <Image
                 width={600}
                 height={500}
                 src="/who-we-are/mobile-who-we-are.jpg"
                 className="block size-full object-cover sm:hidden"
                 alt="banner image"
+                loading="lazy"
               />
             </div>
           </div>
@@ -70,8 +75,8 @@ export default function Banner() {
           </h2>
           <p className="w-[90%] py-3 text-center lg:w-10/12 lg:py-5">
             We are a company involved in manufacturing and global trade. With
-            operations strategically located in India, Hong Kong and China, we
-            are able to leverage our product knowledge and location to maximise
+            operations strategically located in India, Hong Kong, and China, we
+            are able to leverage our product knowledge and location to maximize
             our customer benefits.
           </p>
         </div>

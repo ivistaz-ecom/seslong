@@ -71,7 +71,7 @@ export default function Contact() {
       .then(
         () => {
           // Proceed with form submission if email is successfully sent
-          fetch("https://formspree.io/f/manygeye", {
+          fetch("https://formspree.io/f/mnnqkvnv", {
             method: "POST",
             headers: {
               Accept: "application/json",
@@ -225,34 +225,6 @@ export default function Contact() {
               {/* Error message */}
             </div>
           </div>
-          {/* <div className="relative mt-7 w-full lg:mt-0">
-              <select
-                id="product-category"
-                className="peer block w-full appearance-none rounded-t-lg border-0 border-b-2 border-gray-300 px-2.5  pb-1.5 pt-4 text-sm text-gray-900 focus:border-gray-600 focus:outline-none focus:ring-0 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:focus:border-gray-500"
-                value={productCategory}
-                placeholder=" "
-                onChange={(e) => setProductCategory(e.target.value)}
-              >
-                <option value="" disabled>
-                  Select Product Category
-                </option>
-                {formCategoryList.map((item, index) => (
-                  <option value={item.name} key={index}>
-                    {item.name}
-                  </option>
-                ))}
-              </select>
-              <label
-                for="product-category"
-                htmlFor="product-category"
-                className="absolute start-2.5 top-3 z-10 origin-[0] -translate-y-3 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:-translate-y-3 peer-focus:scale-75 peer-focus:text-gray-600 dark:text-gray-400 peer-focus:dark:text-gray-500 rtl:peer-focus:left-auto rtl:peer-focus:translate-x-1/4"
-              >
-                Product Category
-              </label>
-              {errors.productCategory && (
-                <p className="text-red-500">{errors.productCategory}</p>
-              )}
-            </div> */}
         </div>
 
         <div className="flex w-full gap-4 py-6">
