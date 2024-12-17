@@ -42,7 +42,7 @@ export default function Banner() {
 
   return (
     <>
-      <div className="z-50">
+      <div className="z-50 bg-black">
         <div className="h-[70vh] lg:h-[50vh]">
           <div className="relative size-full overflow-hidden">
             <div
@@ -52,7 +52,7 @@ export default function Banner() {
               <Image
                 width={1200}
                 height={900}
-                src="/who-we-are/banner.jpg"
+                src="/who-we-are/who-we-are-banner.jpg"
                 className="hidden size-full object-cover sm:block"
                 alt="banner image"
                 loading="lazy"

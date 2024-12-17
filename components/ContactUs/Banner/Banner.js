@@ -3,7 +3,7 @@ import React from "react";
 
 export default function Banner() {
   return (
-    <div className="z-50 h-[50vh]">
+    <div className="z-50 h-[50vh] bg-black">
       <div className="h-[70vh] lg:h-[50vh]">
         <div className="relative size-full overflow-hidden">
           <div
@@ -13,7 +13,7 @@ export default function Banner() {
             <Image
               width={1200}
               height={900}
-              src="/contact-banner.png"
+              src="/banner-contact.png"
               className="hidden size-full object-cover sm:block"
               alt="Desktop banner"
               loading="lazy"

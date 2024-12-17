@@ -22,14 +22,14 @@ const WhatsappWidgetKumarkom = () => {
     setIsShow(false); // Hide the popup on click
   };
 
-  useEffect(() => {
-    // Show popup on page load
-    setIsShow(true);
-    startTimerToHide();
+  // useEffect(() => {
+  //   // Show popup on page load
+  //   setIsShow(true);
+  //   startTimerToHide();
 
-    // Cleanup timeout on unmount
-    return () => clearTimeout(timer);
-  }, []);
+  //   // Cleanup timeout on unmount
+  //   return () => clearTimeout(timer);
+  // }, []);
 
   useEffect(() => {
     const handleScroll = () => {

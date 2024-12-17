@@ -3,7 +3,7 @@ import React from "react";
 
 export default function Banner() {
   return (
-    <div className="z-50   lg:mb-0">
+    <div className="z-50  bg-black lg:mb-0">
       <div className="h-[70vh] lg:h-[50vh]">
         <div className="relative size-full overflow-hidden">
           <div
@@ -12,7 +12,7 @@ export default function Banner() {
             <Image
               width={1200}
               height={900}
-              src="/what-we-do/whatWeDoBanner.png"
+              src="/what-we-do/banner.png"
               className="hidden size-full object-cover sm:block"
               alt="Slide image"
               loading="lazy"
