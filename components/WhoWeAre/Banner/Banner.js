@@ -43,7 +43,7 @@ export default function Banner() {
   return (
     <>
       <div className="z-50 bg-black">
-        <div className="h-[70vh] lg:h-[50vh]">
+        <div className="h-[70vh] lg:h-[63vh]">
           <div className="relative size-full overflow-hidden">
             <div
               className={`absolute left-1/2 top-1/2 size-full -translate-x-1/2 -translate-y-1/2 transition-opacity duration-700 ease-in-out `}

@@ -159,7 +159,7 @@ export const contactInfo = [
 ];
 
 export const copyRight = [
-  "@ 2024 Seslong Global Limited. <br class='md:hidden block'> All Rights Reserved. Privacy Policy.",
+  "@ {new Date().getFullYear()} Seslong Global Limited. <br class='md:hidden block'> All Rights Reserved. Privacy Policy.",
 ];
 
 export const whoWeAre = [

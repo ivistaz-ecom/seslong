@@ -4,13 +4,13 @@ import React from "react";
 const Quality = () => {
   return (
     <div className="bg-[#F8E2CF]">
-      <h2 className="container mx-auto py-6 text-center text-3xl font-medium lg:text-4xl">
+      <h2 className="container mx-auto py-8 text-center text-3xl font-medium lg:text-4xl">
         Quality
       </h2>
       <div className="container mx-auto grid items-center justify-center lg:grid-cols-2 lg:py-10">
         <Image
           alt="image"
-          className="mx-5 w-[90%] lg:p-0"
+          className="mx-5 w-[90%] lg:p-0 shadow-xl shadow-[#f4d2b4] rounded-lg"
           width={200}
           height={400}
           src="/what-we-do/Quality.png"

@@ -4,7 +4,7 @@ import { whoWeAre } from "../../../utils/data";
 
 export default function page() {
   return (
-    <div className="mt-0 py-12">
+    <div className="mt-0 py-12 h-[]">
       <div className="flex flex-col items-center justify-center">
         <h2 className="p-4 text-center text-3xl font-medium lg:p-0 lg:text-4xl">
           Seslong Traders Private Limited
