@@ -86,7 +86,8 @@ export default function Footer() {
         </div>
       </div>
       <div className="py-4 text-center text-xl font-thin">
-        <div dangerouslySetInnerHTML={{ __html: copyRight }} />
+        @ {new Date().getFullYear()} Seslong Global Limited.{" "}
+        <br class="block md:hidden" /> All Rights Reserved. Privacy Policy.
       </div>
     </>
   );
