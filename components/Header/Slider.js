@@ -45,6 +45,7 @@ export default function Slider() {
     <>
       <div className="z-50 flex text-center">
         <button
+          id="menu icon"
           className="group flex items-center justify-center gap-1  text-2xl font-normal text-[#9EA1A4] hover:text-[#f5831fca] "
           type="button"
           onMouseOver={toggleDrawer}

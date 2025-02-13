@@ -15,6 +15,7 @@ export default function Product() {
           {ProductsItems.map((items, index) => (
             <div className="group relative overflow-hidden " key={index}>
               <Image
+                alt="product"
                 src={items.productImage}
                 width={300}
                 height={300}

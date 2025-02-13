@@ -8,8 +8,9 @@ export default function Header() {
     <div className="flex h-[10vh] items-center bg-[#000]">
       <div className="container mx-auto grid w-10/12 grid-cols-2">
         <div className="flex items-center justify-start">
-          <Link href="/">
+          <Link href="/" aria-label="seslong home page">
             <Image
+              alt="logo"
               src="/seslong-logo.svg"
               width={400}
               height={400}

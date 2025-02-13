@@ -49,6 +49,7 @@ const WhatsappWidgetKumarkom = () => {
     <>
       {/* Floating Button */}
       <button
+        id="whatsapp button"
         type="button"
         className={`fixed z-50 flex items-center justify-center rounded-full bg-green-500 p-3 shadow-lg transition-all duration-300 ${
           isScrolled

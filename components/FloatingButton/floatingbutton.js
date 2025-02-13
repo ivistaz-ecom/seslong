@@ -64,6 +64,7 @@ export default function FloatingButton() {
         </span>
       )}
       <button
+        id="mail button"
         onClick={handleClick}
         className="flex items-center justify-center rounded-full bg-[#f5831fca] p-3 text-2xl text-white shadow-lg transition duration-300 ease-in-out"
       >
