@@ -1,48 +1,9 @@
 "use client";
-import React, { useState, useEffect } from "react";
-import { homeSlider } from "../../../utils/data"; // Ensure this imports correctly
-import { IoIosArrowRoundForward, IoIosArrowRoundBack } from "react-icons/io";
-import Image from "next/image";
-
 export default function Banner() {
-  const [activeIndex, setActiveIndex] = useState(0); // Track the active slide index
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveIndex((prevIndex) => (prevIndex + 1) % homeSlider.length);
-    }, 5000); // Change slide every 5 seconds
-
-    return () => clearInterval(interval);
-  }, []);
-
-  const prevBtn = (
-    <button
-      type="button"
-      className="group absolute start-0 top-48 z-30 flex h-full cursor-pointer items-center justify-center px-4 focus:outline-none lg:top-48 xl:top-60"
-      onClick={() =>
-        setActiveIndex(
-          (activeIndex - 1 + homeSlider.length) % homeSlider.length,
-        )
-      }
-    >
-      <IoIosArrowRoundBack size="70" color="white" />
-    </button>
-  );
-
-  const nextBtn = (
-    <button
-      type="button"
-      className="group absolute end-0 top-48 z-30 flex h-full cursor-pointer items-center justify-center px-4 focus:outline-none lg:top-48 xl:top-60"
-      onClick={() => setActiveIndex((activeIndex + 1) % homeSlider.length)}
-    >
-      <IoIosArrowRoundForward size="70" color="white" />
-    </button>
-  );
-
   return (
     <div className="">
-      <div className="">
-        <div className="flex h-[400px] w-screen bg-[url('https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/Seslong/home-page-banner-mobile.png')] bg-cover bg-center bg-no-repeat lg:bg-[url('/banner.jpeg')]">
+      <div className="bg-transparent">
+        <div className="flex h-[400px] w-screen bg-[url('/home-banner-mobile.webp')] bg-cover bg-center bg-no-repeat lg:bg-[url('/home-banner.webp')]">
           <div className="container mx-auto flex items-center justify-center p-5 text-center text-2xl text-white lg:text-5xl">
             <div className="inline-block bg-black bg-opacity-65 px-6 py-4">
               <p>
