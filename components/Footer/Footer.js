@@ -23,9 +23,9 @@ export default function Footer() {
             <Link href="/">
               <Image
                 src="/seslong-logo.svg"
-                width={400}
-                height={400}
-                className="mt-5 w-auto lg:mt-0"
+                width={200}
+                height={200}
+                className="mt-5 lg:mt-0 "
                 alt="Company Logo"
               />
             </Link>
