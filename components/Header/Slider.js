@@ -45,9 +45,9 @@ export default function Slider() {
     <>
       <div className="z-50 flex text-center">
         <button
-          name="menu icon"
-          id="menu icon"
-          className="group flex items-center justify-center gap-1  text-2xl font-normal text-[#9EA1A4] hover:text-[#f5831fca] "
+          aria-label="Open menu"
+          id="menu-icon"
+          className="group flex items-center justify-center gap-1 text-2xl font-normal text-[#9EA1A4] hover:text-[#f5831fca]"
           type="button"
           onMouseOver={toggleDrawer}
         >
@@ -55,10 +55,6 @@ export default function Slider() {
             className="cursor-pointer transition-transform duration-300 group-hover:rotate-180"
             size={40}
           />
-          {/* <IoMdArrowForward
-            className="transition-transform duration-300 group-hover:rotate-45"
-            size={30}
-          /> */}
         </button>
       </div>
 

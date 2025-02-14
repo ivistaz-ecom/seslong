@@ -49,15 +49,15 @@ const WhatsappWidgetKumarkom = () => {
     <>
       {/* Floating Button */}
       <button
-        id="whatsapp button"
-        name="whatsapp button"
+        aria-label="Open WhatsApp"
+        id="whatsapp-button"
         type="button"
         className={`fixed z-50 flex items-center justify-center rounded-full bg-green-500 p-3 shadow-lg transition-all duration-300 ${
           isScrolled
             ? "lg:bottom-22 fixed bottom-24 right-4 lg:right-8"
             : "lg:bottom-13 bottom-2 right-4 lg:right-8"
         }`}
-        onClick={handleButtonClick} // Toggle visibility on button click
+        onClick={handleButtonClick}
       >
         <FaWhatsapp size="28" className="text-white" />
       </button>
