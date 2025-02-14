@@ -17,7 +17,7 @@ export default function WhatWe() {
           href="/what-we-do"
           className="group flex items-center justify-center text-2xl hover:text-[#F5841F]"
         >
-          Learn More
+          What We Do
           <span className="ml-2 translate-x-0 transform opacity-0 transition-all duration-200 group-hover:translate-x-1 group-hover:opacity-100">
             <IoMdArrowForward />
           </span>
